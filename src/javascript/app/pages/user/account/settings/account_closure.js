@@ -1,10 +1,10 @@
-const Metatrader     = require('../../metatrader/metatrader');
-const BinarySocket   = require('../../../../base/socket');
-const Client         = require('../../../../base/client');
-const Currency       = require('../../../../common/currency');
-const Url            = require('../../../../../_common/url');
+const Metatrader = require('../../metatrader/metatrader');
+const BinarySocket = require('../../../../base/socket');
+const Client = require('../../../../base/client');
+const Currency = require('../../../../common/currency');
+const Url = require('../../../../../_common/url');
 const getElementById = require('../../../../../_common/common_functions').getElementById;
-const localize       = require('../../../../../_common/localize').localize;
+const localize = require('../../../../../_common/localize').localize;
 const hasAccountType = require('../../../../../_common/base/client_base').hasAccountType;
 
 const AccountClosure = (() => {
@@ -115,13 +115,12 @@ const AccountClosure = (() => {
         if (!regex.test(e.data) ||
             el_other_trading_platforms.value.length + el_suggested_improves.value.length > 255) {
             document.execCommand('undo');
-            return false;
+            return;
         }
         el_remain_characters.innerHTML = localize(
-            `Remaining characters: ${255
+            'Remaining characters: [_1].', 255
             - el_other_trading_platforms.value.length
-            - el_suggested_improves.value.length}.`);
-        return true;
+        - el_suggested_improves.value.length);
     };
 
     const onSelectedReasonChange = () => {
