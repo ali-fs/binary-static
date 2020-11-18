@@ -3,15 +3,15 @@ import { SubmitButton } from '../../../_common/components/forms.jsx';
 import Loading from '../../../_common/components/loading.jsx';
 
 const leaving_reason_list = [
-    { title: 'I have other financial priorities.', id: 'other_priorities' },
-    { title: 'I want to stop myself from trading.', id: 'stop_trading' },
-    { title: 'I’m no longer interested in trading.', id: 'not_interested' },
-    { title: 'I prefer another trading website.', id: 'other_website' },
-    { title: 'The platforms aren’t user-friendly.', id: 'not_user_friendly' },
-    { title: 'Making deposits and withdrawals is difficult.', id: 'difficult' },
-    { title: 'The platforms lack key features or functionality.', id: 'platform_lack' },
-    { title: 'Customer service was unsatisfactory.', id: 'customer_service' },
-    { title: 'I’m deactivating my account for other reasons.', id: 'other' },
+    { title: it.L('I have other financial priorities.'), id: 'other_priorities' },
+    { title: it.L('I want to stop myself from trading.'), id: 'stop_trading' },
+    { title: it.L('I’m no longer interested in trading.'), id: 'not_interested' },
+    { title: it.L('I prefer another trading website.'), id: 'other_website' },
+    { title: it.L('The platforms aren’t user-friendly.'), id: 'not_user_friendly' },
+    { title: it.L('Making deposits and withdrawals is difficult.'), id: 'difficult' },
+    { title: it.L('The platforms lack key features or functionality.'), id: 'platform_lack' },
+    { title: it.L('Customer service was unsatisfactory.'), id: 'customer_service' },
+    { title: it.L('I’m deactivating my account for other reasons.'), id: 'other' },
 ];
 
 const AccountClosureDialog = () => (
@@ -109,7 +109,7 @@ const AccountClosure = () => (
                             {leaving_reason_list.map((item, index) => (
                                 <div key={index}>
                                     <input name='reason-checkbox' type='checkbox' id={item.id} />
-                                    <label htmlFor={item.id}>{it.L(item.title)}</label>
+                                    <label htmlFor={item.id}>{item.title}</label>
                                 </div>
                             ))}
                         </div>

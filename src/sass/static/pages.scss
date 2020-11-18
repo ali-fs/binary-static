@@ -1618,7 +1618,8 @@ body #not_authenticated_financial ul.checked > li {
             font-size: 1rem;
         }
         textarea {
-            width: 350px;
+            width: 90%;
+            max-width: 350px;
             height: 80px;
             margin-top: 10px;
             margin-bottom: 10px;

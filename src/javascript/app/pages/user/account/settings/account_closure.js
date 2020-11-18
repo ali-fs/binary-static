@@ -3,9 +3,10 @@ const BinarySocket = require('../../../../base/socket');
 const Client = require('../../../../base/client');
 const Currency = require('../../../../common/currency');
 const Url = require('../../../../../_common/url');
+const hasAccountType = require('../../../../../_common/base/client_base').hasAccountType;
 const getElementById = require('../../../../../_common/common_functions').getElementById;
 const localize = require('../../../../../_common/localize').localize;
-const hasAccountType = require('../../../../../_common/base/client_base').hasAccountType;
+const applyToAllElements = require('../../../../../_common/utility').applyToAllElements;
 
 const AccountClosure = (() => {
     let reason_checkbox_list,
@@ -22,6 +23,8 @@ const AccountClosure = (() => {
         el_remain_characters,
         el_deacivate_button,
         el_submit_loading;
+
+    const number_of_steps = 3;
 
     const onLoad = () => {
         reason_checkbox_list = document.getElementsByName('reason-checkbox');
@@ -46,15 +49,14 @@ const AccountClosure = (() => {
         };
         hideDialogs();
 
-        const is_virtual = !hasAccountType('real');
+        const has_virtual_only = !hasAccountType('real');
         BinarySocket.wait('landing_company').then(() => {
-            if (!is_virtual) {
+            if (!has_virtual_only) {
                 BinarySocket.send({ statement: 1, limit: 1 });
                 BinarySocket.wait('landing_company', 'get_account_status', 'statement').then(async () => {
                     const is_eligible = await Metatrader.isEligible();
                     if (is_eligible) {
-                        const MT5_links = document.getElementsByClassName('metatrader-link');
-                        Array.from(MT5_links).forEach(MT5_link => { MT5_link.setVisibility(1); });
+                        applyToAllElements('.metatrader-link', (element) => { element.setVisibility(1); });
                     }
                 });
             }
@@ -93,7 +95,7 @@ const AccountClosure = (() => {
 
         el_step_2_back.addEventListener('click', () => {
             showStep(1);
-            $.scrollTo(0, 500);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
         reason_checkbox_list.forEach(element => {
@@ -105,13 +107,14 @@ const AccountClosure = (() => {
     };
 
     const showStep = (step) => {
-        Array.from(new Array(3)).forEach((_, index) => {
+        Array.from(new Array(number_of_steps)).forEach((_, index) => {
             getElementById(`step_${index + 1}`).setVisibility(index + 1 === step);
         });
     };
 
+    const regex = new RegExp('^[a-zA-Z0-9., \'-]+$');
+
     const onTextChanged = (e) => {
-        const regex = new RegExp('^[a-zA-Z0-9., \'-]+$');
         if (!regex.test(e.data) ||
             el_other_trading_platforms.value.length + el_suggested_improves.value.length > 255) {
             document.execCommand('undo');
@@ -124,13 +127,9 @@ const AccountClosure = (() => {
     };
 
     const onSelectedReasonChange = () => {
-        const countOfSelectedReasons = getSelectedReasonCount();
-        if (countOfSelectedReasons === 0) {
-            el_step_2_submit.classList.add('button-disabled');
-        } else {
-            el_step_2_submit.classList.remove('button-disabled');
-        }
-        if (countOfSelectedReasons >= 3) {
+        const num_selected_reasons = getSelectedReasonCount();
+        el_step_2_submit.classList[num_selected_reasons ? 'remove' : 'add']('button-disabled');
+        if (num_selected_reasons >= 3) {
             reason_checkbox_list.forEach(reason => {
                 if (!reason.checked) {
                     reason.disabled = true;
@@ -162,7 +161,7 @@ const AccountClosure = (() => {
             } else {
                 el_submit_loading.setVisibility(0);
                 showStep(3);
-                $.scrollTo(0, 500);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
 
                 sessionStorage.setItem('closingAccount', 1);
                 setTimeout(() => {
@@ -177,19 +176,31 @@ const AccountClosure = (() => {
     const showErrorPopUp = async (response) => {
         const mt5_login_list = (await BinarySocket.wait('mt5_login_list')).mt5_login_list;
         // clear all previously added details first
-        const $error_modal = $('#account_closure_error');
-        $error_modal.find('.account-closure-details').remove();
-        const $parent = $('<div/>', { class: 'gr-padding-10 gr-child account-closure-details' });
+        const previois_parent = document.getElementsByClassName('account-closure-details')[0];
+        if (previois_parent) previois_parent.parentNode.removeChild(previois_parent);
+
+        const el_parent = document.createElement('div');
+        el_parent.className = 'gr-padding-10 gr-child account-closure-details';
         let section_id = '';
         let display_name = '';
         const addSection = (account, info) => {
-            const $section = $parent.clone();
-            $section
-                .append($('<div />')
-                    .append($('<strong />', { text: display_name }))
-                    .append($('<div />', { text: account.replace(/^MT[DR]?/i, '') })))
-                .append($('<span />', { text: info }));
-            $error_modal.find(section_id).setVisibility(1).append($section);
+            const el_section_parent = el_parent.cloneNode(true);
+
+            const el_strong = document.createElement('strong');
+            el_strong.innerHTML = display_name;
+            const el_inner_div = document.createElement('div');
+            el_inner_div.innerHTML = account.replace(/^MT[DR]?/i, '');
+            const el_span = document.createElement('span');
+            el_span.innerHTML = info;
+
+            const el_div = document.createElement('div');
+            el_div.appendChild(el_strong);
+            el_div.appendChild(el_inner_div);
+            el_section_parent.appendChild(el_div);
+            el_section_parent.appendChild(el_span);
+
+            const el_section = getElementById(section_id);
+            el_section.setVisibility(1).appendChild(el_section_parent);
         };
         const getMTDisplay = (account) => {
             const mt5_group = (mt5_login_list.find(acc => acc.login === account) || {}).group;
@@ -199,10 +210,10 @@ const AccountClosure = (() => {
             Object.keys(response.error.details.open_positions).forEach((account) => {
                 const txt_positions = `${response.error.details.open_positions[account]} position(s)`;
                 if (/^MT/.test(account)) {
-                    section_id = '#account_closure_open_mt';
+                    section_id = 'account_closure_open_mt';
                     display_name = getMTDisplay(account);
                 } else {
-                    section_id = '#account_closure_open';
+                    section_id = 'account_closure_open';
                     display_name = Client.get('currency', account);
                 }
                 addSection(account, txt_positions);
@@ -212,10 +223,10 @@ const AccountClosure = (() => {
             Object.keys(response.error.details.balance).forEach((account) => {
                 const txt_balance = `${response.error.details.balance[account].balance} ${response.error.details.balance[account].currency}`;
                 if (/^MT/.test(account)) {
-                    section_id = '#account_closure_balance_mt';
+                    section_id = 'account_closure_balance_mt';
                     display_name = getMTDisplay(account);
                 } else {
-                    section_id = '#account_closure_balance';
+                    section_id = 'account_closure_balance';
                     display_name = Currency.getCurrencyName(response.error.details.balance[account].currency);
                 }
                 addSection(account, txt_balance);
@@ -223,18 +234,27 @@ const AccountClosure = (() => {
         }
     };
 
-    const showFormMessage = (localized_msg, scroll_on_error) => {
-        if (scroll_on_error) $.scrollTo($('#reason'), 500, { offset: -20 });
+    const showFormMessage = (localized_msg) => {
         el_error_msg.setAttribute('class', 'errorfield');
         el_error_msg.innerHTML = localized_msg;
         el_error_msg.style.display = 'block';
+    };
+
+    const getLabelTextOfCheckBox = (checkbox_id) => {
+        const labels = document.getElementsByTagName('LABEL');
+        for (let i = 0; i < labels.length; i++) {
+            if (labels[i].htmlFor === checkbox_id) {
+                return labels[i].textContent;
+            }
+        }
+        return '';
     };
 
     const getReason = () => {
         const selectedReasons = [];
         reason_checkbox_list.forEach(reason => {
             if (reason.checked) {
-                selectedReasons.push($(`label[for=${reason.id}]`).text());
+                selectedReasons.push(getLabelTextOfCheckBox(reason.id));
             }
         });
         if (el_other_trading_platforms.value.length !== 0) {
