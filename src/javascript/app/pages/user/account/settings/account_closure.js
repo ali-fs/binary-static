@@ -176,8 +176,8 @@ const AccountClosure = (() => {
     const showErrorPopUp = async (response) => {
         const mt5_login_list = (await BinarySocket.wait('mt5_login_list')).mt5_login_list;
         // clear all previously added details first
-        const previois_parent = document.getElementsByClassName('account-closure-details')[0];
-        if (previois_parent) previois_parent.parentNode.removeChild(previois_parent);
+        const previous_parent = document.getElementsByClassName('account-closure-details')[0];
+        if (previous_parent) previous_parent.parentNode.removeChild(previous_parent);
 
         const el_parent = document.createElement('div');
         el_parent.className = 'gr-padding-10 gr-child account-closure-details';
