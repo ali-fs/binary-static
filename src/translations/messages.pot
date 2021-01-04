@@ -112,9 +112,6 @@ msgstr ""
 msgid "$500,001 - $1,000,000"
 msgstr ""
 
-msgid "%1 (United Kingdom)"
-msgstr ""
-
 msgid "%1 Account"
 msgstr ""
 
@@ -541,6 +538,9 @@ msgstr ""
 msgid "1. Proof of identity"
 msgstr ""
 
+msgid "1. This link was sent by you"
+msgstr ""
+
 msgid "1.5%"
 msgstr ""
 
@@ -577,7 +577,13 @@ msgstr ""
 msgid "2. Selfie with proof of ID"
 msgstr ""
 
+msgid "2. Your desktop window stays open"
+msgstr ""
+
 msgid "20 – 39.999%"
+msgstr ""
+
+msgid "2020 Binary | All rights reserved"
 msgstr ""
 
 msgid "3.50"
@@ -704,6 +710,9 @@ msgid "A client should not use the client's account as a banking facility, and d
 msgstr ""
 
 msgid "A competitive and flexible affiliate programme that can be adapted to your needs"
+msgstr ""
+
+msgid "A corporate action can include but is not limited to assimilation, acquisition, bankruptcy, bonus issue, bonus rights, cash dividend, class action, delisting, de-merger, general announcement, initial public offering (IPO), liquidation, merger, change in par value, scheme of arrangement, stock dividend, stock split, return of capital, and reverse stock split."
 msgstr ""
 
 msgid "A derivative is a financial instrument whose value is determined by reference to an underlying market. Derivatives are commonly traded in the inter-bank market, and binaries are one of the simplest forms of derivatives."
@@ -1129,6 +1138,9 @@ msgstr ""
 msgid "Affiliate/Country Manager"
 msgstr ""
 
+msgid "Affiliates are not permitted to become clients by using their own affiliate link."
+msgstr ""
+
 msgid "Affiliates are required to display a risk warning on their website and associated materials, with wording such as the following:"
 msgstr ""
 
@@ -1192,9 +1204,6 @@ msgstr ""
 msgid "All affiliate activities must be conducted in a professional and proper manner. The Affiliate shall be expected to act with good faith and integrity in relationship with the Affiliate's referrals and always act in the best interests of the Affiliate's referrals."
 msgstr ""
 
-msgid "All calls are recorded for training and monitoring purposes"
-msgstr ""
-
 msgid "All client orders are processed on a first in, first out basis without any manual intervention. If a client order exceeds the volume limit for the symbol, it is automatically rejected. When executing client orders, %1 will seek to fill client order transaction as promptly as possible at the instructed price (or at a better price, if available). Exposure limits are established based on internal governance arrangements and risk management framework, which both commensurate with the size, nature, complexity, and risk profile of the Company's activities. These exposure limits are used as benchmarks to distinguish orders that are auto-accepted from orders that will be worked in the market with fill level passed on to the client."
 msgstr ""
 
@@ -1202,6 +1211,9 @@ msgid "All conditions and durations"
 msgstr ""
 
 msgid "All credit card details are submitted directly to the Visa/Mastercard network using the latest SSL encryption technology, in accordance with bank policies."
+msgstr ""
+
+msgid "All details must be clear — nothing blurry"
 msgstr ""
 
 msgid "All durations"
@@ -1276,6 +1288,9 @@ msgstr ""
 msgid "Allow Clients to use e-wallets, which are not available directly on %1"
 msgstr ""
 
+msgid "Allow camera access"
+msgstr ""
+
 msgid "Allow equals"
 msgstr ""
 
@@ -1340,6 +1355,9 @@ msgid "An assertive, sales-driven personality, able to adapt quickly and achieve
 msgstr ""
 
 msgid "An eagerness for robust risk management to keep up with the increasing pace of information exchange"
+msgstr ""
+
+msgid "An error occurred while loading the component"
 msgstr ""
 
 msgid "An excellent command of spoken and written English"
@@ -2086,6 +2104,9 @@ msgstr ""
 msgid "Blogger and vlogger"
 msgstr ""
 
+msgid "Blurry photo detected"
+msgstr ""
+
 msgid "Books and records"
 msgstr ""
 
@@ -2278,6 +2299,18 @@ msgstr ""
 msgid "Call Spread/Put Spread"
 msgstr ""
 
+msgid "Camera access is denied"
+msgstr ""
+
+msgid "Camera not detected"
+msgstr ""
+
+msgid "Camera not working"
+msgstr ""
+
+msgid "Camera not working?"
+msgstr ""
+
 msgid "Can I offer my referrals an incentive to sign up through my unique affiliate link rather than sign up directly?"
 msgstr ""
 
@@ -2368,6 +2401,9 @@ msgstr ""
 msgid "Certain limits are imposed as to the acceptable levels for barrier/strike prices of contracts. Typically, the barrier/strike may not be too close nor too far from the current underlying market level."
 msgstr ""
 
+msgid "Champion Group Ltd: Vanuatu"
+msgstr ""
+
 msgid "Change API Endpoint"
 msgstr ""
 
@@ -2404,6 +2440,9 @@ msgstr ""
 msgid "Charting platforms"
 msgstr ""
 
+msgid "Check back here to finish the submission"
+msgstr ""
+
 msgid "Check our systems against the latest attacks, vulnerabilities, and mitigations"
 msgstr ""
 
@@ -2411,6 +2450,21 @@ msgid "Check out some technical terms before you start."
 msgstr ""
 
 msgid "Check out the payment methods accepted by the payment agents in the list below."
+msgstr ""
+
+msgid "Check selfie"
+msgstr ""
+
+msgid "Check that it is connected and functional. You can also <fallback>continue verification on your phone</fallback>"
+msgstr ""
+
+msgid "Check that your number is correct"
+msgstr ""
+
+msgid "Check your image"
+msgstr ""
+
+msgid "Check your mobile"
 msgstr ""
 
 msgid "Checked"
@@ -2438,6 +2492,9 @@ msgid "Choose a payout from $1 to $50,000."
 msgstr ""
 
 msgid "Choose an account"
+msgstr ""
+
+msgid "Choose document"
 msgstr ""
 
 msgid "Choose from 100+ tradable instruments, backed by award-winning technology and innovation since 2000."
@@ -2617,6 +2674,9 @@ msgstr ""
 msgid "Close all or any of the client's Open Positions at a closing level that is reasonably available"
 msgstr ""
 
+msgid "Close identity verification screen"
+msgstr ""
+
 msgid "Close my account"
 msgstr ""
 
@@ -2740,9 +2800,6 @@ msgstr ""
 msgid "Company Ownership"
 msgstr ""
 
-msgid "Company addresses"
-msgstr ""
-
 msgid "Company or Binary"
 msgstr ""
 
@@ -2860,10 +2917,16 @@ msgstr ""
 msgid "Congratulations! We'll make you a fair and competitive offer, and we don't make you negotiate in order to eliminate salary inequities and stress."
 msgstr ""
 
+msgid "Connected to your mobile"
+msgstr ""
+
 msgid "Connecting to server"
 msgstr ""
 
 msgid "Connection error: Please check your internet connection."
+msgstr ""
+
+msgid "Connection lost"
 msgstr ""
 
 msgid "Consent"
@@ -2893,7 +2956,19 @@ msgstr ""
 msgid "Contact us"
 msgstr ""
 
+msgid "Continue"
+msgstr ""
+
+msgid "Continue on phone"
+msgstr ""
+
+msgid "Continue on your phone"
+msgstr ""
+
 msgid "Continue trading"
+msgstr ""
+
+msgid "Continue with the verification"
 msgstr ""
 
 msgid "Continuous Indices – Choose from the Volatility 10 Index, Volatility 25 Index, Volatility 50 Index, Volatility 75 Index, and Volatility 100 Index. These indices correspond to simulated markets with constant volatilities of 10%, 25%, 50%, 75%, and 100% respectively."
@@ -3016,10 +3091,28 @@ msgstr ""
 msgid "Coordinate with payment system service providers in offering cryptocurrencies and digital wallets as a payment method"
 msgstr ""
 
+msgid "Copied"
+msgstr ""
+
+msgid "Copy"
+msgstr ""
+
+msgid "Copy link"
+msgstr ""
+
+msgid "Copy the link to your mobile browser"
+msgstr ""
+
+msgid "Copy the link to your phone"
+msgstr ""
+
 msgid "Copyright"
 msgstr ""
 
 msgid "Copywriter"
+msgstr ""
+
+msgid "Corporate actions"
 msgstr ""
 
 msgid "Cost per acquisition (CPA) for EU clients only"
@@ -3038,6 +3131,9 @@ msgid "Countries"
 msgstr ""
 
 msgid "Countries report: Displays a list of countries where your clicks are coming from"
+msgstr ""
+
+msgid "Country not found"
 msgstr ""
 
 msgid "Country of Residence"
@@ -3139,6 +3235,9 @@ msgstr ""
 msgid "Creative flair and versatility in developing concepts, graphics, and layouts for a wide range of media"
 msgstr ""
 
+msgid "Credit an amount to or debit an amount from the client’s account"
+msgstr ""
+
 msgid "Credit/Debit"
 msgstr ""
 
@@ -3226,10 +3325,10 @@ msgstr ""
 msgid "Customer-centric partnership"
 msgstr ""
 
-msgid "Cyberjaya"
+msgid "Cut-off image detected"
 msgstr ""
 
-msgid "Cyberjaya Office"
+msgid "Cyberjaya"
 msgstr ""
 
 msgid "Cyberjaya expertly combines green lungs and modern amenities to give you the ultimate work-life balance."
@@ -3403,6 +3502,9 @@ msgstr ""
 msgid "Depending on what you do, you can apply as our Affiliate or Introducing Broker, or both. More new clients from you means higher potential commissions."
 msgstr ""
 
+msgid "Depending on where the client lives, the client's account will be governed by the laws of the country of incorporation of the company that the client's account is registered with as set out below. If the client has registered more than one account with more than one company, each account will be governed by the law of the country of incorporation of the company that each individual account has been registered with. The client agrees to submit to the applicable jurisdiction's courts and bring any claim the client may have before them. These courts will have sole authority to settle any disputes that may arise between the client and the Company."
+msgstr ""
+
 msgid "Depending on your broker or trading platform, you can start trading from the time the Sydney market opens on Monday morning to the time the New York market closes on Friday evening – up to 24 hours a day, five days a week."
 msgstr ""
 
@@ -3451,10 +3553,10 @@ msgstr ""
 msgid "Deriv (BVI) Ltd, Kingston Chambers, P.O. Box 173, Road Town, Tortola, British Virgin Islands. Licensed and regulated by the British Virgin Islands Financial Services Commission - %1view licence%2."
 msgstr ""
 
-msgid "Deriv (Europe) Limited"
+msgid "Deriv (BVI) Ltd: British Virgin Islands"
 msgstr ""
 
-msgid "Deriv (Europe) Limited & Deriv Investments (Europe) Limited, W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033"
+msgid "Deriv (Europe) Limited"
 msgstr ""
 
 msgid "Deriv (Europe) Limited,"
@@ -3472,25 +3574,25 @@ msgstr ""
 msgid "Deriv (FX) Ltd,"
 msgstr ""
 
-msgid "Deriv (FX) Ltd, Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Federal Territory of Labuan"
-msgstr ""
-
 msgid "Deriv (FX) Ltd, or"
 msgstr ""
 
 msgid "Deriv (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Federal Territory of Labuan, Malaysia. Licensed and regulated by the Labuan Financial Services Authority to carry on a money-broking business %1(licence no. MB/18/0024)%2."
 msgstr ""
 
-msgid "Deriv (MX) Ltd"
+msgid "Deriv (FX) Ltd: Labuan, Territory of Malaysia"
 msgstr ""
 
-msgid "Deriv (MX) Ltd, First Floor, Millennium House, Victoria Road, Douglas, IM2 4RW"
+msgid "Deriv (MX) Ltd"
 msgstr ""
 
 msgid "Deriv (MX) Ltd, First Floor, Millennium House, Victoria Road, Douglas, Isle of Man, IM2 4RW. Licensed and regulated by the Gambling Supervision Commission in the Isle of Man (current online gambling licence granted on the 31 August 2017) - %1view licence%2 and for UK clients by the UK Gambling Commission - %3view licence%2."
 msgstr ""
 
 msgid "Deriv (MX) Ltd."
+msgstr ""
+
+msgid "Deriv (MX) Ltd: the Isle of Man"
 msgstr ""
 
 msgid "Deriv (SVG) LLC"
@@ -3502,6 +3604,9 @@ msgstr ""
 msgid "Deriv (SVG) LLC, Hinds Buildings, Kingstown, St. Vincent and the Grenadines; company number 25299 BC 2019."
 msgstr ""
 
+msgid "Deriv (SVG) LLC: St. Vincent and the Grenadines"
+msgstr ""
+
 msgid "Deriv (V) Ltd"
 msgstr ""
 
@@ -3509,6 +3614,9 @@ msgid "Deriv (V) Ltd,"
 msgstr ""
 
 msgid "Deriv (V) Ltd, Govant Building, Port Vila, PO Box 1276, Vanuatu, Republic of Vanuatu. Licensed and regulated by the Vanuatu Financial Services Commission - %1view licence%2."
+msgstr ""
+
+msgid "Deriv (V) Ltd: Vanuatu"
 msgstr ""
 
 msgid "Deriv Group members are sometimes referred to collectively as \"%1\" or \"the Company\"."
@@ -3521,6 +3629,9 @@ msgid "Deriv Investments (Europe) Limited"
 msgstr ""
 
 msgid "Deriv Investments (Europe) Limited aggregates the Bid and Ask prices from a pool of liquidity providers to determine and offer the client the best available price of the instrument. The Company is always the final counterparty to the client's Transactions. The Company may execute Orders on behalf of its client, wherein the Company will act as a broker and pass on the Order to the liquidity provider for execution. Alternatively, the Company may also keep the client's Order on its own account, wherein the Company will take the other side of the client's trade. It is further noted that the Company may make a profit as a result of the client's losses and vice-versa. Further details can be found under Conflicts of interest policy and Order execution policy."
+msgstr ""
+
+msgid "Deriv Investments (Europe) Limited and Deriv (Europe) Limited: Malta"
 msgstr ""
 
 msgid "Deriv Investments (Europe) Limited is entitled to provide services in another EU Member State through EU passporting rights. Refer to the map below for the list of EU countries that have access to %1 via EU passporting rights - freedom to provide cross border services."
@@ -3542,9 +3653,6 @@ msgid "Deriv Limited"
 msgstr ""
 
 msgid "Deriv Limited, with registered office at 47 Esplanade, St Helier, Jersey JE1 0BD, Channel Islands, is the holding company for the subsidiaries listed below."
-msgstr ""
-
-msgid "Deriv Services Sdn. Bhd., C-13, iTech Tower, Jalan Impact, Cyber 6, 63000 Cyberjaya, Selangor Darul Ehsan"
 msgstr ""
 
 msgid "Deriv.com launched"
@@ -3649,6 +3757,9 @@ msgstr ""
 msgid "Discover what’s new"
 msgstr ""
 
+msgid "Dismiss alert"
+msgstr ""
+
 msgid "Display your proof of address when prompted."
 msgstr ""
 
@@ -3706,10 +3817,25 @@ msgstr ""
 msgid "Document and administer database policies, procedures, and standards"
 msgstr ""
 
+msgid "Document example"
+msgstr ""
+
 msgid "Document our current and intended future systems and software architecture"
 msgstr ""
 
 msgid "Document submission status"
+msgstr ""
+
+msgid "Document uploaded"
+msgstr ""
+
+msgid "Documents from that country are not currently supported — <fallback>try another document type</fallback>"
+msgstr ""
+
+msgid "Documents uploaded"
+msgstr ""
+
+msgid "Documents you can use to verify your identity"
 msgstr ""
 
 msgid "Does Not Touch"
@@ -3719,6 +3845,9 @@ msgid "Doing great work and inspiring others to do the same."
 msgstr ""
 
 msgid "Don't have a %1 account yet?"
+msgstr ""
+
+msgid "Don't refresh this page"
 msgstr ""
 
 msgid "Don't share your %1 account or payment methods with any other person."
@@ -3764,6 +3893,9 @@ msgid "DragonPhoenix is a payment facility that allows online bank transfers for
 msgstr ""
 
 msgid "Drive rapid growth and business development to support the company's sales and marketing objectives"
+msgstr ""
+
+msgid "Driver's license"
 msgstr ""
 
 msgid "Driving licence"
@@ -3976,6 +4108,9 @@ msgstr ""
 msgid "Enable %1two-factor authentication%2 on your account."
 msgstr ""
 
+msgid "Enable camera"
+msgstr ""
+
 msgid "Enable two-factor authentication for an extra layer of security."
 msgstr ""
 
@@ -4027,6 +4162,9 @@ msgstr ""
 msgid "Enjoy our fastest type of trading with our Tick Trade app, wherever you are."
 msgstr ""
 
+msgid "Enlarge image"
+msgstr ""
+
 msgid "Ensure that your original documents are ready when the video call starts"
 msgstr ""
 
@@ -4036,6 +4174,9 @@ msgstr ""
 msgid "Ensure the integrity of releases by coordinating testing activities"
 msgstr ""
 
+msgid "Enter mobile number"
+msgstr ""
+
 msgid "Enter payment agent ID"
 msgstr ""
 
@@ -4043,6 +4184,9 @@ msgid "Enter the authentication code generated by the app below:"
 msgstr ""
 
 msgid "Enter your email"
+msgstr ""
+
+msgid "Enter your mobile number:"
 msgstr ""
 
 msgid "Entertainment"
@@ -4157,6 +4301,15 @@ msgid "Events of Default"
 msgstr ""
 
 msgid "Everyone else can use the FIX API to connect to our One Zero bridge – subject to a conformance test."
+msgstr ""
+
+msgid "Example of a blurry document"
+msgstr ""
+
+msgid "Example of a cut-off document"
+msgstr ""
+
+msgid "Example of a document with glare"
 msgstr ""
 
 msgid "Example:"
@@ -4459,6 +4612,12 @@ msgstr ""
 msgid "FXOpen"
 msgstr ""
 
+msgid "Face forward and make sure your eyes are clearly visible"
+msgstr ""
+
+msgid "Face photo page"
+msgstr ""
+
 msgid "Facility that allows you to set limits on your account."
 msgstr ""
 
@@ -4555,7 +4714,16 @@ msgstr ""
 msgid "File Name"
 msgstr ""
 
+msgid "File not uploaded."
+msgstr ""
+
 msgid "File records and documents of customer interactions according to existing guidelines"
+msgstr ""
+
+msgid "File size exceeded."
+msgstr ""
+
+msgid "File type not supported"
 msgstr ""
 
 msgid "Filtering Controls"
@@ -4669,6 +4837,9 @@ msgstr ""
 msgid "Follow the law and these Terms"
 msgstr ""
 
+msgid "Follow these steps to recover camera access:"
+msgstr ""
+
 msgid "Follow up on the recommendations and timeline for corrective actions with department heads"
 msgstr ""
 
@@ -4676,18 +4847,6 @@ msgid "Follow, comply, and implement with all business-related directions, polic
 msgstr ""
 
 msgid "Food Services"
-msgstr ""
-
-msgid "For Deriv (MX) Ltd, the applicable Jurisdiction shall be the Isle of Man."
-msgstr ""
-
-msgid "For Deriv (SVG) LLC, the applicable Jurisdiction shall be St. Vincent and the Grenadines."
-msgstr ""
-
-msgid "For Deriv Investments (Europe) Limited and Deriv (Europe) Limited, the applicable Jurisdiction shall be Malta."
-msgstr ""
-
-msgid "For affiliate, partnership, and other marketing-related queries:"
 msgstr ""
 
 msgid "For details on submitting a complaint to the Company's lead supervisory authority on data processing practices, the client is encouraged to check %1's %2Complaints and disputes%3 section."
@@ -4744,9 +4903,6 @@ msgstr ""
 msgid "For further assistance, email us at %1partners@binary.com%2"
 msgstr ""
 
-msgid "For general support:"
-msgstr ""
-
 msgid "For information about forex leverage refer to our %1Margin Policy%2."
 msgstr ""
 
@@ -4757,9 +4913,6 @@ msgid "For more information about counselling and support services, please visit
 msgstr ""
 
 msgid "For more information, please visit %1."
-msgstr ""
-
-msgid "For payments-related queries:"
 msgstr ""
 
 msgid "For the third straight year, BetOnMarkets.com is voted 'Best Fixed-Odds Financial Trading Provider' by Shares Magazine UK. It's the last time we win it because Shares Magazine stops awarding in this category."
@@ -4841,6 +4994,9 @@ msgid "From time to time, DIEL may decide to provide the client with written or 
 msgstr ""
 
 msgid "Front Side"
+msgstr ""
+
+msgid "Front and back"
 msgstr ""
 
 msgid "Front side"
@@ -4948,13 +5104,22 @@ msgstr ""
 msgid "Get Started"
 msgstr ""
 
+msgid "Get link via SMS"
+msgstr ""
+
 msgid "Get out of the city centre and enjoy the serenity of island life free from the excesses of commercialisation. Friendly, helpful locals are also never far off."
+msgstr ""
+
+msgid "Get secure link"
 msgstr ""
 
 msgid "Get started with MT5"
 msgstr ""
 
 msgid "Get your price"
+msgstr ""
+
+msgid "Get your secure link"
 msgstr ""
 
 msgid "Getting Started"
@@ -4964,6 +5129,9 @@ msgid "Getting started"
 msgstr ""
 
 msgid "Given the Company's role as a Margin trading service provider as described in this agreement, the Company seeks to avoid undue market influence to the extent consistent with the client's trading needs and the Company's risk management policies and procedures. By continuing to use the Margin trading services described in this agreement, the client acknowledges that they are aware of the potential conflict of interest disclosed that may arise and cannot be completely eliminated, and they consent to the Company acting notwithstanding such potential conflict of interests."
+msgstr ""
+
+msgid "Glare detected"
 msgstr ""
 
 msgid "Global Banking & Finance Awards"
@@ -5053,7 +5221,13 @@ msgstr ""
 msgid "Government Officers"
 msgstr ""
 
+msgid "Grant access to your camera from your browser settings"
+msgstr ""
+
 msgid "Graphics Designer"
+msgstr ""
+
+msgid "Great, that's everything we need"
 msgstr ""
 
 msgid "Group History"
@@ -5105,6 +5279,9 @@ msgid "Here is some information about the data feeds used by the Company."
 msgstr ""
 
 msgid "Here's an example of the EUR/USD currency pair and its bid-ask price:"
+msgstr ""
+
+msgid "Here's how to do it:"
 msgstr ""
 
 msgid "Here, you can set and adjust the amount of money and time you spend trading on SmartTrader, WebTrader, and Binary Bot. Setting your limits is optional and you can adjust them at any time. If you don’t wish to set a specific limit, leave the field blank."
@@ -5243,6 +5420,9 @@ msgid "How to read the contract specifications table"
 msgstr ""
 
 msgid "How to read the table above"
+msgstr ""
+
+msgid "How to scan a QR code"
 msgstr ""
 
 msgid "How to trade CFDs"
@@ -5389,6 +5569,9 @@ msgstr ""
 msgid "If DIEL decides to introduce a new trading platform, it shall provide the client with a relevant notice within 30 days before it introduces the new trading platform or the additional trading platform. In such a notice, DIEL will outline information including, but not limited to, features and operations of the new trading platform. Thus, using its backup database on the MT5 trading platform, DIEL shall integrate all data to the new trading platform, including but not limited to open trades, historical trades/data, and accounts."
 msgstr ""
 
+msgid "If a court or regulatory body of competent jurisdiction declares any provision of the Terms to be invalid or unenforceable, the rest of the Terms shall remain in full force and effect."
+msgstr ""
+
 msgid "If a trade becomes unavailable after the transaction is made but before the trade is executed, the client may request a refund of the charged price. The Company reserves the right to accept or reject the client’s request after investigating the client’s claim. If technical problems prevent the execution of a trade, for example, if a disruption occurs in the data feeds that the Company cannot readily fix, the Company reserves the right to refund or reverse the trade."
 msgstr ""
 
@@ -5414,6 +5597,9 @@ msgid "If any provision of this agreement shall be held invalid or unenforceable
 msgstr ""
 
 msgid "If force majeure events last for more than 30 business days, the Party not suffering force majeure events may terminate this agreement immediately."
+msgstr ""
+
+msgid "If it doesn’t work, download a QR code scanner from Google Play or the App Store"
 msgstr ""
 
 msgid "If such documents expire, the Company reserves the right to request updated documentation."
@@ -5497,10 +5683,10 @@ msgstr ""
 msgid "If the client is an individual, they are over 18 years old and they have full capacity to enter into this agreement."
 msgstr ""
 
-msgid "If the client wishes to withdraw funds from their MT5 Real Account and close their MT5 Real Account, they may notify the Company by contacting %1 helpdesk %2. The client's MT5 Real Account may be closed if they do not have any Open Positions and all the amounts that were due to the Company have been settled."
+msgid "If the client wishes to withdraw funds from their MT5 Real Account and close their MT5 Real Account, they may notify the Company via %1live chat%2. The client's MT5 Real Account may be closed if they do not have any Open Positions and all the amounts that were due to the Company have been settled."
 msgstr ""
 
-msgid "If the client wishes to withdraw funds from their MT5 Real Account and/or close their MT5 Real Account, the client may notify the Company by contacting the helpdesk at %1. The client's MT5 Real Account may be closed if the client does not have any Open Positions and all amounts due to the Company have been settled."
+msgid "If the client wishes to withdraw funds from their MT5 Real Account and/or close their MT5 Real Account, the client may notify the Company via %1live chat%2. The client's MT5 Real Account may be closed if the client does not have any Open Positions and all amounts due to the Company have been settled."
 msgstr ""
 
 msgid "If the client would like to file a complaint with regards to the Company's service, the client can contact the Company at %1, providing any relevant details relating to the client's complaint. %2If you are registered with Deriv (Europe) Limited, you can also place a complaint by calling %3.%4 The Company will investigate each inquiry and provide a final response in the shortest time possible."
@@ -6103,9 +6289,6 @@ msgstr ""
 msgid "Is there a fee to join the %1 IB Programme?"
 msgstr ""
 
-msgid "Isle of Man"
-msgstr ""
-
 msgid "Issued under your own name"
 msgstr ""
 
@@ -6160,7 +6343,22 @@ msgstr ""
 msgid "It is the client's responsibility to keep their password and login ID confidential. The client agrees not to disclose their password and login ID to any other person."
 msgstr ""
 
-msgid "It is the responsibility of each client to read and understand this legal notice and the terms and conditions pursuant to which an acquisition of financial contracts via this site is governed."
+msgid "It is the responsibility of clients accessing this site to make sure that they understand and fully follow the relevant laws and regulations of their own country. The Company does not support any offerings or make any solicitations that are illegal in a client's country, and clients cannot use their account for such prohibited offerings. In some countries, the Company may not be permitted to offer products and services to clients unless they have taken proactive steps to solicit information about the Company's products and services and requested to be provided with them. Access to this site and the offering of certain trades via this site may be also restricted in some jurisdictions. It is the client's responsibility to know about the restrictions that apply in the client's country of residence and to observe them, as in continuing to access the Company's products and services, the client represents to the Company that the client is doing so legally and that, where relevant, the client has solicited information about the Company's products and services and requested to be provided with them."
+msgstr ""
+
+msgid "It is the responsibility of each client to read and understand this legal notice and the terms and conditions (\"Terms\") pursuant to which an acquisition of financial contracts via this site is governed."
+msgstr ""
+
+msgid "It may be disconnected. <fallback>Try using your phone instead</fallback>."
+msgstr ""
+
+msgid "It may take a few minutes to arrive"
+msgstr ""
+
+msgid "It must be an official photo ID"
+msgstr ""
+
+msgid "It will only take a couple of minutes."
 msgstr ""
 
 msgid "It's completely free to join our IB programme. We've never charged a fee and we never will."
@@ -6173,6 +6371,9 @@ msgid "It's time to expand. We set up a programming center in Cyberjaya - the Si
 msgstr ""
 
 msgid "Item"
+msgstr ""
+
+msgid "It’ll take longer to verify you if we can’t read it"
 msgstr ""
 
 msgid "J. Electronic trading platform and transactions"
@@ -6227,6 +6428,9 @@ msgid "Keep our infrastructure up-to-date with current cutting edge developments
 msgstr ""
 
 msgid "Keep safe"
+msgstr ""
+
+msgid "Keep this window open while using your mobile"
 msgstr ""
 
 msgid "Keep track of your authorised applications."
@@ -6353,9 +6557,6 @@ msgid "Latest bank statement or any government-issued letter which contains your
 msgstr ""
 
 msgid "Law"
-msgstr ""
-
-msgid "Laws regarding financial contracts vary throughout the world, and it is the responsibility of clients accessing this site to ensure that they understand and fully comply with any laws or regulations relevant to themselves in their own country. This site does not constitute, and may not be used for the purposes of, an offer or solicitation to anyone in any jurisdiction in which such offer or solicitation is not authorised or to any person to whom it is unlawful to make such offer or solicitation. Access to this site and the offering of financial contracts via this site in certain jurisdictions may be restricted and, accordingly, clients accessing this site are required to inform themselves about, and to observe, such restrictions."
 msgstr ""
 
 msgid "Lay out mockups and wireframes for app screens and web pages"
@@ -6502,6 +6703,9 @@ msgstr ""
 msgid "Link to and direct the Company's clients to the Programmer's Application."
 msgstr ""
 
+msgid "Linked to your computer"
+msgstr ""
+
 msgid "Links"
 msgstr ""
 
@@ -6520,9 +6724,6 @@ msgstr ""
 msgid "Litecoin vs US dollar"
 msgstr ""
 
-msgid "Live chat"
-msgstr ""
-
 msgid "Living in Asunción"
 msgstr ""
 
@@ -6539,6 +6740,12 @@ msgid "Living in Malta"
 msgstr ""
 
 msgid "Living on an island paradise has its perks. Labuan is one of those rare gems that has yet to undergo excessive commercialisation, thus retaining its small-town charm and tight-knit community vibe. Labuan welcomes tourists throughout the year as the island enjoys good weather all year round, with average daily temperature between 28 and 32 degrees Celsius."
+msgstr ""
+
+msgid "Loading"
+msgstr ""
+
+msgid "Loading..."
 msgstr ""
 
 msgid "Located 10 minutes away, Malaysia's intelligent garden city offers stunning greenery and exquisite structures."
@@ -6590,6 +6797,9 @@ msgid "Looking for desktop apps?"
 msgstr ""
 
 msgid "Looking for the %1 Desktop app?"
+msgstr ""
+
+msgid "Looks like you took too long"
 msgstr ""
 
 msgid "Loss"
@@ -6748,7 +6958,43 @@ msgstr ""
 msgid "Make another transfer"
 msgstr ""
 
+msgid "Make sure all of the document is in the photo"
+msgstr ""
+
+msgid "Make sure details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure everything is clear"
+msgstr ""
+
+msgid "Make sure full document is visible"
+msgstr ""
+
 msgid "Make sure that production and publication of content are technically accurate, well-written, and easily understandable"
+msgstr ""
+
+msgid "Make sure your card details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure your device has a working camera"
+msgstr ""
+
+msgid "Make sure your device's camera works"
+msgstr ""
+
+msgid "Make sure your license details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure your passport details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure your permit details are clear to read, with no blur or glare"
+msgstr ""
+
+msgid "Make sure your selfie clearly shows your face"
+msgstr ""
+
+msgid "Make sure§"
 msgstr ""
 
 msgid "Make your trade"
@@ -6761,9 +7007,6 @@ msgid "Making decisions about who to employ and what salary and benefits to offe
 msgstr ""
 
 msgid "Making sure of having effective and updated antivirus/antispyware software and firewall in place before using public WiFi"
-msgstr ""
-
-msgid "Malaysia"
 msgstr ""
 
 msgid "Malaysia's lower cost of living compared to most western countries means that you can enjoy a high quality of life. You'll also find easy access to world-class healthcare, plus several international schools, colleges, and universities that offer globally-recognised programmes."
@@ -7138,6 +7381,12 @@ msgstr ""
 msgid "Mother's maiden name"
 msgstr ""
 
+msgid "Move away from direct light"
+msgstr ""
+
+msgid "Move away from direct light — no glare"
+msgstr ""
+
 msgid "Mr"
 msgstr ""
 
@@ -7165,6 +7414,9 @@ msgstr ""
 msgid "Multilingual platforms"
 msgstr ""
 
+msgid "Multiple faces found"
+msgstr ""
+
 msgid "Multiple income opportunities"
 msgstr ""
 
@@ -7184,6 +7436,9 @@ msgid "Must be a clear, colour photo"
 msgstr ""
 
 msgid "Must be a clear, colour photo or scanned image"
+msgstr ""
+
+msgid "Must be under 10MB."
 msgstr ""
 
 msgid "My Players report: Displays a list of your clients according to their IDs and the date they signed up"
@@ -7246,7 +7501,7 @@ msgstr ""
 msgid "Neither party shall, without the prior written consent of the other, disclose any details or information acquired directly or indirectly as a result of the relationship contemplated by this Agreement to any person or use the same for their own benefit, other than as contemplated in this Agreement."
 msgstr ""
 
-msgid "Neither the Affiliate, the Affiliate's direct relatives, nor any clients controlled by the Affiliate are eligible to become clients, and the Affiliate shall not be entitled to any share of net revenue or any other remuneration from the Company in relation to such relatives, friends, or controlled clients."
+msgid "Neither the Affiliate's direct relatives nor any clients controlled by the Affiliate are eligible to become clients, and the Affiliate will not be entitled to any share of net revenue or any other remuneration from the Company in relation to such relatives or controlled clients."
 msgstr ""
 
 msgid "Neither the Company nor any of its directors, officers, managers, employees, or agents shall be liable for any loss, damage, or debt to the client arising directly or indirectly out of, or in connection with, this agreement. The client agrees to indemnify the Company and its directors, officers, managers, employees, or agents from, and against, any and all liabilities, losses, damages, costs, and expenses (including reasonable attorney's fees) incurred arising out of the client's failure to comply with any and all of their obligations set forth in this agreement and/or the Company's enforcement against the client of any and all of its rights under this agreement."
@@ -7360,6 +7615,12 @@ msgstr ""
 msgid "No delay, neglect, or forbearance on the part of either party in enforcing any term or condition of this Agreement against the other party shall either be, or be deemed to be, a waiver or in any way prejudice any right of that party under this Agreement."
 msgstr ""
 
+msgid "No document detected"
+msgstr ""
+
+msgid "No face found"
+msgstr ""
+
 msgid "No fiduciary duty"
 msgstr ""
 
@@ -7442,9 +7703,6 @@ msgid "Note:"
 msgstr ""
 
 msgid "Note: %1 does not charge any transfer fees."
-msgstr ""
-
-msgid "Note: A no deposit bonus worth 10 USD will be credited into your account within 24 hours after registration."
 msgstr ""
 
 msgid "Note: For any enquiries regarding disabled or excluded accounts, please contact %1Customer Support%2."
@@ -7558,10 +7816,16 @@ msgstr ""
 msgid "Once you click the 'Submit' button, the funds will be withdrawn from your account and transferred to your Client's account."
 msgstr ""
 
+msgid "Once you've finished we'll take you to the next step"
+msgstr ""
+
 msgid "One Zero"
 msgstr ""
 
 msgid "One of the first things most forex traders learn is how to read a currency pair. There are two parts to a currency pair"
+msgstr ""
+
+msgid "One or more of the client’s trades may be affected by a corporate action. In that case, the company may take one or more of the following measures:"
 msgstr ""
 
 msgid "One simple platform"
@@ -7633,6 +7897,9 @@ msgstr ""
 msgid "Only one account is allowed per person. No withdrawals and/or refunds may be collected on accounts opened in false names or on multiple accounts opened by the same person."
 msgstr ""
 
+msgid "Only your face can be in the selfie"
+msgstr ""
+
 msgid "Oops... Page Not Available"
 msgstr ""
 
@@ -7670,6 +7937,15 @@ msgid "Open contracts"
 msgstr ""
 
 msgid "Open positions"
+msgstr ""
+
+msgid "Open the link and complete the tasks"
+msgstr ""
+
+msgid "Open the link on your mobile"
+msgstr ""
+
+msgid "Open your new bank account"
 msgstr ""
 
 msgid "Open-Source Projects"
@@ -7912,6 +8188,9 @@ msgstr ""
 msgid "Passport"
 msgstr ""
 
+msgid "Passport photo page"
+msgstr ""
+
 msgid "Password Reset"
 msgstr ""
 
@@ -8066,6 +8345,12 @@ msgid "Personal Wealth Awards 2017"
 msgstr ""
 
 msgid "Personal details"
+msgstr ""
+
+msgid "Photo of your document"
+msgstr ""
+
+msgid "Photo of your face"
 msgstr ""
 
 msgid "Pillar 3 Disclosures"
@@ -8341,10 +8626,16 @@ msgstr ""
 msgid "Please tell us why you are closing your account (please select one):"
 msgstr ""
 
+msgid "Please try again"
+msgstr ""
+
 msgid "Please update your %1 to continue."
 msgstr ""
 
 msgid "Please wait for confirmation. Our customer support team will get back to you regarding your account status via email within four hours."
+msgstr ""
+
+msgid "Point your phone’s camera at the QR code"
 msgstr ""
 
 msgid "Portfolio"
@@ -8677,6 +8968,9 @@ msgstr ""
 msgid "Provide the customer support agent with the four-digit verification code below for confirmation."
 msgstr ""
 
+msgid "Provide the whole document page for best results"
+msgstr ""
+
 msgid "Provision of service"
 msgstr ""
 
@@ -8735,6 +9029,9 @@ msgid "Q3 2018"
 msgstr ""
 
 msgid "Q3 2019"
+msgstr ""
+
+msgid "Q3 2020"
 msgstr ""
 
 msgid "Q4 2018"
@@ -8833,7 +9130,7 @@ msgstr ""
 msgid "Real Synthetic"
 msgstr ""
 
-msgid "Real accounts will be archived after %1 days of inactivity. To re-activate a real account, contact binary.com help desk at %2support@binary.com%3"
+msgid "Real accounts will be archived after %1 days of inactivity. The client can request for the reactivation of a real account via %2live chat%3."
 msgstr ""
 
 msgid "Real-Money Account"
@@ -8887,10 +9184,19 @@ msgstr ""
 msgid "Recommend alternatives to redundant or obsolete systems"
 msgstr ""
 
+msgid "Recover camera access to continue face verification"
+msgstr ""
+
+msgid "Recovery"
+msgstr ""
+
 msgid "Recruit, train, and nurture affiliates and IBs in countries where Deriv Group is active, leveraging your direct knowledge and experience of the local market"
 msgstr ""
 
 msgid "Recruitment Process"
+msgstr ""
+
+msgid "Redo"
 msgstr ""
 
 msgid "Ref."
@@ -8915,6 +9221,12 @@ msgid "Referral tools"
 msgstr ""
 
 msgid "Refine and polish engineer-generated documents and open source projects to imbue them with clarity and consistency"
+msgstr ""
+
+msgid "Refresh"
+msgstr ""
+
+msgid "Refresh this page to restart the identity verification process"
 msgstr ""
 
 msgid "Refund policy"
@@ -8992,6 +9304,12 @@ msgstr ""
 msgid "Remaining Time"
 msgstr ""
 
+msgid "Remember to press stop when you're done. <fallback>Redo video actions</fallback>"
+msgstr ""
+
+msgid "Remove your glasses, if necessary"
+msgstr ""
+
 msgid "Replication,"
 msgstr ""
 
@@ -9037,6 +9355,9 @@ msgstr ""
 msgid "Research new payment systems that are available in the market"
 msgstr ""
 
+msgid "Resend link"
+msgstr ""
+
 msgid "Reset Barrier"
 msgstr ""
 
@@ -9064,6 +9385,9 @@ msgstr ""
 msgid "Reset to original settings"
 msgstr ""
 
+msgid "Residence permit"
+msgstr ""
+
 msgid "Residents of countries that have been identified by the FATF as having strategic deficiencies shall be restricted from opening an account with Deriv Investments (Europe) Limited."
 msgstr ""
 
@@ -9089,6 +9413,18 @@ msgid "Responsible trading"
 msgstr ""
 
 msgid "Rest assured that your information will only be used for CRS/FATCA reporting purposes and will be kept safe."
+msgstr ""
+
+msgid "Restart process on a different device"
+msgstr ""
+
+msgid "Restart the process on the latest version of Google Chrome"
+msgstr ""
+
+msgid "Restart the process on the latest version of Safari"
+msgstr ""
+
+msgid "Restrict the client’s account to prevent the client from closing any affected trades until the corporate action is passed"
 msgstr ""
 
 msgid "Restrictions"
@@ -9241,7 +9577,16 @@ msgstr ""
 msgid "Scalable"
 msgstr ""
 
+msgid "Scan QR code"
+msgstr ""
+
 msgid "Scan the QR code below with your authentication app. We recommend %1 or %2. Please note that %3 is not supported."
+msgstr ""
+
+msgid "Scan the QR code with your phone"
+msgstr ""
+
+msgid "Scans and photocopies are not accepted"
 msgstr ""
 
 msgid "Schedule and coordinate interviews with candidates"
@@ -9263,6 +9608,9 @@ msgid "Screen and approve website content and marketing promotions"
 msgstr ""
 
 msgid "Scrutinise clients' user behaviour on our trading platform"
+msgstr ""
+
+msgid "Search for country"
 msgstr ""
 
 msgid "Search..."
@@ -9319,10 +9667,19 @@ msgstr ""
 msgid "Select Trade Type"
 msgstr ""
 
+msgid "Select a %{country} document"
+msgstr ""
+
+msgid "Select country"
+msgstr ""
+
 msgid "Select currency"
 msgstr ""
 
 msgid "Select date"
+msgstr ""
+
+msgid "Select issuing country"
 msgstr ""
 
 msgid "Select market:"
@@ -9358,7 +9715,13 @@ msgstr ""
 msgid "Self-motivation and flexibility in task rotations"
 msgstr ""
 
+msgid "Selfie"
+msgstr ""
+
 msgid "Selfie holding proof of identity (front)"
+msgstr ""
+
+msgid "Selfie uploaded"
 msgstr ""
 
 msgid "Sell"
@@ -9379,10 +9742,22 @@ msgstr ""
 msgid "Sell your long-term contracts before expiry to protect any profits you may have made or to minimise your losses."
 msgstr ""
 
+msgid "Send a secure link to your phone"
+msgstr ""
+
+msgid "Send link"
+msgstr ""
+
+msgid "Send this one-time link to your phone"
+msgstr ""
+
 msgid "Send us your CV and cover letter. We'll compare your skills and experience with our requirements."
 msgstr ""
 
 msgid "Send your funds to the payment agent. The deposited funds, less the agent's commission, will show up in your account."
+msgstr ""
+
+msgid "Sending"
 msgstr ""
 
 msgid "Sep"
@@ -9496,6 +9871,9 @@ msgstr ""
 msgid "Should these expenses not be covered by funds in the Affiliate's account, the Company reserves the right to investigate alternative means for obtaining payment. For example, should the Affiliate's account have generated purchasing accounts, the Company will hold payment of commission for these accounts until such a time as the account for damages has been cleared."
 msgstr ""
 
+msgid "Show all details — including the bottom 2 lines"
+msgstr ""
+
 msgid "Show all historical transactions up to"
 msgstr ""
 
@@ -9568,6 +9946,9 @@ msgstr ""
 msgid "Some of the things that cryptocurrencies have in common include:"
 msgstr ""
 
+msgid "Something's gone wrong"
+msgstr ""
+
 msgid "Sorry,"
 msgstr ""
 
@@ -9586,10 +9967,10 @@ msgstr ""
 msgid "Sorry, deposits for this currency are currently disabled."
 msgstr ""
 
-msgid "Sorry, live chat is currently unavailable. Please email us at %1."
+msgid "Sorry, mobile version is not available yet."
 msgstr ""
 
-msgid "Sorry, mobile version is not available yet."
+msgid "Sorry, no mobile phone bills"
 msgstr ""
 
 msgid "Sorry, this feature is available to virtual accounts only."
@@ -9754,6 +10135,9 @@ msgstr ""
 msgid "Step outdoors and soak up the sun on one of Labuan's pristine beaches. There's also wreck diving, island hopping, kayaking, and deep sea fishing to look forward to."
 msgstr ""
 
+msgid "Steps required to continue verification on your mobile"
+msgstr ""
+
 msgid "Sticpay is a global e-wallet service for money transfers and online payments. For more information, please visit %1."
 msgstr ""
 
@@ -9847,13 +10231,40 @@ msgstr ""
 msgid "Submit a report on HackerOne of any potential security issue you found, along with any suggestions you have to resolve the issue."
 msgstr ""
 
+msgid "Submit document"
+msgstr ""
+
 msgid "Submit for review"
+msgstr ""
+
+msgid "Submit identity card (back)"
+msgstr ""
+
+msgid "Submit identity card (front)"
+msgstr ""
+
+msgid "Submit license (back)"
+msgstr ""
+
+msgid "Submit license (front)"
 msgstr ""
 
 msgid "Submit one of the documents below"
 msgstr ""
 
+msgid "Submit passport photo page"
+msgstr ""
+
+msgid "Submit residence permit (back)"
+msgstr ""
+
+msgid "Submit residence permit (front)"
+msgstr ""
+
 msgid "Submit the document below"
+msgstr ""
+
+msgid "Submit verification"
 msgstr ""
 
 msgid "Submit your CV and Cover Letter"
@@ -9982,6 +10393,36 @@ msgstr ""
 msgid "Table 6 - Likelihood of execution information"
 msgstr ""
 
+msgid "Take a photo"
+msgstr ""
+
+msgid "Take a photo of the back of your card"
+msgstr ""
+
+msgid "Take a photo of the back of your license"
+msgstr ""
+
+msgid "Take a photo of the front of your card"
+msgstr ""
+
+msgid "Take a photo of the front of your license"
+msgstr ""
+
+msgid "Take a photo of your passport photo page"
+msgstr ""
+
+msgid "Take a photo using the <fallback>basic camera mode</fallback> instead"
+msgstr ""
+
+msgid "Take a photo with your phone"
+msgstr ""
+
+msgid "Take a selfie"
+msgstr ""
+
+msgid "Take a selfie showing your face"
+msgstr ""
+
 msgid "Take a short-term or long-term view with trade durations from 10 seconds to 365 days."
 msgstr ""
 
@@ -9989,6 +10430,9 @@ msgid "Take all necessary steps at all times to ensure the non-disclosure and co
 msgstr ""
 
 msgid "Take necessary measures to correct and enhance IT operations"
+msgstr ""
+
+msgid "Take photo"
 msgstr ""
 
 msgid "Taking the following measures, the Company is committed to making sure that the client's personal data and transactions are secure:"
@@ -10034,9 +10478,6 @@ msgid "Telegram Bot"
 msgstr ""
 
 msgid "Telephone"
-msgstr ""
-
-msgid "Telephone:"
 msgstr ""
 
 msgid "Term"
@@ -10100,6 +10541,9 @@ msgid "Tether is a blockchain-based cryptocurrency whose cryptocoins in circulat
 msgstr ""
 
 msgid "Th"
+msgstr ""
+
+msgid "Thank you"
 msgstr ""
 
 msgid "Thank you for completing the Financial Assessment. You can now deposit funds and trade forex with real money on MetaTrader 5."
@@ -10918,6 +11362,9 @@ msgstr ""
 msgid "The anti-money laundering processes have the following effects on clients:"
 msgstr ""
 
+msgid "The applicable jurisdiction shall be one of the following:"
+msgstr ""
+
 msgid "The applicant also has the right to restrict the further processing of their personal data."
 msgstr ""
 
@@ -11326,6 +11773,9 @@ msgstr ""
 msgid "The leverage ratio refers to the number of times that the client's margin (the amount set aside from the client's account balance to open and maintain a transaction) can be \"leveraged\" to enter into a transaction. The denominator of the leverage ratio is always one. A 50:1 leverage is equivalent to a 2% margin requirement (1 divided by 50 = 2%). The leverage ratio that the Company/the client establishes will determine the amount of margin required. As leverage is inversely proportional to margin, as the leverage that the client sets for the client's account gets lower, the margin required to be set aside from the client's account balance (the client's margin requirement) gets higher."
 msgstr ""
 
+msgid "The link only works on mobile devices"
+msgstr ""
+
 msgid "The market conditions of the financial instruments that client orders are related to, which includes the need for timely execution, availability of price improvement, liquidity of the market, size of client order, and the potential impact on total consideration"
 msgstr ""
 
@@ -11384,6 +11834,9 @@ msgid "The patent means Regent Markets is the recognised pioneer of binary tradi
 msgstr ""
 
 msgid "The payout is the amount paid to an options trader if their prediction is correct."
+msgstr ""
+
+msgid "The photo should clearly show your document"
 msgstr ""
 
 msgid "The premier platform for trading binary options in the world's financial markets"
@@ -11503,9 +11956,6 @@ msgstr ""
 msgid "The trading services described in this agreement are OTC. This means that one or more of the Underlying Instruments in which the client transacts with DIEL, though quoted on an exchange, are not traded on an exchange when transacted through the electronic trading platform as described in this agreement."
 msgstr ""
 
-msgid "The transactions performed on this site and the relationship between clients and the Company are to be governed by, and construed in accordance with, the laws of the country of incorporation of the Company (the \"Jurisdiction\"). The client agrees that the Jurisdiction's courts will have sole jurisdiction to settle any disputes that may arise in relation thereto. For such purposes, the client irrevocably submits to the jurisdiction of the courts of the Jurisdiction in relation to any such dispute and agrees that any claim the client might have against the Company shall only be brought before the courts of the Jurisdiction. For further information on complaints and disputes, kindly refer to the Company's %1Complaints and disputes%2 section."
-msgstr ""
-
 msgid "The two passwords that you entered do not match."
 msgstr ""
 
@@ -11594,6 +12044,9 @@ msgid "These ST&Cs begin to apply on the date DIEL opens the client's account, a
 msgstr ""
 
 msgid "These ST&Cs form part of, and need to be read together with, the general terms and conditions relating to the use of %1."
+msgstr ""
+
+msgid "These are the documents most likely to show your current home address"
 msgstr ""
 
 msgid "These are trades where the trader predicts if a market will finish higher or lower than a specified price target."
@@ -11881,6 +12334,9 @@ msgstr ""
 msgid "Tips"
 msgstr ""
 
+msgid "Tips to take a good selfie"
+msgstr ""
+
 msgid "Tips:"
 msgstr ""
 
@@ -11938,6 +12394,9 @@ msgstr ""
 msgid "To maintain Open Positions, the client is required to have sufficient Account Equity to cover any Margin Requirement. If a client's Margin Level is less than the Margin Level set for their account, the client has entered into a Margin Call and is required to increase their Margin Level above the account's specified level in order to avoid a Stop Out to occur. The client may not be able to place an Order to open a transaction unless there is sufficient Account Equity to cover the Total Margin."
 msgstr ""
 
+msgid "To open a bank account, we will need to verify your identity."
+msgstr ""
+
 msgid "To perform this action, please set the %1currency%2 of your account."
 msgstr ""
 
@@ -11954,6 +12413,9 @@ msgid "To reset your password, enter the email address you used to create your a
 msgstr ""
 
 msgid "To reset your trading or investor password, please click the button below:"
+msgstr ""
+
+msgid "To smoothly verify you, we need a better photo"
 msgstr ""
 
 msgid "To which it, at the time of execution of this Agreement was, or subsequently has become, in the public domain through no fault of the parties"
@@ -11978,6 +12440,9 @@ msgid "Token name"
 msgstr ""
 
 msgid "Too addictive"
+msgstr ""
+
+msgid "Too many failed attempts"
 msgstr ""
 
 msgid "Top Up Virtual Account"
@@ -12352,6 +12817,12 @@ msgstr ""
 msgid "Try our other markets."
 msgstr ""
 
+msgid "Try using a JPG or PNG file"
+msgstr ""
+
+msgid "Try using another file type."
+msgstr ""
+
 msgid "Tu"
 msgstr ""
 
@@ -12514,6 +12985,9 @@ msgstr ""
 msgid "Unless otherwise advised, DIEL shall treat a client as a retail client. Clients may also request, by writing to DIEL, to change the category in which they have been classified, and this may have an effect on the level of protection afforded to them. DIEL will assess the client's knowledge and experience versus the appropriateness of the requested service/investment product."
 msgstr ""
 
+msgid "Unsupported browser"
+msgstr ""
+
 msgid "Up to %1"
 msgstr ""
 
@@ -12548,6 +13022,39 @@ msgid "Upgrade to %1 %2Gaming Account%3."
 msgstr ""
 
 msgid "Upgrade your account and start trading using real money."
+msgstr ""
+
+msgid "Upload"
+msgstr ""
+
+msgid "Upload a selfie from your computer"
+msgstr ""
+
+msgid "Upload anyway"
+msgstr ""
+
+msgid "Upload back of card from your computer"
+msgstr ""
+
+msgid "Upload back of license from your computer"
+msgstr ""
+
+msgid "Upload front of card from your computer"
+msgstr ""
+
+msgid "Upload front of license from your computer"
+msgstr ""
+
+msgid "Upload passport photo page"
+msgstr ""
+
+msgid "Upload passport photo page from your computer"
+msgstr ""
+
+msgid "Upload photo"
+msgstr ""
+
+msgid "Uploads successful"
 msgstr ""
 
 msgid "Upon closing a trade, the realised profit (or loss), which is represented by the difference between the opening level and closing level of the trade multiplied by the number of lots (volume), becomes due and payable by the Company to the client (or due and payable by the client to the Company in cases of realised loss)."
@@ -12649,7 +13156,13 @@ msgstr ""
 msgid "Verification code is wrong. Please use the link sent to your email."
 msgstr ""
 
+msgid "Verification complete"
+msgstr ""
+
 msgid "Verification required"
+msgstr ""
+
+msgid "Verify Identity"
 msgstr ""
 
 msgid "Verify Reset Password"
@@ -12670,7 +13183,7 @@ msgstr ""
 msgid "Verify new password"
 msgstr ""
 
-msgid "Version 48. Last modified 2019-05-10."
+msgid "Version 49. Last modified 23-11-2020."
 msgstr ""
 
 msgid "Video Room Facility"
@@ -12686,6 +13199,9 @@ msgid "View available payment methods"
 msgstr ""
 
 msgid "View chart"
+msgstr ""
+
+msgid "View from camera"
 msgstr ""
 
 msgid "View guide"
@@ -12829,6 +13345,9 @@ msgstr ""
 msgid "We can't validate your personal details because there is some information missing."
 msgstr ""
 
+msgid "We cannot verify you without using your camera"
+msgstr ""
+
 msgid "We delete an order with the largest margin reserved."
 msgstr ""
 
@@ -12928,6 +13447,9 @@ msgstr ""
 msgid "We'd love to hear what you think."
 msgstr ""
 
+msgid "We'll compare it with your document"
+msgstr ""
+
 msgid "We're almost there"
 msgstr ""
 
@@ -12943,6 +13465,9 @@ msgstr ""
 msgid "We're not obliged to conduct an appropriateness test, nor provide you with any risk warnings"
 msgstr ""
 
+msgid "We're now ready to verify your identity"
+msgstr ""
+
 msgid "We're projected to register over 377 million transactions this year, bringing the total number of contracts that were bought and sold on our platform since inception to over 1.42 billion."
 msgstr ""
 
@@ -12950,6 +13475,9 @@ msgid "We're really proud of this award. We're strongly committed to offering an
 msgstr ""
 
 msgid "We've grown in size over the years - both in terms of manpower and offices. We currently have over %1 employees across four offices in Malaysia, Malta, Paraguay and Dubai. Further growth in headcount is expected this year to cater to the increased demand in our products and services."
+msgstr ""
+
+msgid "We've sent a secure link to %{number}"
 msgstr ""
 
 msgid "Web and software developer"
@@ -12979,13 +13507,7 @@ msgstr ""
 msgid "Wednesday"
 msgstr ""
 
-msgid "Weekdays:"
-msgstr ""
-
 msgid "Weekend quotes"
-msgstr ""
-
-msgid "Weekend:"
 msgstr ""
 
 msgid "Welcome to Binary.com"
@@ -13067,6 +13589,9 @@ msgid "When executing client orders using the A-book model, the Company directs 
 msgstr ""
 
 msgid "When it comes to food, you'll be spoilt for choice. Cuisine from every part of the world can be found in Dubai, but that doesn't mean that local flavours should be ignored: chebab (saffron pancakes), khameer (puffed flatbreads), harees (savoury porridge), tender roasted meats, and pistachio-stuffed sweets are some of the local dishes that will excite your taste buds. There are also numerous economical options in the form of chain restaurants that cater to a variety of tastes."
+msgstr ""
+
+msgid "When prompted, you must enable camera access to continue"
 msgstr ""
 
 msgid "When the Affiliate's referred clients open an account with any member of the Deriv group, the Company assumes ownership of the database of names and contact information and any other data of the Affiliate's referred clients."
@@ -13220,6 +13745,9 @@ msgid "Where the Company ascertains any mistakes or flaws related to deposits or
 msgstr ""
 
 msgid "Where the Introducing Broker owns, or operates, a website and wishes to include Binary's services, the Introducing Broker shall"
+msgstr ""
+
+msgid "Where the client makes any false or misleading representation to the Company breaching the clauses under Governing laws and jurisdiction"
 msgstr ""
 
 msgid "Where the client's obligations to the Company are due and payable, the Company shall cease to treat as client money the amount equal to the amount of such obligations."
@@ -13513,6 +14041,9 @@ msgstr ""
 msgid "You can no longer change the currency because you've made a first-time deposit."
 msgstr ""
 
+msgid "You can now return to your computer to continue"
+msgstr ""
+
 msgid "You can open a fiat currency account without closing your cryptocurrency account."
 msgstr ""
 
@@ -13708,6 +14239,9 @@ msgstr ""
 msgid "You win the payout if the market price ends in the digit you have selected."
 msgstr ""
 
+msgid "You'll need to restart your verification on your computer"
+msgstr ""
+
 msgid "You're buying the %1 and selling the %2."
 msgstr ""
 
@@ -13801,10 +14335,16 @@ msgstr ""
 msgid "Your commission for the previous calendar month will be deposited into your account by the 15th of every month."
 msgstr ""
 
+msgid "Your computer may take a few seconds to update"
+msgstr ""
+
 msgid "Your demo account balance is currently %1 or less. You may top up your account with an additional %2."
 msgstr ""
 
 msgid "Your document is being reviewed, please check back in 1-3 days"
+msgstr ""
+
+msgid "Your face is needed in the selfie"
 msgstr ""
 
 msgid "Your fiat account's currency is currently set to %1."
@@ -13814,6 +14354,12 @@ msgid "Your fiat account's currency is set to %1."
 msgstr ""
 
 msgid "Your fund transfer is successful. Your new balances are:"
+msgstr ""
+
+msgid "Your link will expire in one hour"
+msgstr ""
+
+msgid "Your mobile link will expire in one hour"
 msgstr ""
 
 msgid "Your name, email address and contact number"
@@ -13909,9 +14455,6 @@ msgstr ""
 msgid "Your withdrawal limit is %1%2."
 msgstr ""
 
-msgid "Your withdrawal will be processed in one business day (Monday to Friday 9:00 am–5:00 pm GMT+8) unless stated otherwise."
-msgstr ""
-
 msgid "You’ll be logged out automatically."
 msgstr ""
 
@@ -13975,7 +14518,13 @@ msgstr ""
 msgid "b. Download and install the MT5 trading platform through the link %1"
 msgstr ""
 
+msgid "back"
+msgstr ""
+
 msgid "binary options, forex, forex trading, online trading, financial trading, binary trading, index trading, trading stock indices, forex trades, trading commodities, binary options strategy, binary broker, binary bet, binary options trading platform, binary strategy, finance, investment, trading"
+msgstr ""
+
+msgid "close"
 msgstr ""
 
 msgid "day"
@@ -13985,6 +14534,9 @@ msgid "days"
 msgstr ""
 
 msgid "details"
+msgstr ""
+
+msgid "e.g. United States"
 msgstr ""
 
 msgid "e.g. frontend.binaryws.com"
@@ -14033,6 +14585,9 @@ msgid "numbers"
 msgstr ""
 
 msgid "or"
+msgstr ""
+
+msgid "or upload photo – no scans or photocopies"
 msgstr ""
 
 msgid "paysafecard offers a voucher-based online payment method that does not require a bank account, credit card, or other personal information. For more information, please visit %1."
