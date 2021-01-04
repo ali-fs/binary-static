@@ -121,9 +121,10 @@ const AccountClosure = (() => {
             return;
         }
         el_remain_characters.innerHTML = localize(
-            'Remaining characters: [_1].', 255
-            - el_other_trading_platforms.value.length
-        - el_suggested_improves.value.length);
+            'Remaining characters: [_1].', (255
+                - el_other_trading_platforms.value.length
+                - el_suggested_improves.value.length).toString()
+        );
     };
 
     const onSelectedReasonChange = () => {
