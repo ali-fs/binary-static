@@ -5,13 +5,13 @@ import Loading from '../../../_common/components/loading.jsx';
 const leaving_reason_list = [
     { title: it.L('I have other financial priorities.'), id: 'other_priorities' },
     { title: it.L('I want to stop myself from trading.'), id: 'stop_trading' },
-    { title: it.L('I’m no longer interested in trading.'), id: 'not_interested' },
+    { title: it.L('I\'m no longer interested in trading.'), id: 'not_interested' },
     { title: it.L('I prefer another trading website.'), id: 'other_website' },
-    { title: it.L('The platforms aren’t user-friendly.'), id: 'not_user_friendly' },
+    { title: it.L('The platforms aren\'t user-friendly.'), id: 'not_user_friendly' },
     { title: it.L('Making deposits and withdrawals is difficult.'), id: 'difficult' },
     { title: it.L('The platforms lack key features or functionality.'), id: 'platform_lack' },
     { title: it.L('Customer service was unsatisfactory.'), id: 'customer_service' },
-    { title: it.L('I’m deactivating my account for other reasons.'), id: 'other' },
+    { title: it.L('I\'m deactivating my account for other reasons.'), id: 'other' },
 ];
 
 const AccountClosureDialog = () => (
@@ -121,6 +121,7 @@ const AccountClosure = () => (
 
                         <p className='no-margin' id='remain_characters'>{it.L('Remaining characters: 255.')}</p>
                         <p className='no-margin'>{it.L('Must be numbers, letters, and special characters . , \' -')}</p>
+                        <p className='no-margin errorfield invisible' id='error_no_selection'>{it.L('Please select at least one reason.')}</p>
 
                         <div id='error_msg' />
                         <div className='gr-padding-10 gr-child margin-top-20'>

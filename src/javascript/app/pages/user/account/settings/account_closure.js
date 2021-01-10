@@ -10,6 +10,7 @@ const applyToAllElements = require('../../../../../_common/utility').applyToAllE
 
 const AccountClosure = (() => {
     let reason_checkbox_list,
+        checked_reasons,
         el_form_closure_step_1,
         el_step_2_back,
         el_step_2_submit,
@@ -22,9 +23,11 @@ const AccountClosure = (() => {
         el_suggested_improves,
         el_remain_characters,
         el_deacivate_button,
+        el_error_no_selection,
         el_submit_loading;
 
     const number_of_steps = 3;
+    checked_reasons = '';
 
     const onLoad = () => {
         reason_checkbox_list = document.getElementsByName('reason-checkbox');
@@ -40,6 +43,7 @@ const AccountClosure = (() => {
         el_closure_loading = getElementById('closure_loading');
         el_deacivate_button = getElementById('deactivate');
         el_error_msg = getElementById('error_msg');
+        el_error_no_selection = getElementById('error_no_selection');
         el_submit_loading = getElementById('submit_loading');
 
         el_closure_loading.setVisibility(1);
@@ -115,21 +119,17 @@ const AccountClosure = (() => {
     const regex = new RegExp('^[a-zA-Z0-9., \'-]+$');
 
     const onTextChanged = (e) => {
-        if (!regex.test(e.data) ||
-            el_other_trading_platforms.value.length + el_suggested_improves.value.length > 255) {
+        if (!regex.test(e.data)) {
             document.execCommand('undo');
             return;
         }
-        el_remain_characters.innerHTML = localize(
-            'Remaining characters: [_1].', (255
-                - el_other_trading_platforms.value.length
-                - el_suggested_improves.value.length).toString()
-        );
+        validateReason();
     };
 
     const onSelectedReasonChange = () => {
         const num_selected_reasons = getSelectedReasonCount();
-        el_step_2_submit.classList[num_selected_reasons ? 'remove' : 'add']('button-disabled');
+        el_step_2_submit.classList[num_selected_reasons > 0 ? 'remove' : 'add']('button-disabled');
+        el_error_no_selection.setVisibility(num_selected_reasons > 0 ? 0 : 1);
         if (num_selected_reasons >= 3) {
             reason_checkbox_list.forEach(reason => {
                 if (!reason.checked) {
@@ -140,6 +140,8 @@ const AccountClosure = (() => {
         } else {
             reason_checkbox_list.forEach(reason => { reason.disabled = false; });
         }
+        getReason();
+        validateReason();
     };
 
     const getSelectedReasonCount = () => Array.from(reason_checkbox_list).filter(el => el.checked).length;
@@ -177,9 +179,8 @@ const AccountClosure = (() => {
     const showErrorPopUp = async (response) => {
         const mt5_login_list = (await BinarySocket.wait('mt5_login_list')).mt5_login_list;
         // clear all previously added details first
-        const previous_parent = document.getElementsByClassName('account-closure-details')[0];
-        if (previous_parent) previous_parent.parentNode.removeChild(previous_parent);
-
+        const previous_parent = document.getElementsByClassName('account-closure-details');
+        if (previous_parent) { Array.from(previous_parent).forEach(item => { item.parentNode.removeChild(item); }); }
         const el_parent = document.createElement('div');
         el_parent.className = 'gr-padding-10 gr-child account-closure-details';
         let section_id = '';
@@ -251,20 +252,35 @@ const AccountClosure = (() => {
         return '';
     };
 
+    const validateReason = () => {
+        const reason_length = 247
+            - checked_reasons.length
+            - el_other_trading_platforms.value.length
+            - el_suggested_improves.value.length;
+        el_remain_characters.innerHTML = localize('Remaining characters: [_1].', (reason_length).toString());
+        el_remain_characters.classList[reason_length < 0 ? 'add' : 'remove']('errorfield');
+        el_step_2_submit.classList[
+            reason_length < 0 || checked_reasons.length === 0
+                ? 'add'
+                : 'remove'
+        ]('button-disabled');
+    };
+
     const getReason = () => {
-        const selectedReasons = [];
+        const reasons = [];
         reason_checkbox_list.forEach(reason => {
             if (reason.checked) {
-                selectedReasons.push(getLabelTextOfCheckBox(reason.id));
+                reasons.push(getLabelTextOfCheckBox(reason.id));
             }
         });
+        checked_reasons = reasons.toString();
         if (el_other_trading_platforms.value.length !== 0) {
-            selectedReasons.push(el_other_trading_platforms.value);
+            reasons.push(el_other_trading_platforms.value);
         }
         if (el_suggested_improves.value.length !== 0) {
-            selectedReasons.push(el_suggested_improves.value);
+            reasons.push(el_suggested_improves.value);
         }
-        return selectedReasons.toString();
+        return reasons.toString();
     };
 
     return {
