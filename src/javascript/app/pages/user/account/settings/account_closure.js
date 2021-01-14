@@ -216,7 +216,7 @@ const AccountClosure = (() => {
                     display_name = getMTDisplay(account);
                 } else {
                     section_id = 'account_closure_open';
-                    display_name = Currency.getCurrencyName(Client.get('currency', account))
+                    display_name = Currency.getCurrencyName(Client.get('currency', account));
                 }
                 addSection(account, txt_positions);
             });
