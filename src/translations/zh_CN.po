@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-01-11 08:17\n"
+"PO-Revision-Date: 2021-01-14 06:37\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -30,6 +30,12 @@ msgstr "10"
 
 msgid "404"
 msgstr "404"
+
+msgid " (account created)"
+msgstr " (已开立账户)"
+
+msgid " (unavailable)"
+msgstr " (不可用)"
 
 msgid " All calls are recorded for training and monitoring purposes."
 msgstr " 为了利于培训和监控，所有通话将被录音。"
@@ -1086,6 +1092,9 @@ msgstr "透过添加+/-给障碍偏移量定义。例如, +0.005 表示比入市
 
 msgid "Add funds"
 msgstr "添加基金"
+
+msgid "Add more trade servers"
+msgstr "添加更多交易服务器"
 
 msgid "Additional business exposure:"
 msgstr "附加商业风险："
@@ -2503,6 +2512,9 @@ msgstr "选择赔付额后，系统将计算购入合约所需投注资金额。
 msgid "Choose a payout from $1 to $50,000."
 msgstr "赔付额的选择范围为 1 美元到 5 万美元。"
 
+msgid "Choose a server for your MT5 %1 account:"
+msgstr "选择 MT5 %1 账户的服务器:"
+
 msgid "Choose an account"
 msgstr "选择账户"
 
@@ -2617,8 +2629,8 @@ msgstr "客户同意遵守本公司为验证此条款是否合规而提出的合
 msgid "Clients are also advised that their rights may be prejudiced if they provide the wrong information as the Company would not be in a position to act in their best interests."
 msgstr "客户也被告知，如果客户提供错误的信息，其权利可能会受到损害，因为公司无法以客户的最佳利益行事。"
 
-msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, Hong Kong) will have their FX and CFD Metatrader 5 account opened with Deriv (BVI) Ltd. %1 is not available in the British Virgin Islands."
-msgstr "全球其他地区的客户 (不包括某些国家如美国、加拿大、香港) 可在  Deriv (BVI) Ltd. 开设外汇和差价合约Metatrader 5账户。%1在英属维尔京群岛不能使用。"
+msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, Hong Kong) who wish to trade CFDs on financial instruments and cryptocurrencies can have MetaTrader 5 accounts under Deriv (BVI) Ltd. %1 is not available in the British Virgin Islands."
+msgstr ""
 
 msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, Hong Kong) will have their FX and CFD Metatrader 5 account opened with Deriv (V) Ltd. %1 is not available in the Republic of Vanuatu."
 msgstr "全球其他地区的客户 (不包括某些国家如美国、加拿大、香港) 可在 Deriv (V) Ltd. 开设外汇和差价合约 Metatrader 5 账户。%1在瓦努阿图不能使用。"
@@ -3375,10 +3387,10 @@ msgid "DIEL has the duty to disclose all the circumstances that are material to 
 msgstr "DIEL 有义务在提供此类产品和/或服务之前和期间向客户披露其提供的产品或服务的所有重大状况。DIEL 有义务根据其受许可的活动这样做。"
 
 msgid "DIEL is a company established in Malta under registration number C70156 and having its registered office at W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta."
-msgstr ""
+msgstr "DIEL 是在马耳他成立的公司，注册号为 C70156，公司注册地址是 W Business Centre, Level 3, Triq Dun Karm, Birkirkara, BKR 9033, Malta。"
 
 msgid "DIEL is authorised and regulated by the Malta Financial Services Authority (\"MFSA\") under the Investment Services Act (Cap. 370, Laws of Malta) (the \"Act\") to carry on investment business. It is also authorised and subject to limited regulation by the Financial Conduct Authority in the UK. Details about the extent of our authorisation and regulation by the Financial Conduct Authority are available from us on request. DIEL is authorised by the MFSA to deal on own account (i.e. offer and act as counterparty to trades) and to execute orders on behalf of other clients; both services are in relation to financial derivative products relating to foreign exchange, indices and other financial products or assets (\"Financial Products\"). DIEL is not authorised to and does not offer investment, financial, legal, tax, regulatory, and/or other types of advice or state an opinion in relation to a Transaction under any circumstances. Clients should get independent advice from an investment adviser if they have any doubts about dealing in financial products."
-msgstr ""
+msgstr "DIEL 由马耳他金融服务管理局（“MFSA”）根据《投资服务法令》（《马耳他法律》第370章）（“法令”）授权执行投资业务和受其监管。并由英国金融行为监管局授权并受其监管。我们可应要求提供有关金融行为监管局授权和监管范围的详细信息。MFSA 授权 DIEL 以自己的账户交易（即提供报价并充当交易对手）并代表其他客户执行订单；以上两项服务均涉及与外汇、指数和其他金融产品或资产（“金融产品”）有关的金融衍生产品。DIEL 在任何情况下均无权提供任何投资、财务、法律、税务、监管和/或其他类型的建议，也不可就任何交易发表意见。如果客户对金融产品交易有任何疑问，须向投资顾问寻求独立建议。"
 
 msgid "DIEL is authorised by the MFSA to deal on own account (i.e. offer and act as counterparty to trades) and to execute orders on behalf of other clients; both services are in relation to financial derivative products relating to foreign exchange, indices and other financial products or assets (\"Financial Products\"). DIEL is not authorised to and does not offer investment, financial, legal, tax, regulatory, and/or other types of advice or state an opinion in relation to a Transaction under any circumstances. Clients should get independent advice from an investment adviser if they have any doubts about dealing in financial products."
 msgstr "DIEL经 MFSA 授权，在自己的账户进行交易（例如：向交易者提供服务，或担任交易对手）及代替其他客户执行订单。这两种服务和金融衍生产品有关，也和外汇、指数及其他金融产品或资产（“金融产品”）有关。任何情况下，DIEL 无权也不提供任何与交易有关的投资、金融、法律、税务、法规和/或其它类型的咨询或提出意见。如果客户对金融产品有任何疑问，须向金融顾问寻求独立的建议。"
@@ -5802,7 +5814,7 @@ msgid "If you reside in the UK and are considering self-exclusion, you may wish 
 msgstr "如果您在英国居住且要自我禁止, 您可考虑在 GAMSTOP 注册。"
 
 msgid "If you reside in the UK and you are unhappy with our response you may escalate your complaint to the %1Financial Ombudsman Service%2."
-msgstr ""
+msgstr "如果您在英国居住，并对我们的答复不满意，则可以进一步向%1金融申诉专员服务%2提出投诉。"
 
 msgid "If you score well in the hackathon or talent test, we'll send you a Self-Assessment Topgrading Interview (SATI) questionnaire. Do well on the SATI and we'll invite you for an interview with a member of our recruitment team."
 msgstr "如果您在黑客松或人才测试中取得高分, 我们将向您发送一份自我评估精英面谈 (SATI) 问卷。如果您通过了SATI，我们将邀请您参与我们招聘团队成员的面试。"
@@ -11037,8 +11049,8 @@ msgstr "公司保留随时修改、补充或更换这些条款的权利。如有
 msgid "The Company reserves the right to refuse the Affiliate's referrals' application to open an account (or to close the Affiliate's account), as deemed necessary, to comply with any requirements that the Company may periodically establish and/or that may be required under applicable laws, rules, and regulations."
 msgstr "为遵守公司定期建立和/或适用法律、规则和条例的任何要求，公司保留在必要时拒绝联盟会员的推介人申请开立（或关闭）账户的权利。"
 
-msgid "The Company reserves the right to refuse the client's request to open an MT5 Real Account for any reason, and any MT5 Real Account may be closed at the Company's discretion at any time."
-msgstr "不论是什么原因，公司保留拒绝客户开立MT5真实账户请求， 并随时由公司自主决定关闭任何MT5真实账户的权利。"
+msgid "The Company reserves the right to refuse the client's request to open an MT5 Real Account for any reason, and any MT5 Real Account may be closed at the Company's discretion at any time upon 7-day notice."
+msgstr ""
 
 msgid "The Company reserves the right to refuse to do business with, to discontinue to do business with, and to reverse the transactions of clients who engage in any trading activity"
 msgstr "如果客户从事任何的交易活动如下，公司保留拒绝与客户进行业务、停止业务运作以及撤销交易的权利"
@@ -12636,6 +12648,9 @@ msgstr "在我们的MT5平台使用杠杆和可变点差交易流行的加密货
 
 msgid "Trade popular major and minor currency pairs, plus Smart FX indices – weighted indices that measure the value of a currency against a basket of major currencies."
 msgstr "交易流行的主要和次要货币对，加上智能外汇指数 - 衡量与一篮子主要货币相兑的指定货币价值的加权指数。"
+
+msgid "Trade server:"
+msgstr "交易服务器:"
 
 msgid "Trade type"
 msgstr "交易类型"
