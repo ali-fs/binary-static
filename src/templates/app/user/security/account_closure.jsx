@@ -30,7 +30,7 @@ const AccountClosureDialog = () => (
             </div>
             <div className='center-text gr-centered gr-padding-10 gr-child'>
                 <a className='modal-back back button button-secondary' href='javascript:;'><span id='span-btn'>{it.L('Back')}</span></a>
-                <button id='deactivate' className='button btn-size button-disabled' type='submit'>{it.L('Deactivate')}</button>
+                <button id='deactivate' className='button btn-size' type='submit'>{it.L('Deactivate')}</button>
             </div>
         </div>
     </div>
