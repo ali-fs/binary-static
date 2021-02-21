@@ -257,7 +257,9 @@ const AccountClosure = (() => {
             - checked_reasons.length
             - el_other_trading_platforms.value.length
             - el_suggested_improves.value.length;
-        el_remain_characters.innerHTML = localize('Remaining characters: [_1].', (reason_length).toString());
+        el_remain_characters.innerHTML = localize('Remaining characters: [_1].', 
+                (reason_length < 0 ? 0 : reason_length).toString()
+        );
         el_remain_characters.classList[reason_length < 0 ? 'add' : 'remove']('errorfield');
         el_step_2_submit.classList[
             reason_length < 0 || checked_reasons.length === 0
