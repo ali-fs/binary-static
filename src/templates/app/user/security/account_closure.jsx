@@ -119,8 +119,9 @@ const AccountClosure = () => (
                             <textarea type='text-area' id='suggested_improves' maxLength='255' placeholder='What could we do to improve?' />
                         </div>
 
-                        <p className='no-margin' id='remain_characters'>{it.L('Remaining characters: 255.')}</p>
+                        <p className='no-margin' id='remain_characters'>{it.L('Remaining characters: 247.')}</p>
                         <p className='no-margin'>{it.L('Must be numbers, letters, and special characters . , \' -')}</p>
+                        <p className='no-margin invisible' id='remain_characters_warning' />
                         <p className='no-margin errorfield invisible' id='error_no_selection'>{it.L('Please select at least one reason.')}</p>
 
                         <div id='error_msg' />

@@ -10,7 +10,7 @@ const applyToAllElements = require('../../../../../_common/utility').applyToAllE
 
 const AccountClosure = (() => {
     let reason_checkbox_list,
-        checked_reasons,
+        selected_reasons,
         el_form_closure_step_1,
         el_step_2_back,
         el_step_2_submit,
@@ -22,12 +22,13 @@ const AccountClosure = (() => {
         el_other_trading_platforms,
         el_suggested_improves,
         el_remain_characters,
+        el_remain_characters_warning,
         el_deacivate_button,
         el_error_no_selection,
         el_submit_loading;
 
     const number_of_steps = 3;
-    checked_reasons = '';
+    selected_reasons = '';
 
     const onLoad = () => {
         reason_checkbox_list = document.getElementsByName('reason-checkbox');
@@ -38,6 +39,7 @@ const AccountClosure = (() => {
         el_other_trading_platforms = getElementById('other_trading_platforms');
         el_suggested_improves = getElementById('suggested_improves');
         el_remain_characters = getElementById('remain_characters');
+        el_remain_characters_warning = getElementById('remain_characters_warning');
         el_account_closure_warning = getElementById('account_closure_warning');
         el_account_closure_error = getElementById('account_closure_error');
         el_closure_loading = getElementById('closure_loading');
@@ -106,6 +108,9 @@ const AccountClosure = (() => {
             element.addEventListener('change', () => { onSelectedReasonChange(); });
         });
 
+        el_suggested_improves.addEventListener('keydown', onKeyDown);
+        el_other_trading_platforms.addEventListener('keydown', onKeyDown);
+
         el_suggested_improves.addEventListener('input', onTextChanged);
         el_other_trading_platforms.addEventListener('input', onTextChanged);
     };
@@ -117,9 +122,16 @@ const AccountClosure = (() => {
     };
 
     const regex = new RegExp('^[a-zA-Z0-9., \'-]+$');
+    const delete_key_codes = [8, 46];
+    let last_key_code = null;
+
+    const onKeyDown = (e) => {
+        last_key_code = e.keyCode;
+    };
 
     const onTextChanged = (e) => {
-        if (!regex.test(e.data)) {
+        if ((!regex.test(e.data) || getRemainingCharacters() < 0)
+            && !delete_key_codes.includes(last_key_code)) {
             document.execCommand('undo');
             return;
         }
@@ -253,16 +265,19 @@ const AccountClosure = (() => {
     };
 
     const validateReason = () => {
-        const reason_length = 247
-            - checked_reasons.length
-            - el_other_trading_platforms.value.length
-            - el_suggested_improves.value.length;
+        const remaining_length = getRemainingCharacters();
         el_remain_characters.innerHTML = localize('Remaining characters: [_1].',
-            (reason_length < 0 ? 0 : reason_length).toString()
+            remaining_length.toString()
         );
-        el_remain_characters.classList[reason_length < 0 ? 'add' : 'remove']('errorfield');
+        if (remaining_length < 20) {
+            const warning_error = localize('Please enter no more than [_1] characters for both fields.',
+                247 - selected_reasons.length);
+            el_remain_characters_warning.innerHTML = warning_error;
+            el_remain_characters_warning.classList[remaining_length < 0 ? 'add' : 'remove']('errorfield');
+            el_remain_characters_warning.setVisibility(1);
+        } else el_remain_characters_warning.setVisibility(0);
         el_step_2_submit.classList[
-            reason_length < 0 || checked_reasons.length === 0
+            remaining_length < 0 || selected_reasons.length === 0
                 ? 'add'
                 : 'remove'
         ]('button-disabled');
@@ -275,7 +290,7 @@ const AccountClosure = (() => {
                 reasons.push(getLabelTextOfCheckBox(reason.id));
             }
         });
-        checked_reasons = reasons.toString();
+        selected_reasons = reasons.toString();
         if (el_other_trading_platforms.value.length !== 0) {
             reasons.push(el_other_trading_platforms.value);
         }
@@ -284,6 +299,11 @@ const AccountClosure = (() => {
         }
         return reasons.toString();
     };
+
+    const getRemainingCharacters = () => 247
+        - selected_reasons.length
+        - el_other_trading_platforms.value.length
+        - el_suggested_improves.value.length;
 
     return {
         onLoad,
