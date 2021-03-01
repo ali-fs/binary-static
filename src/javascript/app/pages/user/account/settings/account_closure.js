@@ -28,6 +28,7 @@ const AccountClosure = (() => {
         el_submit_loading;
 
     const number_of_steps = 3;
+    const max_reason_length = 250;
     selected_reasons = '';
 
     const onLoad = () => {
@@ -130,13 +131,16 @@ const AccountClosure = (() => {
     };
 
     const onTextChanged = (e) => {
-        if ((!regex.test(e.data) || getRemainingCharacters() < 0)
+        const remaining_length =  max_reason_length - getReason().length;
+        if ((!regex.test(e.data) || remaining_length < 0)
             && !delete_key_codes.includes(last_key_code)) {
             document.execCommand('undo');
             return;
         }
         validateReason();
     };
+
+    const getSelectedReasonCount = () => Array.from(reason_checkbox_list).filter(el => el.checked).length;
 
     const onSelectedReasonChange = () => {
         const num_selected_reasons = getSelectedReasonCount();
@@ -152,11 +156,15 @@ const AccountClosure = (() => {
         } else {
             reason_checkbox_list.forEach(reason => { reason.disabled = false; });
         }
-        getReason();
+        const reasons = [];
+        reason_checkbox_list.forEach(reason => {
+            if (reason.checked) {
+                reasons.push(getLabelTextOfCheckBox(reason.id));
+            }
+        });
+        selected_reasons = reasons.toString();
         validateReason();
     };
-
-    const getSelectedReasonCount = () => Array.from(reason_checkbox_list).filter(el => el.checked).length;
 
     const deactivate = async () => {
         el_submit_loading.setVisibility(1);
@@ -265,15 +273,14 @@ const AccountClosure = (() => {
     };
 
     const validateReason = () => {
-        const remaining_length = getRemainingCharacters();
+        const remaining_length = max_reason_length - getReason().length;
         el_remain_characters.innerHTML = localize('Remaining characters: [_1].',
-            remaining_length.toString()
+            (remaining_length < 0 ? 0 : remaining_length).toString()
         );
-        if (remaining_length < 20) {
+        if (remaining_length < 0) {
             const warning_error = localize('Please enter no more than [_1] characters for both fields.',
-                247 - selected_reasons.length);
+                max_reason_length - selected_reasons.length);
             el_remain_characters_warning.innerHTML = warning_error;
-            el_remain_characters_warning.classList[remaining_length < 0 ? 'add' : 'remove']('errorfield');
             el_remain_characters_warning.setVisibility(1);
         } else el_remain_characters_warning.setVisibility(0);
         el_step_2_submit.classList[
@@ -284,26 +291,15 @@ const AccountClosure = (() => {
     };
 
     const getReason = () => {
-        const reasons = [];
-        reason_checkbox_list.forEach(reason => {
-            if (reason.checked) {
-                reasons.push(getLabelTextOfCheckBox(reason.id));
-            }
-        });
-        selected_reasons = reasons.toString();
+        let reason_string = selected_reasons;
         if (el_other_trading_platforms.value.length !== 0) {
-            reasons.push(el_other_trading_platforms.value);
+            reason_string += `,${el_other_trading_platforms.value}`;
         }
         if (el_suggested_improves.value.length !== 0) {
-            reasons.push(el_suggested_improves.value);
+            reason_string += `,${el_suggested_improves.value}`;
         }
-        return reasons.toString();
+        return reason_string;
     };
-
-    const getRemainingCharacters = () => 247
-        - selected_reasons.length
-        - el_other_trading_platforms.value.length
-        - el_suggested_improves.value.length;
 
     return {
         onLoad,
