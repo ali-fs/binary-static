@@ -10,16 +10,19 @@ const Virtual = () => (
 
         <form id='virtual-form' className='gr-padding-10 invisible'>
             <Fieldset legend={it.L('Details')}>
+                <FormRow type='select' id='residence' className='invisible' label={it.L('Country of residence')} attributes={{ single: 'single' }} />
+
                 <FormRow
                     type='password'
                     id='client_password'
-                    label={it.L('Choose a password')}
-                    hint={it.L('Minimum of eight lower and uppercase English letters with numbers')}
+                    className='password-input'
+                    label={it.L('New password')}
+                    hint={it.L('Strong passwords contain at least 8 characters, combine uppercase and lowercase letters, numbers, and symbols.')}
+                    hint_className='password-input-hint'
                 />
 
-                <FormRow type='password' id='repeat_password' label={it.L('Re-enter password')} />
+                {/* <p>{it.L('Strong passwords contain at least 8 characters, combine uppercase and lowercase letters, numbers, and symbols.')}</p> */}
 
-                <FormRow type='select' id='residence' className='invisible' label={it.L('Country of residence')} attributes={{ single: 'single' }}  />
 
                 <FormRow
                     type='checkbox'
@@ -29,12 +32,12 @@ const Virtual = () => (
                     label_row_id='email_consent_label'
                     label={it.L('Receive news and special offers')}
                 />
+                <div className='center-text'>
+                    <button className='button margin-top-32' type='submit'>{it.L('Create new virtual-money account')}</button>
+                    <p className='errorfield invisible' id='error-account-opening' />
+                </div>
             </Fieldset>
 
-            <div className='center-text'>
-                <button className='button' type='submit'>{it.L('Create new virtual-money account')}</button>
-                <p className='errorfield invisible' id='error-account-opening' />
-            </div>
         </form>
     </div>
 );

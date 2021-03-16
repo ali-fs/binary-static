@@ -24,6 +24,7 @@ export const FormRow = ({
     is_bold,
     tooltip,
     hint,
+    hint_className,
     has_geovalidator,
     attributes = {},
     input_prefix,
@@ -144,7 +145,7 @@ export const FormRow = ({
             <div className={inner_el_classname()}>
                 {getInnerElement()}
                 {hint &&
-                    <p className='hint no-margin'>{hint}</p>
+                    <p className={`hint no-margin ${hint_className || ''}`}>{hint}</p>
                 }
             </div>
             {has_geovalidator ? children : undefined}

@@ -2,7 +2,7 @@ import React from 'react';
 import { Fieldset } from '../../_common/components/forms.jsx';
 
 const PepDeclaration = () => (
-    <Fieldset legend={it.L('PEP Declaration')}>
+    <Fieldset legend={it.L('Real accounts are not available to politically exposed persons (PEPs).')} className='fieldset_margin_top'>
         <div className='gr-12'>
             <label>{it.L('A PEP is an individual who is or has been entrusted with a prominent public function. This status extends to a PEP\'s relatives and close associates.')}&nbsp;
                 <a id='pep_declaration_note_toggle' className='toggle-arrow' href='javascript:;'>{it.L('Learn more')}</a>
