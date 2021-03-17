@@ -1,34 +1,38 @@
-const GetCurrency        = require('../../../../pages/user/get_currency');
-const Client             = require('../../../../base/client');
-const BinarySocket       = require('../../../../base/socket');
-const Currency           = require('../../../../common/currency');
-const localize           = require('../../../../../_common/localize').localize;
-const Url                = require('../../../../../_common/url');
+const BinarySocket = require('../../../../base/socket');
+const Currency = require('../../../../common/currency');
+const localize = require('../../../../../_common/localize').localize;
+const Url = require('../../../../../_common/url');
 
 const SetCurrency = (() => {
     let $submit;
 
-    const init = async () => {
-        const $currency_list    = $('.currency_list');
-        const $error            = $('#set_currency').find('.error-msg');
+    const init = async (real_account_signup_target) => {
+        const $currency_list = $('.currency_list');
+        const $error = $('#set_currency').find('.error-msg');
         const landing_company = (await BinarySocket.wait('landing_company')).landing_company;
-        const payout_currencies = (await BinarySocket.wait('payout_currencies')).payout_currencies;
-      
-        populateCurrencies(getAvailableCurrencies(landing_company, payout_currencies));
+        // const payout_currencies = (await BinarySocket.wait('payout_currencies')).payout_currencies;
+
+        populateCurrencies(getAvailableCurrencies(landing_company, real_account_signup_target));
 
         onSelection($currency_list, $error, true);
     };
 
-    const getAvailableCurrencies = (landing_company, payout_currencies) =>
-        Client.get('landing_company_shortcode') === 'svg' ? GetCurrency.getCurrencies(landing_company) : payout_currencies;
+    const getAvailableCurrencies = (landing_company, real_account_signup_target) => {
+        // Client.get('landing_company_shortcode') === 'svg' ? GetCurrency.getCurrencies(landing_company) : payout_currencies;
+        const target = real_account_signup_target === 'maltainvest' ? 'financial' : 'gaming';
+        if (landing_company[`${target}_company`]) {
+            return landing_company[`${target}_company`].legal_allowed_currencies;
+        }
+        return [];
+    };
 
     const populateCurrencies = (currencies) => {
-        const $fiat_currencies  = $('<div/>');
+        const $fiat_currencies = $('<div/>');
         const $cryptocurrencies = $('<div/>');
         currencies.forEach((c) => {
             const $wrapper = $('<div/>', { class: 'gr-2 gr-4-m currency_wrapper', id: c });
-            const $image   = $('<div/>').append($('<img/>', { src: Url.urlForStatic(`images/pages/set_currency/${c.toLowerCase()}.svg`) }));
-            const $name    = $('<div/>', { class: 'currency-name' });
+            const $image = $('<div/>').append($('<img/>', { src: Url.urlForStatic(`images/pages/set_currency/${c.toLowerCase()}.svg`) }));
+            const $name = $('<div/>', { class: 'currency-name' });
 
             if (Currency.isCryptocurrency(c)) {
                 const $display_name = $('<span/>', {
@@ -196,7 +200,7 @@ const SetCurrency = (() => {
      * @param {boolean} is_btn_enabled // Enable button
      */
     const removeError = ($error, is_btn_enabled) => {
-        if ($error){
+        if ($error) {
             $error.setVisibility(0);
         }
         if ($submit && is_btn_enabled) {

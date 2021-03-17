@@ -7,7 +7,7 @@ const currency_selector_fields = [
         supported_in : ['maltainvest', 'malta', 'svg', 'iom'],
         default_value: '',
         rules        : [['custom', {
-            value  : () => $('.selected').find('.currency-name').text(),
+            value  : () => $('.selected').find('.currency-name').text() || '',
             func   : (value) => value !== '',
             message: 'Please select the currency for this account.',
         }]],

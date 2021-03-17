@@ -2,8 +2,6 @@ const moment = require('moment');
 const localize = require('../../../../../_common/localize').localize;
 const PersonalDetailForm = require('../new_account_modules/personal_detail_form');
 
-// import { toMoment, getErrorMessages, generateValidationFunction, getDefaultFields, validLength } from '@deriv/shared';
-
 const getCountryName = (residence_list, countryCode) => {
     const country = residence_list.find(item => item.value === countryCode);
     return country ? country.text : '';

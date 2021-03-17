@@ -6,6 +6,7 @@ const FormManager = require('../../../common/form_manager');
 const FormProgress = require('../../../common/form_progress');
 const getElementById = require('../../../../_common/common_functions').getElementById;
 const param = require('../../../../_common/url').param;
+const { localize } = require('../../../../_common/localize');
 
 const RealAccountOpening = (() => {
     let real_account_signup_target,
@@ -42,8 +43,11 @@ const RealAccountOpening = (() => {
         });
         current_step = 0;
         steps.forEach(step => {
-            step.body_module.init(step.fields, real_account_signup_target === 'maltainvest');
+            step.body_module.init(step.fields, real_account_signup_target);
         });
+        getElementById('page_title').innerHTML = real_account_signup_target === 'maltainvest' ?
+            localize('Financial Account Opening') :
+            localize('Gaming Account Opening');
         getElementById('loading').setVisibility(0);
         getElementById('real_account_wrapper').setVisibility(1);
         renderStep();

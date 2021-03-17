@@ -14,7 +14,7 @@ const RealAccount = () => (
 
         <div className='gr-12 static_full invisible' id='real_account_wrapper'>
 
-            <h1>{it.L('Financial Account Opening')}</h1>
+            <h1 id='page_title' />
 
             <div className='form-progress' id='form_progress' />
 
