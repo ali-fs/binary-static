@@ -14,6 +14,7 @@ const Virtual = () => (
 
                 <FormRow
                     type='password'
+                    has_password_meter
                     id='client_password'
                     className='password-input'
                     label={it.L('New password')}
