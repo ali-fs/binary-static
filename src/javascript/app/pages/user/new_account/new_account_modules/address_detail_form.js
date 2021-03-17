@@ -10,11 +10,13 @@ const AddressDetailForm = (() => {
     const init = async (fields) => {
         if (fields.some(field => field.id === 'address_state')) {
             let $address_state = $('#address_state');
-            const client_state = (await BinarySocket.send({ get_settings: 1 })).get_settings.address_state
+            const client_state = (await BinarySocket.send({ get_settings: 1 })).get_settings.address_state;
             const state_list = (await BinarySocket.send({ states_list: Client.get('residence') })).states_list;
             if (state_list && state_list.length > 0) {
-                $address_state.append(makeOption({ text: localize('Please select'), value: '' }))
-                state_list.forEach((state) => { $address_state.append(makeOption({ text: state.text, value: state.value })); });
+                $address_state.append(makeOption({ text: localize('Please select'), value: '' }));
+                state_list.forEach((state) => {
+                    $address_state.append(makeOption({ text: state.text, value: state.value }));
+                });
                 $address_state.select2({
                     matcher(params, data) {
                         return SelectMatcher(params, data);
@@ -28,7 +30,7 @@ const AddressDetailForm = (() => {
             }
         }
 
-        const texts = ['address_line_1', 'address_line_2', 'address_city', 'address_postcode']
+        const texts = ['address_line_1', 'address_line_2', 'address_city', 'address_postcode'];
 
         fields.forEach(field => {
             if (texts.includes(field.id)) {
@@ -38,9 +40,9 @@ const AddressDetailForm = (() => {
                     .attr({ 'data-force': true, 'data-value': field.default_value });
             }
 
-            getElementById(`${field.section}_section`).setVisibility(1)
-            getElementById(`${field.id}_row`).setVisibility(1)
-        })
+            getElementById(`${field.section}_section`).setVisibility(1);
+            getElementById(`${field.id}_row`).setVisibility(1);
+        });
     };
 
     return {

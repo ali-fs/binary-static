@@ -136,7 +136,7 @@ const FormManager = (() => {
             if (Validation.validate(options.form_selector)) {
                 const req = $.extend({}, options.obj_request, getFormData(options.form_selector));
                 if (typeof options.get_submitted_data === 'function') {
-                    options.get_submitted_data(getFormData(options.form_selector))
+                    options.get_submitted_data(getFormData(options.form_selector));
                 } else if (typeof options.fnc_additional_check === 'function') {
                     Promise.resolve(options.fnc_additional_check(req)).then((result) => {
                         if (result) submit(req);

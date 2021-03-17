@@ -5,7 +5,6 @@ const TermsOfUseForm = (() => {
 
     const init = async (fields, is_financial) => {
         const landing_company = State.getResponse('landing_company');
-        console.log({ landing_company });
         const lc_to_upgrade_to = landing_company[is_financial ? 'financial_company' : 'gaming_company'] || landing_company.financial_company;
         getElementById('lc-name').innerHTML = lc_to_upgrade_to.name;
         getElementById('lc-country').innerHTML = lc_to_upgrade_to.country;
@@ -17,9 +16,9 @@ const TermsOfUseForm = (() => {
         });
         
         fields.forEach(field => {
-            getElementById(`${field.section}_section`).setVisibility(1)
-            getElementById(`${field.id}_row`).setVisibility(1)
-        })
+            getElementById(`${field.section}_section`).setVisibility(1);
+            getElementById(`${field.id}_row`).setVisibility(1);
+        });
     };
 
     return {

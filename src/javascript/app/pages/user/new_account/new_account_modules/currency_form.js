@@ -23,7 +23,6 @@ const SetCurrency = (() => {
         Client.get('landing_company_shortcode') === 'svg' ? GetCurrency.getCurrencies(landing_company) : payout_currencies;
 
     const populateCurrencies = (currencies) => {
-        console.log({currencies});
         const $fiat_currencies  = $('<div/>');
         const $cryptocurrencies = $('<div/>');
         currencies.forEach((c) => {
@@ -77,7 +76,7 @@ const SetCurrency = (() => {
         $('#set_currency, .select_currency').setVisibility(1);
     };
 
-    const onSelection = ($currency_list, $error, should_show_confirmation) => {
+    const onSelection = ($currency_list, $error) => {
         $('.currency_wrapper').off('click dblclick').on('click dblclick', function () {
             removeError($error, true);
             const $clicked_currency = $(this);

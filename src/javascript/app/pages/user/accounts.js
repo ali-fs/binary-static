@@ -95,7 +95,7 @@ const Accounts = (() => {
             $(form_id).find('tbody')
                 .append($('<tr/>')
                     .append($('<td/>', { datath: table_headers.account }).html($('<span/>', {
-                        text: new_account_title,
+                        text          : new_account_title,
                         'data-balloon': `${localize('Counterparty')}: ${getCompanyName(account)}, ${localize(
                             'Jurisdiction')}: ${getCompanyCountry(account)}`,
                         'data-balloon-length': 'large',
@@ -255,8 +255,8 @@ const Accounts = (() => {
         $(form_id).find('tbody')
             .append($('<tr/>', { id: 'new_account_opening' })
                 .append($('<td/>', { datath: table_headers.account }).html($('<span/>', {
-                    text: localize('Real Account'),
-                    'data-balloon': `${localize('Counterparty')}: ${getCompanyName(account)}, ${localize('Jurisdiction')}: ${getCompanyCountry(account)}`,
+                    text                 : localize('Real Account'),
+                    'data-balloon'       : `${localize('Counterparty')}: ${getCompanyName(account)}, ${localize('Jurisdiction')}: ${getCompanyCountry(account)}`,
                     'data-balloon-length': 'large',
                 })))
                 .append($('<td/>', { text: getAvailableMarkets({ real: 1 }), datath: table_headers.available_markets }))

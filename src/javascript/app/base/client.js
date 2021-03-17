@@ -110,9 +110,7 @@ const Client = (() => {
         
     };
 
-    const getUpgradeInfo = () => {
-        return ClientBase.getBasicUpgradeInfo();
-    };
+    const getUpgradeInfo = () => ClientBase.getBasicUpgradeInfo();
 
     const defaultRedirectUrl = () => urlFor('trading');
 

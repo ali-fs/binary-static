@@ -130,8 +130,7 @@ export const TaxIdentificationNumber = ({ className, hint, row_class, row_id }) 
     />
 );
 
-
-export const TaxIdentificationConfirm = ({ className, hint, row_class, row_id }) => (
+export const TaxIdentificationConfirm = ({ row_class, row_id }) => (
     <div id={row_id} className={row_class}>
         <div className='gr-12 gr-padding-10'>
             <input type='checkbox' id='tax_identification_confirm' />
@@ -141,8 +140,6 @@ export const TaxIdentificationConfirm = ({ className, hint, row_class, row_id })
         </div>
     </div>
 );
-
-
 
 export const AddressLine1 = ({ hint, row_class, row_id }) => (
     <FormRow
@@ -203,8 +200,7 @@ export const AddressPostcode = ({ children, hint, row_class, row_id }) => (
         attributes={{ maxLength: '20', 'data-lpignore': true }}
         hint={hint}
         has_geovalidator
-        row_class='postcode-form-row'
-        row_class={row_class}
+        row_class={`postcode-form-row ${row_class || ''}`}
         row_id={row_id}
     >
         {children}

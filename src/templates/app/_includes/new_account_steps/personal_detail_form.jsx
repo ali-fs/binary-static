@@ -14,8 +14,6 @@ import {
 } from '../../../_common/components/forms_common_rows.jsx';
 import { Fieldset } from '../../../_common/components/forms.jsx';
 
-
-
 const PersonalDetailForm = () => (
     <React.Fragment>
         <form id='personal_detail_step_form' className='gr-padding-10'>

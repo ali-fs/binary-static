@@ -1,6 +1,6 @@
 import React from 'react';
-import PepDeclaration from '../../_includes/pep_declaration.jsx';
-import ProfessionalClient from '../../_includes/professional_client.jsx';
+import PepDeclaration from '../pep_declaration.jsx';
+import ProfessionalClient from '../professional_client.jsx';
 import {
     Jurisdiction,
     RiskDisclaimer,
