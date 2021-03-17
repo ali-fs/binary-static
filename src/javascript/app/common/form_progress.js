@@ -2,7 +2,6 @@ const getElementById = require('../../_common/common_functions').getElementById;
 const isMobile = require('../../_common/os_detect').isMobile;
 const localize = require('../../_common/localize').localize;
 
-
 const FormProgress = (() => {
     const render = (identifire, steps, current_step) => {
         const el_header = document.createElement('div');
