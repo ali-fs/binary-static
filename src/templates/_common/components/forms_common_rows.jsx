@@ -1,4 +1,4 @@
-import React                 from 'react';
+import React from 'react';
 import { Fieldset, FormRow } from './forms.jsx';
 
 export const Salutation = ({ className, row_class, row_id }) => (
@@ -53,14 +53,26 @@ export const DateOfBirth = ({ className, row_class, row_id }) => (
     />
 );
 
-export const Citizenship = ({ className, row_class }) => (
+export const PlaceOfBirth = ({ className, row_class, row_id }) => (
+    <FormRow
+        type='select'
+        id='place_of_birth'
+        label={it.L('Place of birth')}
+        className={className}
+        row_class={row_class}
+        row_id={row_id || 'place_of_birth_row'}
+        attributes={{ single: 'single' }}
+    />
+);
+
+export const Citizenship = ({ className, row_class, row_id }) => (
     <FormRow
         type='select'
         id='citizen'
         label={it.L('Citizenship')}
         className={className}
         row_class={row_class}
-        row_id='citizen_row'
+        row_id={row_id || 'citizen_row'}
         attributes={{ single: 'single' }}
     />
 );
@@ -78,7 +90,7 @@ export const Residence = ({ className, row_class, row_id }) => (
     </FormRow>
 );
 
-export const AccountOpeningReason  = ({ row_id, row_class }) => (
+export const AccountOpeningReason = ({ row_id, row_class }) => (
     <FormRow
         type='select'
         id='account_opening_reason'
@@ -94,7 +106,45 @@ export const AccountOpeningReason  = ({ row_id, row_class }) => (
     </FormRow>
 );
 
-export const AddressLine1 = ({ hint }) => (
+export const TaxResidence = ({ className, row_class, row_id }) => (
+    <FormRow
+        type='select'
+        id='tax_residence'
+        label={it.L('Tax residence')}
+        className={className}
+        row_class={row_class}
+        row_id={row_id || 'tax_residence_row'}
+        attributes={{ single: 'single' }}
+    />
+);
+
+export const TaxIdentificationNumber = ({ className, hint, row_class, row_id }) => (
+    <FormRow
+        type='text'
+        id='tax_identification_number'
+        label={it.L('Tax identification number')}
+        attributes={{ maxLength: '50', className: `center-text-m ${className || ''}`, 'data-lpignore': true }}
+        hint={hint}
+        row_id={row_id}
+        row_class={row_class}
+    />
+);
+
+
+export const TaxIdentificationConfirm = ({ className, hint, row_class, row_id }) => (
+    <div id={row_id} className={row_class}>
+        <div className='gr-12 gr-padding-10'>
+            <input type='checkbox' id='tax_identification_confirm' />
+            <label htmlFor='tax_identification_confirm'>
+                {it.L('I hereby confirm that the tax information I provided is true and complete. I will also inform Deriv Investments (Europe) Limited about any changes to this information.')}
+            </label>
+        </div>
+    </div>
+);
+
+
+
+export const AddressLine1 = ({ hint, row_class, row_id }) => (
     <FormRow
         type='text'
         id='address_line_1'
@@ -102,10 +152,12 @@ export const AddressLine1 = ({ hint }) => (
         label={it.L('First line')}
         attributes={{ maxLength: '70', 'data-lpignore': true }}
         hint={hint}
+        row_class={row_class}
+        row_id={row_id}
     />
 );
 
-export const AddressLine2 = ({ hint }) => (
+export const AddressLine2 = ({ hint, row_class, row_id }) => (
     <FormRow
         type='text'
         id='address_line_2'
@@ -113,10 +165,12 @@ export const AddressLine2 = ({ hint }) => (
         label={it.L('Second line')}
         attributes={{ maxLength: '70', 'data-lpignore': true }}
         hint={hint}
+        row_class={row_class}
+        row_id={row_id}
     />
 );
 
-export const AddressCity = ({ hint }) => (
+export const AddressCity = ({ hint, row_class, row_id }) => (
     <FormRow
         type='text'
         id='address_city'
@@ -124,14 +178,23 @@ export const AddressCity = ({ hint }) => (
         label={it.L('Town/City')}
         attributes={{ maxLength: 35, 'data-lpignore': true }}
         hint={hint}
+        row_class={row_class}
+        row_id={row_id}
     />
 );
 
-export const AddressState = () => (
-    <FormRow type='select' id='address_state' label={it.L('State/Province')} attributes={{ single: 'single' }} />
+export const AddressState = (row_class, row_id) => (
+    <FormRow
+        type='select'
+        id='address_state'
+        label={it.L('State/Province')}
+        attributes={{ single: 'single' }}
+        row_class={row_class}
+        row_id={row_id}
+    />
 );
 
-export const AddressPostcode = ({ children, hint }) => (
+export const AddressPostcode = ({ children, hint, row_class, row_id }) => (
     <FormRow
         type='text'
         id='address_postcode'
@@ -141,6 +204,8 @@ export const AddressPostcode = ({ children, hint }) => (
         hint={hint}
         has_geovalidator
         row_class='postcode-form-row'
+        row_class={row_class}
+        row_id={row_id}
     >
         {children}
     </FormRow>
@@ -182,21 +247,17 @@ export const SecretAnswer = () => (
 );
 
 export const Tnc = () => (
-    <div className='center-text'>
-        <div className='gr-row'>
-            <div className='gr-12-m gr-padding-10 gr-centered'>
-                <input type='checkbox' name='tnc' id='tnc' />
-                <label htmlFor='tnc'>
-                    {it.L(
-                        'I have read and agree to the [_1]terms and conditions[_2] of the site.',
-                        `<a target="_blank" href="${it.url_for('terms-and-conditions')}">`,
-                        '</a>'
-                    )}
-                </label>
-            </div>
+    <div className='gr-row fieldset_margin_top invisible'>
+        <div className='gr-12-m gr-padding-10'>
+            <input type='checkbox' name='tnc' id='tnc' />
+            <label htmlFor='tnc'>
+                {it.L(
+                    'I have read and agree to the [_1]terms and conditions[_2] of the site.',
+                    `<a target="_blank" href="${it.url_for('terms-and-conditions')}">`,
+                    '</a>'
+                )}
+            </label>
         </div>
-
-        <button className='button' type='submit'>{it.L('Open account')}</button>
     </div>
 );
 
@@ -209,11 +270,11 @@ export const Jurisdiction = () => (
 );
 
 export const RiskDisclaimer = () => (
-    <fieldset>
+    <Fieldset legend={it.L('Risk warning')} className='fieldset_margin_top' >
         <div className='gr-12'>
             <p>{it.L('The financial trading services contained within this site are only suitable for customers who accept the possibility of losing all the money they invest and who understand and have experience of the risk involved in the acquisition of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium.')}</p>
         </div>
-    </fieldset>
+    </Fieldset>
 );
 
 export const ClientMessage = () => (
