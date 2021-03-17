@@ -120,7 +120,7 @@ const personalDetailsConfig = ({
     real_account_signup_target,
     residence_list, account_settings,
 }) => {
-    const [config] = getPersonalDetailsConfig({ residence_list, account_settings });
+    const config = getPersonalDetailsConfig({ residence_list, account_settings });
     return {
         title           : localize('Personal details'),
         body_module     : PersonalDetailForm,
