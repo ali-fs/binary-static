@@ -4,37 +4,37 @@ import { SeparatorLine } from '../../_common/components/separator_line.jsx';
 const WelcomePage = () => {
     const options = [
         {
-            icon_list: ['images/pages/welcome/cfd.svg'],
-            title: it.L('CFD'),
-            desc: it.L('Trade with leverage and low spreads for better returns on successful trades.'),
+            icon_list    : ['images/pages/welcome/cfd.svg'],
+            title        : it.L('CFD'),
+            desc         : it.L('Trade with leverage and low spreads for better returns on successful trades.'),
             platform_list: [
                 {
-                    icon: 'metatrader5',
-                    title: it.L('MetaTrader 5'),
+                    icon       : 'metatrader5',
+                    title      : it.L('MetaTrader 5'),
                     description: it.L('Earn fixed payouts with options, or trade multipliers to amplify your gains with limited risk.'),
                 },
             ],
             action_title: it.L('Trade on MetaTrader 5'),
-            action_id: 'mt5',
+            action_id   : 'mt5',
         },
         {
-            icon_list: ['images/pages/welcome/options.svg', 'images/pages/welcome/multipliers.svg'],
-            title: it.L('Options and multipliers'),
-            desc: it.L('Earn fixed payouts with options, or trade multipliers to amplify your gains with limited risk.'),
+            icon_list    : ['images/pages/welcome/options.svg', 'images/pages/welcome/multipliers.svg'],
+            title        : it.L('Options and multipliers'),
+            desc         : it.L('Earn fixed payouts with options, or trade multipliers to amplify your gains with limited risk.'),
             platform_list: [
                 {
-                    icon: 'metatrader5',
-                    title: it.L('SmartTrader'),
+                    icon       : 'metatrader5',
+                    title      : it.L('SmartTrader'),
                     description: it.L('Trade options with Binary.com\'s legacy trading app.'),
                 },
                 {
-                    icon: 'binarybot',
-                    title: it.L('Binary Bot'),
+                    icon       : 'binarybot',
+                    title      : it.L('Binary Bot'),
                     description: it.L('Trade options with Binary.com\'s legacy trading app.'),
                 },
             ],
             action_title: it.L('Get started'),
-            action_id: 'default',
+            action_id   : 'default',
         },
     ];
 
@@ -49,7 +49,7 @@ const WelcomePage = () => {
             <SeparatorLine className='gr-padding-10' invisible />
         </div>
     );
-}
+};
 
 const Platform = ({ title, description, icon }) => (
     <div className='welcome-content-platform-list-container'>
