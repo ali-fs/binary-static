@@ -10,7 +10,7 @@ const Virtual = () => (
 
         <form id='virtual-form' className='gr-padding-10 invisible'>
             <Fieldset legend={it.L('Details')}>
-                <FormRow type='select' id='residence' className='invisible' label={it.L('Country of residence')} attributes={{ single: 'single' }}  />
+                <FormRow type='select' id='residence' className='invisible' label={it.L('Country of residence')} attributes={{ single: 'single' }} />
                 <FormRow
                     type='password'
                     has_password_meter
@@ -32,12 +32,12 @@ const Virtual = () => (
                     label_row_id='email_consent_label'
                     label={it.L('Receive news and special offers')}
                 />
-            </Fieldset>
 
-            <div className='center-text'>
-                <button className='button' type='submit'>{it.L('Create new virtual-money account')}</button>
-                <p className='errorfield invisible' id='error-account-opening' />
-            </div>
+                <div className='center-text'>
+                    <button className='button margin-top-32' type='submit'>{it.L('Create new virtual-money account')}</button>
+                    <p className='errorfield invisible' id='error-account-opening' />
+                </div>
+            </Fieldset>
         </form>
     </div>
 );
