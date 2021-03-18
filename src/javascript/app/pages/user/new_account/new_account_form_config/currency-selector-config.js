@@ -1,5 +1,5 @@
-const localize = require('../../../../../_common/localize').localize;
 const CurrencyForm = require('../new_account_modules/currency_form');
+const localize = require('../../../../../_common/localize').localize;
 
 const currency_selector_fields = [
     {

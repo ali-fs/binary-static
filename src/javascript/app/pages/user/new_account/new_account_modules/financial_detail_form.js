@@ -4,6 +4,7 @@ const FinancialDetailForm = (() => {
 
     const init = async (fields) => {
         fields.forEach(field => {
+            getElementById(`${field.id}`).value = field.default_value;
             getElementById(`${field.section}_section`).setVisibility(1);
             getElementById(`${field.id}_row`).setVisibility(1);
         });

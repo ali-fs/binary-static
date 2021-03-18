@@ -6,17 +6,9 @@ const getCountryName = (residence_list, countryCode) => {
     const country = residence_list.find(item => item.value === countryCode);
     return country ? country.text : '';
 };
+
 const getPersonalDetailsConfig = ({ residence_list, account_settings }) => {
-    if (!residence_list || !account_settings) {
-        return {};
-    }
-
-    // minimum characters required is 9 numbers (excluding +- signs or space)
-    // const min_phone_number = 9;
-    // const max_phone_number = 35;
-
     const config = [
-
         {
             id           : 'salutation',
             section      : 'name',
@@ -70,7 +62,9 @@ const getPersonalDetailsConfig = ({ residence_list, account_settings }) => {
             section      : 'detail',
             supported_in : ['svg', 'iom', 'malta', 'maltainvest'],
             default_value: account_settings.phone || '',
-            rules        : ['req', 'phone', ['length', { min: 9, max: 35, value: () => $('#phone').val().replace(/\D/g, '') }]],
+            rules        : ['req', 'phone', ['length',
+                { min: 9, max: 35, value: () => $('#phone').val().replace(/\D/g, '') },
+            ]],
         },
         {
             id           : 'tax_residence',
@@ -107,7 +101,6 @@ const getPersonalDetailsConfig = ({ residence_list, account_settings }) => {
             rules        : ['req'],
         },
     ];
-
     return config;
 };
 
@@ -116,7 +109,8 @@ const getRequiredFields = (landing_company, all_fields) =>
 
 const personalDetailsConfig = ({
     real_account_signup_target,
-    residence_list, account_settings,
+    residence_list,
+    account_settings,
 }) => {
     const config = getPersonalDetailsConfig({ residence_list, account_settings });
     return {

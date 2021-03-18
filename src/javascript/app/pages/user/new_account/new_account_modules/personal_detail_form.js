@@ -10,8 +10,9 @@ const State = require('../../../../../_common/storage').State;
 const PersonalDetailForm = (() => {
 
     const init = async (fields) => {
-        const residence_list = (await BinarySocket.send({ residence_list: 1 })).residence_list;
+        const residence_list = (await BinarySocket.wait('residence_list')).residence_list;
         const client_residence = Client.get('residence') || '';
+        const landing_company = State.getResponse('landing_company');
 
         const $options = $('<div/>');
         const $options_with_disabled = $('<div/>');
@@ -23,20 +24,12 @@ const PersonalDetailForm = (() => {
                 is_disabled: residence.disabled,
             }));
         });
-        const landing_company = State.getResponse('landing_company');
 
-        const phone_config = fields.find(field => field.id === 'phone');
-        if (phone_config) {
-            const residence_phone_idd =
-                residence_list.find(residence => residence.value === client_residence).phone_idd;
-            $('#phone').val(phone_config.default_value !== '' ? phone_config.default_value : `+${residence_phone_idd}`);
-        }
-
-        const selects = ['place_of_birth', 'citizen', 'tax_residence'];
-        const texts = ['first_name', 'last_name', 'tax_identification_number'];
+        const select_fields = ['place_of_birth', 'citizen', 'tax_residence'];
+        const text_fields = ['first_name', 'last_name', 'tax_identification_number'];
 
         fields.forEach(field => {
-            if (selects.includes(field.id)) {
+            if (select_fields.includes(field.id)) {
                 $(`#${field.id}`).html((field.id === 'tax_residence' ? $options_with_disabled : $options).html()).val(field.default_value);
                 $(`#${field.id}`).select2({
                     matcher(params, data) {
@@ -44,19 +37,24 @@ const PersonalDetailForm = (() => {
                     },
                 });
             }
-            if (texts.includes(field.id)) {
+            if (text_fields.includes(field.id)) {
                 $(`#${field.id}`).text(field.default_value);
                 $(`#${field.id}`)
                     .val(field.default_value) // Set value for validation
                     .attr({ 'data-force': true, 'data-value': field.default_value });
             }
-            if (['date_of_birth'].includes(field.id)) {
+            if (field.id === 'date_of_birth') {
                 generateBirthDate(landing_company.minimum_age);
                 if (field.default_value !== '') {
                     $(`#${field.id}`)
                         .attr('data-value', field.default_value)
                         .val(moment(field.default_value).format('DD MMM, YYYY'));
                 }
+            }
+            if (field.id === 'phone') {
+                const residence_phone_idd =
+                    residence_list.find(residence => residence.value === client_residence).phone_idd;
+                $(`#${field.id}`).val(field.default_value !== '' ? field.default_value : `+${residence_phone_idd}`);
             }
             getElementById(`${field.section}_section`).setVisibility(1);
             getElementById(`${field.id}_row`).setVisibility(1);

@@ -1,5 +1,5 @@
-const localize = require('../../../../../_common/localize').localize;
 const FinancialDetailForm = require('../new_account_modules/financial_detail_form');
+const localize = require('../../../../../_common/localize').localize;
 
 const getFinancialDetailsConfig = ({ financial_assessment }) => [
     {

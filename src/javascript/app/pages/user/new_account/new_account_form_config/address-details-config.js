@@ -8,8 +8,6 @@ const getAddressDetailsConfig = ({ account_settings, is_svg }) => [
         supported_in : ['svg', 'iom', 'malta', 'maltainvest'],
         default_value: account_settings.address_line_1 || '',
         rules        : ['req', 'address', ['length', { min: 1, max: 700 }]],
-        // ['po_box', getErrorMessages().po_box()],
-        // ].filter(x => (is_svg ? x.indexOf('po_box') !== 0 : x)),
     },
     {
         id           : 'address_line_2',
@@ -17,8 +15,6 @@ const getAddressDetailsConfig = ({ account_settings, is_svg }) => [
         supported_in : ['svg', 'iom', 'malta', 'maltainvest'],
         default_value: account_settings.address_line_2 || '',
         rules        : [['length', { min: 0, max: 70 }]],
-        // ['po_box', getErrorMessages().po_box()],
-        // ].filter(x => (is_svg ? x.indexOf('po_box') !== 0 : x)),
     },
     {
         id           : 'address_city',
