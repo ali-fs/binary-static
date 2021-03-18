@@ -45,7 +45,7 @@ const getPersonalDetailsConfig = ({ residence_list, account_settings }) => {
             supported_in : ['maltainvest', 'iom', 'malta'],
             default_value: account_settings.place_of_birth
                 ? getCountryName(residence_list, account_settings.place_of_birth)
-                : account_settings.country_code,
+                : '',
             rules: ['req'],
         },
         {
@@ -54,7 +54,7 @@ const getPersonalDetailsConfig = ({ residence_list, account_settings }) => {
             supported_in : ['iom', 'malta', 'maltainvest'],
             default_value: account_settings.citizen
                 ? getCountryName(residence_list, account_settings.citizen)
-                : account_settings.country_code,
+                : '',
             rules: ['req'],
         },
         {
@@ -72,7 +72,7 @@ const getPersonalDetailsConfig = ({ residence_list, account_settings }) => {
             supported_in : ['maltainvest'],
             default_value: account_settings.tax_residence
                 ? getCountryName(residence_list, account_settings.tax_residence)
-                : account_settings.country_code,
+                : '',
             rules: ['req', ['length', { min: 1, max: 20 }]],
         },
         {

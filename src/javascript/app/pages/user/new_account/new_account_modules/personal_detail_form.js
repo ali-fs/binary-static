@@ -25,17 +25,21 @@ const PersonalDetailForm = (() => {
             }));
         });
 
-        const select_fields = ['place_of_birth', 'citizen', 'tax_residence'];
+        const residence_select_fields = ['place_of_birth', 'citizen', 'tax_residence'];
+        const simple_select_fields = ['salutation', 'account_opening_reason']
         const text_fields = ['first_name', 'last_name', 'tax_identification_number'];
 
         fields.forEach(field => {
-            if (select_fields.includes(field.id)) {
+            if (residence_select_fields.includes(field.id)) {
                 $(`#${field.id}`).html((field.id === 'tax_residence' ? $options_with_disabled : $options).html()).val(field.default_value);
                 $(`#${field.id}`).select2({
                     matcher(params, data) {
                         return SelectMatcher(params, data);
                     },
                 });
+            }
+            if (simple_select_fields.includes(field.id)) {
+                getElementById(field.id).value = field.default_value;
             }
             if (text_fields.includes(field.id)) {
                 $(`#${field.id}`).text(field.default_value);
