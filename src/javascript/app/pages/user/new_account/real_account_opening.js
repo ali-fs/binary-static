@@ -12,7 +12,7 @@ const RealAccountOpening = (() => {
     let real_account_signup_target,
         steps,
         current_step,
-
+        account_details,
         action_previous_buttons;
 
     const onLoad = async () => {
@@ -29,6 +29,7 @@ const RealAccountOpening = (() => {
         const financial_assessment = financial_assessment_response.get_financial_assessment || {};
         const upgrade_info = Client.getUpgradeInfo();
 
+        account_details = { new_account_real: 1, residence: account_settings.country_code };
         action_previous_buttons = document.getElementsByClassName('action_previous');
         Array.from(action_previous_buttons).forEach((item) => {
             item.addEventListener('click', onClickPrevious);
@@ -67,10 +68,16 @@ const RealAccountOpening = (() => {
         });
     };
 
-    const onStepSubmitted = () => {
+    const onStepSubmitted = (req) => {
+        Object.assign(account_details, req);
         if (current_step === steps.length - 1) {
-            // alert('submit data');
+            BinarySocket.send(account_details).then((response) => {
+                AccountOpening.handleNewAccount(response, response.msg_type);
+            });
         } else {
+            if (current_step === 0) {
+                account_details.currency = $('#set_currency .select_currency #currency').find('.selected').attr('id');
+            }
             current_step++;
             renderStep(current_step - 1);
         }

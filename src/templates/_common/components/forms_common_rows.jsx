@@ -33,7 +33,7 @@ export const LastName = ({ className, hint, row_class, row_id }) => (
     <FormRow
         type='text'
         id='last_name'
-        label={it.L('Family name')}
+        label={it.L('Last name')}
         attributes={{ maxLength: '50', className: `center-text-m ${className || ''}`, 'data-lpignore': true }}
         hint={hint}
         row_id={row_id}
@@ -146,7 +146,7 @@ export const AddressLine1 = ({ hint, row_class, row_id }) => (
         type='text'
         id='address_line_1'
         className='center-text-m'
-        label={it.L('First line')}
+        label={it.L('First line of address')}
         attributes={{ maxLength: '70', 'data-lpignore': true }}
         hint={hint}
         row_class={row_class}
@@ -159,7 +159,7 @@ export const AddressLine2 = ({ hint, row_class, row_id }) => (
         type='text'
         id='address_line_2'
         className='center-text-m'
-        label={it.L('Second line')}
+        label={it.L('Second line of address')}
         attributes={{ maxLength: '70', 'data-lpignore': true }}
         hint={hint}
         row_class={row_class}
@@ -172,7 +172,7 @@ export const AddressCity = ({ hint, row_class, row_id }) => (
         type='text'
         id='address_city'
         className='center-text-m'
-        label={it.L('Town/City')}
+        label={it.L('Town/city')}
         attributes={{ maxLength: 35, 'data-lpignore': true }}
         hint={hint}
         row_class={row_class}
@@ -184,7 +184,7 @@ export const AddressState = (row_class, row_id) => (
     <FormRow
         type='select'
         id='address_state'
-        label={it.L('State/Province')}
+        label={it.L('State/province')}
         attributes={{ single: 'single' }}
         row_class={row_class}
         row_id={row_id}
@@ -212,7 +212,7 @@ export const Phone = ({ hint, row_class, row_id }) => (
         type='text'
         id='phone'
         className='center-text-m'
-        label={it.L('Mobile number')}
+        label={it.L('Phone number')}
         attributes={{ 'data-lpignore': true }}
         hint={hint}
         row_class={row_class}
@@ -243,12 +243,12 @@ export const SecretAnswer = () => (
 );
 
 export const Tnc = () => (
-    <div className='gr-row fieldset_margin_top invisible'>
+    <div className='gr-row fieldset_margin_top'>
         <div className='gr-12-m gr-padding-10'>
             <input type='checkbox' name='tnc' id='tnc' />
             <label htmlFor='tnc'>
                 {it.L(
-                    'I have read and agree to the [_1]terms and conditions[_2] of the site.',
+                    'I agree to the [_1]terms and conditions[_2].',
                     `<a target="_blank" href="${it.url_for('terms-and-conditions')}">`,
                     '</a>'
                 )}
@@ -268,7 +268,7 @@ export const Jurisdiction = () => (
 export const RiskDisclaimer = () => (
     <Fieldset legend={it.L('Risk warning')} className='fieldset_margin_top' >
         <div className='gr-12'>
-            <p>{it.L('The financial trading services contained within this site are only suitable for customers who accept the possibility of losing all the money they invest and who understand and have experience of the risk involved in the acquisition of financial contracts. Transactions in financial contracts carry a high degree of risk. If purchased contracts expire worthless, you will suffer a total loss of your investment, which consists of the contract premium.')}</p>
+            <p>{it.L('The financial trading services offered on this site are only suitable for customers who accept the possibility of losing all the money they invest and who understand and have experience of the risk involved in the purchase of financial contracts. Transactions in financial contracts carry a high degree of risk. If the contracts you purchased expire as worthless, you will lose all your investment, which includes the contract premium.')}</p>
         </div>
     </Fieldset>
 );

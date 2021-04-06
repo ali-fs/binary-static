@@ -2,7 +2,6 @@ const getElementById = require('../../../../../_common/common_functions').getEle
 const State = require('../../../../../_common/storage').State;
 
 const TermsOfUseForm = (() => {
-
     const init = async (fields, real_account_signup_target) => {
         const landing_company = State.getResponse('landing_company');
         const lc_to_upgrade_to =
@@ -28,7 +27,6 @@ const TermsOfUseForm = (() => {
     return {
         init,
     };
-
 })();
 
 module.exports = TermsOfUseForm;

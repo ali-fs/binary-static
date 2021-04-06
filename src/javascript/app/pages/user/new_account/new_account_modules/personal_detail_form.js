@@ -26,7 +26,7 @@ const PersonalDetailForm = (() => {
         });
 
         const residence_select_fields = ['place_of_birth', 'citizen', 'tax_residence'];
-        const simple_select_fields = ['salutation', 'account_opening_reason']
+        const simple_select_fields = ['salutation', 'account_opening_reason'];
         const text_fields = ['first_name', 'last_name', 'tax_identification_number'];
 
         fields.forEach(field => {
