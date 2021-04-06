@@ -186,7 +186,7 @@ const Header = (() => {
                 if (show_upgrade_msg) {
                     const upgrade_url = upgrade_info.can_upgrade_to.length > 1
                         ? 'user/accounts'
-                        : Object.values(upgrade_info.upgrade_links)[0];
+                        : `new_account/real_account?account_type=${upgrade_info.can_upgrade_to[0]}`;
                     showUpgrade(upgrade_url, upgrade_link_txt);
                     showUpgradeBtn(upgrade_url, upgrade_btn_txt);
                 } else {
@@ -203,7 +203,7 @@ const Header = (() => {
                 getElementById('virtual-wrapper').setVisibility(0);
                 const upgrade_url = upgrade_info.can_upgrade_to.length > 1
                     ? 'user/accounts'
-                    : Object.values(upgrade_info.upgrade_links)[0];
+                    : `new_account/real_account?account_type=${upgrade_info.can_upgrade_to[0]}`;
                 showUpgrade(upgrade_url, upgrade_link_txt);
                 showUpgradeBtn(upgrade_url, upgrade_btn_txt);
 

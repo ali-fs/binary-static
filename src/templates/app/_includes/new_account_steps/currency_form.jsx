@@ -28,7 +28,6 @@ const CurrencyForm = () => (
                     </div>
                 </form>
             </div>
-
         </div>
     </React.Fragment>
 );
