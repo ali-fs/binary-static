@@ -1,16 +1,16 @@
-const moment             = require('moment');
+const moment = require('moment');
 const setIsForNewAccount = require('./account/settings/personal_details').setIsForNewAccount;
-const GetCurrency        = require('./get_currency');
-const BinaryPjax         = require('../../base/binary_pjax');
-const Client             = require('../../base/client');
-const Header             = require('../../base/header');
-const BinarySocket       = require('../../base/socket');
-const Dialog             = require('../../common/attach_dom/dialog');
-const Currency           = require('../../common/currency');
-const isCryptocurrency   = require('../../../_common/base/currency_base').isCryptocurrency;
-const localize           = require('../../../_common/localize').localize;
-const State              = require('../../../_common/storage').State;
-const Url                = require('../../../_common/url');
+const GetCurrency = require('./get_currency');
+const BinaryPjax = require('../../base/binary_pjax');
+const Client = require('../../base/client');
+const Header = require('../../base/header');
+const BinarySocket = require('../../base/socket');
+const Dialog = require('../../common/attach_dom/dialog');
+const Currency = require('../../common/currency');
+const isCryptocurrency = require('../../../_common/base/currency_base').isCryptocurrency;
+const localize = require('../../../_common/localize').localize;
+const State = require('../../../_common/storage').State;
+const Url = require('../../../_common/url');
 
 const SetCurrency = (() => {
     let is_new_account,
@@ -30,20 +30,27 @@ const SetCurrency = (() => {
         $('#upgrade_to_mf').setVisibility(can_upgrade && type === 'financial');
 
         const payout_currencies = (await BinarySocket.wait('payout_currencies')).payout_currencies;
-        const $currency_list    = $('.currency_list');
-        const $error            = $('#set_currency').find('.error-msg');
+        const $currency_list = $('.currency_list');
+        const $error = $('#set_currency').find('.error-msg');
+
+        $('#deposit_btn').off('click dblclick').on('click dblclick', () => {
+            if (popup_action) {
+                cleanupPopup();
+            }
+            BinaryPjax.load(`${Url.urlFor('cashier/forwardws')}?action=deposit`);
+        });
+        $('#maybe_later_btn').off('click dblclick').on('click dblclick', () => {
+            const url = Client.isAccountOfType('financial') ? Url.urlFor('user/metatrader') : Client.defaultRedirectUrl();
+            BinaryPjax.load(url);
+        });
 
         popup_action = localStorage.getItem('popup_action');
         if (Client.get('currency') || popup_action) {
             if (is_new_account) {
                 $('#set_currency_loading').remove();
                 $('#set_currency').setVisibility(1);
-                $('#deposit_btn')
-                    .off('click dblclick')
-                    .on('click dblclick', () => {
-                        BinaryPjax.load(`${Url.urlFor('cashier/forwardws')}?action=deposit`);
-                    })
-                    .setVisibility(1);
+                $('#deposit_row').setVisibility(1);
+                $('#congratulations_message').html(localize('You have added a [_1] account.', [Client.get('currency')]));
             } else if (popup_action) {
                 const currencies = /multi_account|set_currency/.test(popup_action) ?
                     getAvailableCurrencies(landing_company, payout_currencies) :
@@ -97,12 +104,12 @@ const SetCurrency = (() => {
     };
 
     const populateCurrencies = (currencies) => {
-        const $fiat_currencies  = $('<div/>');
+        const $fiat_currencies = $('<div/>');
         const $cryptocurrencies = $('<div/>');
         currencies.forEach((c) => {
             const $wrapper = $('<div/>', { class: 'gr-2 gr-4-m currency_wrapper', id: c });
-            const $image   = $('<div/>').append($('<img/>', { src: Url.urlForStatic(`images/pages/set_currency/${c.toLowerCase()}.svg`) }));
-            const $name    = $('<div/>', { class: 'currency-name' });
+            const $image = $('<div/>').append($('<img/>', { src: Url.urlForStatic(`images/pages/set_currency/${c.toLowerCase()}.svg`) }));
+            const $name = $('<div/>', { class: 'currency-name' });
 
             if (Currency.isCryptocurrency(c)) {
                 const $display_name = $('<span/>', {
@@ -158,8 +165,8 @@ const SetCurrency = (() => {
             $clicked_currency.addClass('selected');
 
             if (should_show_confirmation) {
-                const currency         = $clicked_currency.attr('id');
-                let localized_message  = '';
+                const currency = $clicked_currency.attr('id');
+                let localized_message = '';
                 let localized_footnote = '';
 
                 if (Currency.isCryptocurrency(currency)) {
@@ -244,7 +251,7 @@ const SetCurrency = (() => {
                         $('#congratulations_message').html(
                             popup_action === 'set_currency' ?
                                 localize('You have successfully set your account currency to [_1].', [`<strong>${selected_currency_display}</strong>`]) :
-                                localize('You have successfully changed your account currency from [_1] to [_2].', [ `<strong>${previous_currency_display}</strong>`, `<strong>${selected_currency_display}</strong>` ])
+                                localize('You have successfully changed your account currency from [_1] to [_2].', [`<strong>${previous_currency_display}</strong>`, `<strong>${selected_currency_display}</strong>`])
                         );
                         $('.btn_cancel, #deposit_btn, #set_currency, #show_new_account').setVisibility(1);
                         $(`#${Client.get('loginid')}`).find('td[datath="Currency"]').text(selected_currency_display);
@@ -269,15 +276,7 @@ const SetCurrency = (() => {
                     } else {
                         Header.populateAccountsList(); // update account title
                         $('.select_currency').setVisibility(0);
-                        $('#deposit_btn')
-                            .off('click dblclick')
-                            .on('click dblclick', () => {
-                                if (popup_action) {
-                                    cleanupPopup();
-                                }
-                                BinaryPjax.load(`${Url.urlFor('cashier/forwardws')}?action=deposit`);
-                            })
-                            .setVisibility(1);
+                        $('#deposit_row').setVisibility(1);
                     }
                 }
             });
@@ -295,7 +294,7 @@ const SetCurrency = (() => {
      * @param {boolean} is_btn_enabled // Enable button
      */
     const removeError = ($error, is_btn_enabled) => {
-        if ($error){
+        if ($error) {
             $error.setVisibility(0);
         }
         if ($submit && is_btn_enabled) {

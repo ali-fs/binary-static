@@ -34,7 +34,7 @@ const getAddressDetailsConfig = ({ account_settings, is_svg }) => [
         rules        : [
             ['regular', { regex: /^[\w\s\W'.-;,]{0,60}$/ }],
             // Isle of Man and SVG Clients do not need to fill out state.
-            ...(account_settings.residence === 'im' || is_svg ? [] : ['req']),
+            ...(account_settings.country_code === 'im' || is_svg ? [] : ['req']),
         ],
     },
     {
@@ -46,7 +46,7 @@ const getAddressDetailsConfig = ({ account_settings, is_svg }) => [
             ['length', { min: 0, max: 20 }],
             'postcode',
             // GB and IM residence are required to fill in the post code.
-            ...(/^(im|gb)$/.test(account_settings.residence) ? ['req'] : []),
+            ...(/^(im|gb)$/.test(account_settings.country_code) ? ['req'] : []),
         ],
     },
 ];

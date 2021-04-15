@@ -22,6 +22,9 @@ const CurrencyForm = () => (
                         <Currencies id='fiat' text={it.L('Fiat Currency')} />
                         <Currencies id='crypto' text={it.L('Cryptocurrency')} />
                     </div>
+
+                    <p className='hint'>{it.L('You will not be able to change currency once you have made a deposit.')}</p>
+
                     <p className='invisible error-msg center-text' />
                     <div className='align-end' id='submit_section'>
                         <button className='button' type='submit'>{it.L('Next')}</button>

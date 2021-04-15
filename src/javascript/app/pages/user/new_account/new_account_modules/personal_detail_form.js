@@ -31,12 +31,17 @@ const PersonalDetailForm = (() => {
 
         fields.forEach(field => {
             if (residence_select_fields.includes(field.id)) {
-                $(`#${field.id}`).html((field.id === 'tax_residence' ? $options_with_disabled : $options).html()).val(field.default_value);
-                $(`#${field.id}`).select2({
-                    matcher(params, data) {
-                        return SelectMatcher(params, data);
-                    },
-                });
+                if (field.is_immutable && field.default_value !== '') {
+                    const country_name = residence_list.find(obj => obj.value === field.default_value).text;
+                    $(`#${field.id}`).replaceWith($('<span/>', { id: field.id, text: country_name, 'data-value': field.default_value }));
+                } else {
+                    $(`#${field.id}`).html((field.id === 'tax_residence' ? $options_with_disabled : $options).html()).val(field.default_value);
+                    $(`#${field.id}`).select2({
+                        matcher(params, data) {
+                            return SelectMatcher(params, data);
+                        },
+                    });
+                }
             }
             if (simple_select_fields.includes(field.id)) {
                 getElementById(field.id).value = field.default_value;
@@ -51,7 +56,7 @@ const PersonalDetailForm = (() => {
                 generateBirthDate(landing_company.minimum_age);
                 if (field.default_value !== '') {
                     $(`#${field.id}`)
-                        .attr('data-value', field.default_value)
+                        .attr('data-value', moment(field.default_value).format('YYYY-MM-DD'))
                         .val(moment(field.default_value).format('DD MMM, YYYY'));
                 }
             }
@@ -62,6 +67,7 @@ const PersonalDetailForm = (() => {
             }
             getElementById(`${field.section}_section`).setVisibility(1);
             getElementById(`${field.id}_row`).setVisibility(1);
+            if (field.is_immutable && field.default_value !== '') $(`#${field.id}`).attr('disabled', 'disabled');
         });
     };
 

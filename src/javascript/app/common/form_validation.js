@@ -1,22 +1,22 @@
-const Dropdown                 = require('@binary-com/binary-style').selectDropdown;
-const addComma                 = require('./currency').addComma;
-const getDecimalPlaces         = require('./currency').getDecimalPlaces;
-const Client                   = require('../base/client');
-const Password                 = require('../../_common/check_password');
-const localize                 = require('../../_common/localize').localize;
+const Dropdown = require('@binary-com/binary-style').selectDropdown;
+const addComma = require('./currency').addComma;
+const getDecimalPlaces = require('./currency').getDecimalPlaces;
+const Client = require('../base/client');
+const Password = require('../../_common/check_password');
+const localize = require('../../_common/localize').localize;
 const localizeKeepPlaceholders = require('../../_common/localize').localizeKeepPlaceholders;
-const compareBigUnsignedInt    = require('../../_common/string_util').compareBigUnsignedInt;
-const getHashValue             = require('../../_common/url').getHashValue;
-const cloneObject              = require('../../_common/utility').cloneObject;
-const isEmptyObject            = require('../../_common/utility').isEmptyObject;
-const template                 = require('../../_common/utility').template;
-const urlFor                   = require('../../_common/url').urlForStatic;
+const compareBigUnsignedInt = require('../../_common/string_util').compareBigUnsignedInt;
+const getHashValue = require('../../_common/url').getHashValue;
+const cloneObject = require('../../_common/utility').cloneObject;
+const isEmptyObject = require('../../_common/utility').isEmptyObject;
+const template = require('../../_common/utility').template;
+const urlFor = require('../../_common/url').urlForStatic;
 
 const Validation = (() => {
-    const forms        = {};
-    const error_class  = 'error-msg';
+    const forms = {};
+    const error_class = 'error-msg';
     const hidden_class = 'invisible';
-    const pass_length  = { min: 8, max: 25 };
+    const pass_length = { min: 8, max: 25 };
 
     const events_map = {
         input   : 'input.validation change.validation',
@@ -41,6 +41,8 @@ const Validation = (() => {
             value = isChecked(field);
         } else if (field.type === 'radio') {
             value = field.$.find(`input[name=${field.selector.slice(1)}]:checked`).val();
+        } else if (field.type === 'span') {
+            value = field.$.data().value;
         } else {
             value = field.$.val();
         }
@@ -62,7 +64,7 @@ const Validation = (() => {
             forms[form_selector] = { $form };
             if (Array.isArray(fields) && fields.length) {
                 forms[form_selector].fields = fields;
-                const $btn_submit           = $form.find('button[type="submit"]');
+                const $btn_submit = $form.find('button[type="submit"]');
 
                 let has_required = false;
                 fields.forEach((field) => {
@@ -155,14 +157,14 @@ const Validation = (() => {
     // ------------------------------
     // ----- Validation Methods -----
     // ------------------------------
-    const validRequired     = (value, options, field) => {
+    const validRequired = (value, options, field) => {
         if (value.length) return true;
         // else
         ValidatorsMap.get().req.message = field.type === 'checkbox' ? localize('Please select the checkbox.') : localize('This field is required.');
         return false;
     };
-    const validEmail        = value => /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}$/.test(value);
-    const validPassword     = (value, options, field) => {
+    const validEmail = value => /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}$/.test(value);
+    const validPassword = (value, options, field) => {
         if (/^(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z])[ -~]*$/.test(value)) {
             Password.checkPassword(field.selector, true);
             return true;
@@ -171,21 +173,21 @@ const Validation = (() => {
         return false;
     };
     const validLetterSymbol = value => !/[`~!@#$%^&*)(_=+[}{\]\\/";:?><,|\d]+/.test(value);
-    const validGeneral      = value => !/[`~!@#$%^&*)(_=+[}{\]\\/";:?><|]+/.test(value);
-    const validAddress      = value => !/[`~!$%^&*_=+[}{\]\\"?><|]+/.test(value);
-    const validPostCode     = value => value === '' || /^[A-Za-z0-9][A-Za-z0-9\s-]*$/.test(value);
-    const validPhone        = value => /^\+?((-|\s)*[0-9])*$/.test(value);
-    const validRegular      = (value, options) => options.regex.test(value);
-    const validEmailToken   = value => value.trim().length === 8;
-    const compareToEmail    = value => {
+    const validGeneral = value => !/[`~!@#$%^&*)(_=+[}{\]\\/";:?><|]+/.test(value);
+    const validAddress = value => !/[`~!$%^&*_=+[}{\]\\"?><|]+/.test(value);
+    const validPostCode = value => value === '' || /^[A-Za-z0-9][A-Za-z0-9\s-]*$/.test(value);
+    const validPhone = value => /^\+?((-|\s)*[0-9])*$/.test(value);
+    const validRegular = (value, options) => options.regex.test(value);
+    const validEmailToken = value => value.trim().length === 8;
+    const compareToEmail = value => {
         const email = Client.get('email');
         return !email || email.toLowerCase() !== value.toLowerCase();
     };
 
-    const validCompare  = (value, options) => value === $(options.to).val();
+    const validCompare = (value, options) => value === $(options.to).val();
     const validNotEqual = (value, options) => value !== $(options.to).val();
-    const validMin      = (value, options) => (options.min ? value.length >= options.min : true);
-    const validLength   = (value, options) => (
+    const validMin = (value, options) => (options.min ? value.length >= options.min : true);
+    const validLength = (value, options) => (
         (options.min ? value.length >= options.min : true) &&
         (options.max ? value.length <= options.max : true)
     );
@@ -196,7 +198,7 @@ const Validation = (() => {
             return true;
         }
 
-        let is_ok   = true;
+        let is_ok = true;
         let message = '';
 
         if ('min' in options && typeof options.min === 'function') {
@@ -207,23 +209,23 @@ const Validation = (() => {
         }
 
         if (!(options.type === 'float' ? /^\d+(\.\d+)?$/ : /^\d+$/).test(value) || !$.isNumeric(value)) {
-            is_ok   = false;
+            is_ok = false;
             message = localize('Should be a valid number.');
         } else if (options.type === 'float' && options.decimals &&
             !(new RegExp(`^\\d+(\\.\\d{0,${options.decimals}})?$`).test(value))) {
-            is_ok   = false;
+            is_ok = false;
             message = localize('Up to [_1] decimal places are allowed.', options.decimals);
         } else if ('min' in options && 'max' in options && +options.min === +options.max && +value !== +options.min) {
-            is_ok   = false;
+            is_ok = false;
             message = localize('Should be [_1]', addComma(options.min, options.format_money ? getDecimalPlaces(Client.get('currency')) : undefined));
         } else if ('min' in options && 'max' in options && (+value < +options.min || isMoreThanMax(value, options))) {
-            is_ok   = false;
+            is_ok = false;
             message = localize('Should be between [_1] and [_2]', [addComma(options.min, options.format_money ? getDecimalPlaces(Client.get('currency')) : undefined), addComma(options.max, options.format_money ? getDecimalPlaces(Client.get('currency')) : undefined)]);
         } else if ('min' in options && +value < +options.min) {
-            is_ok   = false;
+            is_ok = false;
             message = localize('Should be more than [_1]', addComma(options.min, options.format_money ? getDecimalPlaces(Client.get('currency')) : undefined));
         } else if ('max' in options && isMoreThanMax(value, options)) {
-            is_ok   = false;
+            is_ok = false;
             message = localize('Should be less than [_1]', addComma(options.max, options.format_money ? getDecimalPlaces(Client.get('currency')) : undefined));
         }
 
@@ -240,7 +242,7 @@ const Validation = (() => {
             if (options.residence_list && options.$tax_residence && options.$warning) {
                 // get the tax id regex validation of currently selected tax residence dynamically
                 const tax_regex = getTaxRegex(options.residence_list, options.$tax_residence.val());
-                const tax_id    = $(field.selector).val();
+                const tax_id = $(field.selector).val();
                 // consider valid if no validation is needed, or
                 // tax id value matches some acceptable regex from the tax_regex array
                 const is_valid_tax = !tax_regex.length || tax_regex.find(regex => regex.test(tax_id));
@@ -254,7 +256,7 @@ const Validation = (() => {
     };
 
     const getTaxRegex = (residence_list, tax_residence) => {
-        const tin_format = (residence_list.find(residence =>  residence.value === tax_residence) || {}).tin_format;
+        const tin_format = (residence_list.find(residence => residence.value === tax_residence) || {}).tin_format;
         return (tin_format || []).map((format) => new RegExp(format));
     };
 
@@ -262,23 +264,23 @@ const Validation = (() => {
         let validators_map;
 
         const initValidatorsMap = () => ({
-            req             : { func: validRequired,     message: '' },
-            email           : { func: validEmail,        message: localize('Invalid email address.') },
-            password        : { func: validPassword,     message: localize('Password should have lower and uppercase English letters with numbers.') },
-            general         : { func: validGeneral,      message: localize('Only letters, numbers, space, hyphen, period, and apostrophe are allowed.') },
-            address         : { func: validAddress,      message: localize('Only letters, numbers, space, and these special characters are allowed: [_1]', '- . \' # ; : ( ) , @ /') },
+            req             : { func: validRequired, message: '' },
+            email           : { func: validEmail, message: localize('Invalid email address.') },
+            password        : { func: validPassword, message: localize('Password should have lower and uppercase English letters with numbers.') },
+            general         : { func: validGeneral, message: localize('Only letters, numbers, space, hyphen, period, and apostrophe are allowed.') },
+            address         : { func: validAddress, message: localize('Only letters, numbers, space, and these special characters are allowed: [_1]', '- . \' # ; : ( ) , @ /') },
             letter_symbol   : { func: validLetterSymbol, message: localize('Only letters, space, hyphen, period, and apostrophe are allowed.') },
-            postcode        : { func: validPostCode,     message: localize('Only letters, numbers, space, and hyphen are allowed.') },
-            phone           : { func: validPhone,        message: localize('Please enter a valid phone number (e.g. +15417541234).') },
-            compare         : { func: validCompare,      message: localize('The two passwords that you entered do not match.') },
-            not_equal       : { func: validNotEqual,     message: localizeKeepPlaceholders('[_1] and [_2] cannot be the same.') },
-            min             : { func: validMin,          message: localizeKeepPlaceholders('Minimum of [_1] characters required.') },
-            length          : { func: validLength,       message: localizeKeepPlaceholders('You should enter [_1] characters.') },
-            number          : { func: validNumber,       message: '' },
-            regular         : { func: validRegular,      message: '' },
-            tax_id          : { func: validTaxID,        message: localize('Should start with letter or number, and may contain hyphen and underscore.') },
-            token           : { func: validEmailToken,   message: localize('Invalid verification code.') },
-            compare_to_email: { func: compareToEmail,    message: localize('Your password cannot be the same as your email address.') },
+            postcode        : { func: validPostCode, message: localize('Only letters, numbers, space, and hyphen are allowed.') },
+            phone           : { func: validPhone, message: localize('Please enter a valid phone number (e.g. +15417541234).') },
+            compare         : { func: validCompare, message: localize('The two passwords that you entered do not match.') },
+            not_equal       : { func: validNotEqual, message: localizeKeepPlaceholders('[_1] and [_2] cannot be the same.') },
+            min             : { func: validMin, message: localizeKeepPlaceholders('Minimum of [_1] characters required.') },
+            length          : { func: validLength, message: localizeKeepPlaceholders('You should enter [_1] characters.') },
+            number          : { func: validNumber, message: '' },
+            regular         : { func: validRegular, message: '' },
+            tax_id          : { func: validTaxID, message: localize('Should start with letter or number, and may contain hyphen and underscore.') },
+            token           : { func: validEmailToken, message: localize('Invalid verification code.') },
+            compare_to_email: { func: compareToEmail, message: localize('Your password cannot be the same as your email address.') },
         });
 
         return {
@@ -301,7 +303,7 @@ const Validation = (() => {
         }
 
         let all_is_ok = true;
-        let message   = '';
+        let message = '';
         const field_type = field.$.attr('type');
 
         field.validations.some((valid) => {
@@ -312,14 +314,14 @@ const Validation = (() => {
             if (typeof valid === 'string') {
                 type = valid;
             } else {
-                type    = valid[0];
+                type = valid[0];
                 options = valid[1];
             }
 
             if (type === 'password' && !validLength(getFieldValue(field, options), pass_length)) {
                 field.is_ok = false;
-                type        = 'length';
-                options     = pass_length;
+                type = 'length';
+                options = pass_length;
                 Password.checkPassword(field.selector, false);
             } else {
                 const validator = (type === 'custom' ? options.func : ValidatorsMap.get(type).func);

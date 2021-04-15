@@ -7,7 +7,7 @@ const SetCurrency = (() => {
     let $error,
         $currency_list;
 
-    const init = async (real_account_signup_target) => {
+    const init = async (_, real_account_signup_target) => {
         $currency_list = $('.currency_list');
         $error = $('#set_currency').find('.error-msg');
         const landing_company = (await BinarySocket.wait('landing_company')).landing_company;
@@ -67,7 +67,7 @@ const SetCurrency = (() => {
             $('#crypto_currencies').setVisibility(1);
             $('#crypto_currency_list').html(crypto_currencies).parent().setVisibility(1);
         }
-        
+
         $('#set_currency, .select_currency').setVisibility(1);
     };
 

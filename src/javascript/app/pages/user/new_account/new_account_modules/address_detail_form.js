@@ -25,23 +25,25 @@ const AddressDetailForm = (() => {
 
     const initializeState = async (field) => {
         let $address_state = $('#address_state');
-        const client_state = field.default_value !== '' ? field.default_value : undefined;
         const state_list = (await BinarySocket.send({ states_list: Client.get('residence') })).states_list;
         if (state_list && state_list.length > 0) {
             [{ text: localize('Please select'), value: '' }].concat(state_list).forEach((state) => {
                 $address_state.append(makeOption({ text: state.text, value: state.value }));
             });
+            if (field.default_value !== '') $address_state.val(field.default_value);
             $address_state.select2({
                 matcher(params, data) {
                     return SelectMatcher(params, data);
                 },
             });
-            if (client_state) $address_state.val(client_state);
         } else {
             $address_state.replaceWith($('<input/>',
                 { id: 'address_state', name: 'address_state', type: 'text', maxlength: '35', 'data-lpignore': true }));
             $address_state = $('#address_state');
-            if (client_state) $address_state.text(client_state);
+            if (field.default_value !== '') {
+                const state_name = state_list.find(obj => obj.value === field.default_value).text;
+                $address_state.text(state_name);
+            }
         }
     };
 

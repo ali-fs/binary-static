@@ -240,8 +240,8 @@ export const SecretAnswer = () => (
     />
 );
 
-export const Tnc = () => (
-    <div className='gr-row fieldset_margin_top'>
+export const Tnc = ({ className, row_id }) => (
+    <div className={`gr-row fieldset_margin_top ${className}`} id={row_id}>
         <div className='gr-12-m gr-padding-10'>
             <input type='checkbox' name='tnc' id='tnc' />
             <label htmlFor='tnc'>
@@ -255,16 +255,16 @@ export const Tnc = () => (
     </div>
 );
 
-export const Jurisdiction = () => (
-    <Fieldset legend={it.L('Jurisdiction and Choice of Law')}>
+export const Jurisdiction = ({ row_id, className }) => (
+    <Fieldset legend={it.L('Jurisdiction and Choice of Law')} id={row_id} className={className}>
         <div className='gr-12'>
             <p>{it.L('Your account will be opened with [_1], and will be subject to the jurisdiction and laws of [_2].', '<span id="lc-name"></span>', '<span id="lc-country"></span>')}</p>
         </div>
     </Fieldset>
 );
 
-export const RiskDisclaimer = () => (
-    <Fieldset legend={it.L('Risk warning')} className='fieldset_margin_top' >
+export const RiskDisclaimer = ({ className, row_id }) => (
+    <Fieldset legend={it.L('Risk warning')} className={`fieldset_margin_top ${className}`} id={row_id} >
         <div className='gr-12'>
             <p>{it.L('The financial trading services offered on this site are only suitable for customers who accept the possibility of losing all the money they invest and who understand and have experience of the risk involved in the purchase of financial contracts. Transactions in financial contracts carry a high degree of risk. If the contracts you purchased expire as worthless, you will lose all your investment, which includes the contract premium.')}</p>
         </div>

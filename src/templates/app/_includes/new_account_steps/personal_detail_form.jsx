@@ -18,7 +18,7 @@ const PersonalDetailForm = () => (
     <React.Fragment>
         <form id='personal_detail_step_form' className='gr-padding-10'>
             <div className='gr-9 auto-margin'>
-                <Fieldset id='name_section' legend={it.L('Name')} className='invisible'>
+                <Fieldset id='name_section' legend={it.L('Title and name')} className='invisible'>
                     <Salutation row_id='salutation_row' row_class='input-disabled invisible' />
                     <FirstName row_id='first_name_row' row_class='input-disabled invisible' />
                     <LastName row_id='last_name_row' row_class='input-disabled invisible' />
@@ -32,6 +32,9 @@ const PersonalDetailForm = () => (
                 <Fieldset id='tax_section' legend={it.L('Tax information')} className='fieldset_margin_top invisible'>
                     <TaxResidence row_id='tax_residence_row' row_class='invisible' />
                     <TaxIdentificationNumber row_id='tax_identification_number_row' row_class='invisible' />
+                    <p id='tax_id_warning' className='notice-msg invisible gr-9 gr-centered'>
+                        {it.L('This Tax Identification Number (TIN) is invalid. You may continue, but to facilitate future payment processes, valid tax information will be required.')}
+                    </p>
                     <TaxIdentificationConfirm row_id='tax_identification_confirm_row' row_class='invisible' />
                 </Fieldset>
                 <Fieldset id='account_opening_reason_section' legend={it.L('Account opening reason')} className='fieldset_margin_top invisible'>
