@@ -31,7 +31,18 @@ const SetCurrency = (() => {
 
         const payout_currencies = (await BinarySocket.wait('payout_currencies')).payout_currencies;
         const $currency_list    = $('.currency_list');
-        const $error            = $('#set_currency').find('.error-msg');
+        const $error             = $('#set_currency').find('.error-msg');
+
+        $('#deposit_btn').off('click dblclick').on('click dblclick', () => {
+            if (popup_action) {
+                cleanupPopup();
+            }
+            BinaryPjax.load(`${Url.urlFor('cashier/forwardws')}?action=deposit`);
+        });
+        $('#maybe_later_btn').off('click dblclick').on('click dblclick', () => {
+            const url = Client.isAccountOfType('financial') ? Url.urlFor('user/metatrader') : Client.defaultRedirectUrl();
+            BinaryPjax.load(url);
+        });
 
         $('#deposit_btn').off('click dblclick').on('click dblclick', () => {
             if (popup_action) {
