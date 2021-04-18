@@ -2,18 +2,14 @@ const moment = require('moment');
 const localize = require('../../../../../_common/localize').localize;
 const PersonalDetailForm = require('../new_account_modules/personal_detail_form');
 
-const getCountryName = (residence_list, countryCode) => {
-    const country = residence_list.find(item => item.value === countryCode);
-    return country ? country.text : '';
-};
-
-const getPersonalDetailsConfig = ({ residence_list, account_settings }) => {
+const getPersonalDetailsConfig = ({ account_settings, residence_list }) => {
     const config = [
         {
             id           : 'salutation',
             section      : 'name',
             supported_in : ['iom', 'malta', 'maltainvest'],
             default_value: account_settings.salutation || '',
+            is_immutable : true,
             rules        : ['req'],
         },
         {
@@ -21,6 +17,7 @@ const getPersonalDetailsConfig = ({ residence_list, account_settings }) => {
             section      : 'name',
             supported_in : ['svg', 'iom', 'malta', 'maltainvest'],
             default_value: account_settings.first_name || '',
+            is_immutable : true,
             rules        : ['req', 'letter_symbol', ['length', { min: 2, max: 50 }]],
         },
         {
@@ -28,6 +25,7 @@ const getPersonalDetailsConfig = ({ residence_list, account_settings }) => {
             section      : 'name',
             supported_in : ['svg', 'iom', 'malta', 'maltainvest'],
             default_value: account_settings.last_name || '',
+            is_immutable : true,
             rules        : ['req', 'letter_symbol', ['length', { min: 2, max: 50 }]],
         },
         {
@@ -37,25 +35,24 @@ const getPersonalDetailsConfig = ({ residence_list, account_settings }) => {
             default_value: account_settings.date_of_birth
                 ? moment.utc(account_settings.date_of_birth * 1000)
                 : '',
-            rules: ['req'],
+            is_immutable: true,
+            rules       : ['req'],
         },
         {
             id           : 'place_of_birth',
             section      : 'detail',
             supported_in : ['maltainvest', 'iom', 'malta'],
-            default_value: account_settings.place_of_birth
-                ? getCountryName(residence_list, account_settings.place_of_birth)
-                : '',
-            rules: ['req'],
+            default_value: account_settings.place_of_birth || '',
+            is_immutable : true,
+            rules        : ['req'],
         },
         {
             id           : 'citizen',
             section      : 'detail',
             supported_in : ['iom', 'malta', 'maltainvest'],
-            default_value: account_settings.citizen
-                ? getCountryName(residence_list, account_settings.citizen)
-                : '',
-            rules: ['req'],
+            default_value: account_settings.citizen || '',
+            is_immutable : true,
+            rules        : ['req'],
         },
         {
             id           : 'phone',
@@ -70,10 +67,8 @@ const getPersonalDetailsConfig = ({ residence_list, account_settings }) => {
             id           : 'tax_residence',
             section      : 'tax',
             supported_in : ['maltainvest'],
-            default_value: account_settings.tax_residence
-                ? getCountryName(residence_list, account_settings.tax_residence)
-                : '',
-            rules: ['req', ['length', { min: 1, max: 20 }]],
+            default_value: account_settings.tax_residence || '',
+            rules        : ['req', ['length', { min: 1, max: 20 }]],
         },
         {
             id           : 'tax_identification_number',
@@ -82,7 +77,7 @@ const getPersonalDetailsConfig = ({ residence_list, account_settings }) => {
             default_value: account_settings.tax_identification_number || '',
             rules        : [
                 'req',
-                ['tax_id', { $warning: $('#tax_id_warning'), $tax_residence: $('#tax_residence') }],
+                ['tax_id', { residence_list, $warning: $('#tax_id_warning'), $tax_residence: $('#tax_residence') }],
                 ['length', { min: 1, max: 20 }],
             ],
         },
@@ -107,12 +102,8 @@ const getPersonalDetailsConfig = ({ residence_list, account_settings }) => {
 const getRequiredFields = (landing_company, all_fields) =>
     all_fields.filter(field => field.supported_in.includes(landing_company));
 
-const personalDetailsConfig = ({
-    real_account_signup_target,
-    residence_list,
-    account_settings,
-}) => {
-    const config = getPersonalDetailsConfig({ residence_list, account_settings });
+const personalDetailsConfig = ({ real_account_signup_target, account_settings, residence_list }) => {
+    const config = getPersonalDetailsConfig({ account_settings, residence_list });
     return {
         title           : localize('Personal details'),
         body_module     : PersonalDetailForm,

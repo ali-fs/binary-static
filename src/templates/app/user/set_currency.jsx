@@ -1,5 +1,5 @@
-import React             from 'react';
-import Loading           from '../../_common/components/loading.jsx';
+import React from 'react';
+import Loading from '../../_common/components/loading.jsx';
 import { SeparatorLine } from '../../_common/components/separator_line.jsx';
 
 const Currencies = ({ text, id }) => (
@@ -31,16 +31,17 @@ const SetCurrency = () => (
                 <div className='invisible' id='show_new_account'>
                     <img src={it.url_for('images/pages/set_currency/account-created.svg')} />
                     <div className='gr-padding-10' />
-                    <h1>{it.L('Congratulations!')}</h1>
-                    <p id='congratulations_message'>{it.L('You have successfully created your real money [_1]account.', `<span data-show="iom">${it.L('gaming')}&nbsp;</span>`)}</p>
+                    <h1>{it.L('Success!')}</h1>
+                    <p id='congratulations_message' />
+                    <p>{it.L('Make a deposit now to start trading.')}</p>
 
                     <SeparatorLine show_mobile className='gr-parent gr-padding-10' invisible />
                 </div>
 
-                <div id='deposit_btn' className='invisible'>
+                <div id='deposit_row' className='invisible'>
                     <div>
-                        <a className='button button-secondary invisible btn_cancel' href='javascript:;'><span>{it.L('Close')}</span></a>
-                        <a className='button' href='javascript:;'><span>{it.L('Make a deposit')}</span></a>
+                        <a className='button button-secondary btn_cancel'id='maybe_later_btn' href='javascript:;'><span>{it.L('Maybe later')}</span></a>
+                        <a className='button' href='javascript:;'id='deposit_btn'><span>{it.L('Deposit now')}</span></a>
                     </div>
                 </div>
 

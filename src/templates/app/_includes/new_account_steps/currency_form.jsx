@@ -14,22 +14,23 @@ const Currencies = ({ text, id }) => (
 );
 
 const CurrencyForm = () => (
-    <React.Fragment>
-        <div id='set_currency'>
-            <div className='center-text select_currency'>
-                <form id='currency_step_form' className='gr-padding-10'>
-                    <div id='currency'>
-                        <Currencies id='fiat' text={it.L('Fiat Currency')} />
-                        <Currencies id='crypto' text={it.L('Cryptocurrency')} />
-                    </div>
-                    <p className='invisible error-msg center-text' />
-                    <div className='align-end' id='submit_section'>
-                        <button className='button' type='submit'>{it.L('Next')}</button>
-                    </div>
-                </form>
-            </div>
+    <div id='set_currency'>
+        <div className='center-text select_currency'>
+            <form id='currency_step_form' className='gr-padding-10'>
+                <div id='currency'>
+                    <Currencies id='fiat' text={it.L('Fiat Currency')} />
+                    <Currencies id='crypto' text={it.L('Cryptocurrency')} />
+                </div>
+
+                <p className='hint'>{it.L('You will not be able to change currency once you have made a deposit.')}</p>
+
+                <p className='invisible error-msg center-text' />
+                <div className='align-end' id='submit_section'>
+                    <button className='button' type='submit'>{it.L('Next')}</button>
+                </div>
+            </form>
         </div>
-    </React.Fragment>
+    </div>
 );
 
 export default CurrencyForm;

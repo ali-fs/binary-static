@@ -57,7 +57,7 @@ const FinancialInformationForm = () => (
             <option value=''>{it.L('Please select')}</option>
             <option value='Salaried Employee'>{it.L('Salaried Employee')}</option>
             <option value='Self-Employed'>{it.L('Self-Employed')}</option>
-            <option value='Investments &amp; Dividends'>{it.L('Investments &amp; Dividends')}</option>
+            <option value='Investments &amp; Dividends'>{it.L('Investments & Dividends')}</option>
             <option value='Pension'>{it.L('Pension')}</option>
             <option value='State Benefits'>{it.L('State Benefits')}</option>
             <option value='Savings &amp; Inheritance'>{it.L('Savings & Inheritance')}</option>

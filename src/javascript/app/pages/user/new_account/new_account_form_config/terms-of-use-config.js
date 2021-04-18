@@ -1,19 +1,30 @@
-// import { isDesktop, getDefaultFields } from '@deriv/shared';
 const localize = require('../../../../../_common/localize').localize;
 const TermsOfUseForm = require('../new_account_modules/terms_of_use_form');
 
 const getTermsOfUseConfig = [
     {
-        id           : 'agreed_tos',
+        id          : 'jurisdiction',
+        section     : 'terms_of_use_section',
+        supported_in: ['maltainvest', 'svg', 'iom', 'malta'],
+        rules       : [],
+    },
+    {
+        id          : 'risk_disclaimer',
+        section     : 'terms_of_use_section',
+        supported_in: ['maltainvest', 'svg'],
+        rules       : [],
+    },
+    {
+        id           : 'pep_declaration',
         section      : 'terms_of_use_section',
-        supported_in : ['svg', 'iom'],
+        supported_in : ['maltainvest', 'iom', 'malta', 'svg'],
         default_value: false,
         rules        : ['req'],
     },
     {
-        id           : 'agreed_tnc',
+        id           : 'tnc',
         section      : 'terms_of_use_section',
-        supported_in : ['svg', 'iom'],
+        supported_in : ['maltainvest', 'svg', 'iom', 'malta'],
         default_value: false,
         rules        : ['req'],
     },

@@ -59,6 +59,8 @@ const FormManager = (() => {
                         value = field.$.attr('data-value');
                     } else if (/lbl_/.test(key)) {
                         value = field.value || field.$.text();
+                    } else if (key === '#currency') {
+                        value = $('.selected').find('.currency-name').text() || '';
                     } else if (field.$.is(':checkbox')) {
                         value = field.$.is(':checked') ? 1 : 0;
                     } else if (Array.isArray(val)) {
@@ -158,6 +160,8 @@ const FormManager = (() => {
     return {
         handleSubmit,
         init: initForm,
+        disableButton,
+        enableButton,
     };
 })();
 
