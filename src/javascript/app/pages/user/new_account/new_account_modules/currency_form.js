@@ -1,11 +1,31 @@
 const BinarySocket = require('../../../../base/socket');
-const Currency = require('../../../../common/currency');
-const localize = require('../../../../../_common/localize').localize;
-const Url = require('../../../../../_common/url');
+const Currency     = require('../../../../common/currency');
+const localize     = require('../../../../../_common/localize').localize;
+const Url          = require('../../../../../_common/url');
 
 const SetCurrency = (() => {
     let $error,
         $currency_list;
+
+    const currencies_display_order = [
+        'USD',
+        'EUR',
+        'GBP',
+        'AUD',
+        'BTC',
+        'ETH',
+        'LTC',
+        'UST',
+        'eUSDT',
+        'BUSD',
+        'DAI',
+        'EURS',
+        'IDK',
+        'PAX',
+        'TUSD',
+        'USDC',
+        'USDK',
+    ];
 
     const init = async (_, real_account_signup_target) => {
         $currency_list = $('.currency_list');
@@ -19,16 +39,26 @@ const SetCurrency = (() => {
     const getAvailableCurrencies = (landing_company, real_account_signup_target) => {
         const target = real_account_signup_target === 'maltainvest' ? 'financial' : 'gaming';
         if (landing_company[`${target}_company`]) {
-            return landing_company[`${target}_company`].legal_allowed_currencies;
+            return getSortedCurrencies(landing_company[`${target}_company`].legal_allowed_currencies);
         }
         return [];
     };
+
+    const getSortedCurrencies = (currency_list) => currency_list.sort((a, b) => {
+        if (currencies_display_order.indexOf(a) < currencies_display_order.indexOf(b)) {
+            return -1;
+        }
+        if (currencies_display_order.indexOf(a) > currencies_display_order.indexOf(b)) {
+            return 1;
+        }
+        return 0;
+    });
 
     const populateCurrencies = (currencies) => {
         const $fiat_currencies = $('<div/>');
         const $cryptocurrencies = $('<div/>');
         currencies.forEach((c) => {
-            const $wrapper = $('<div/>', { class: 'gr-2 gr-4-m currency_wrapper', id: c });
+            const $wrapper = $('<div/>', { class: 'gr-2 gr-6-m currency_wrapper', id: c });
             const $image = $('<div/>').append($('<img/>', { src: Url.urlForStatic(`images/pages/set_currency/${c.toLowerCase()}.svg`) }));
             const $name = $('<div/>', { class: 'currency-name' });
 

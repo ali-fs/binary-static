@@ -17,7 +17,7 @@ import { Fieldset } from '../../../_common/components/forms.jsx';
 const PersonalDetailForm = () => (
     <React.Fragment>
         <form id='personal_detail_step_form' className='gr-padding-10'>
-            <div className='gr-9 auto-margin'>
+            <div className='gr-9 gr-12-m auto-margin'>
                 <Fieldset id='name_section' legend={it.L('Title and name')} className='invisible'>
                     <Salutation row_id='salutation_row' row_class='input-disabled invisible' />
                     <FirstName row_id='first_name_row' row_class='input-disabled invisible' />
