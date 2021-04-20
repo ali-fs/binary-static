@@ -26,6 +26,7 @@ const FormProgress = (() => {
                 const el_step = document.createElement('div');
                 el_step.key = index + 1;
                 el_step.className = 'form-progress__step';
+                el_step.style =  `--step_width: ${steps.length > 4 ? '160px' : '230px'}`;
 
                 const el_identifier = document.createElement('div');
                 el_identifier.className = `identifier${index <= current_step ? ' identifier--active' : ''}`;

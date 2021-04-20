@@ -9,12 +9,11 @@ import {
 
 const AddressDetailForm = () => (
     <form id='address_detail_step_form' className='gr-padding-10'>
+        <div className='gr-padding-10 auto-margin gr-9'>
+            <p className='hint'><strong>{it.L('Only use an address for which you have proof of residence - ')}</strong></p>
+            <p className='hint'>{it.L('a recent utility bill (e.g. electricity, water, gas, landline, or internet), bank statement, or government-issued letter with your name and this address.')}</p>
+        </div>
         <div className='gr-8 gr-12-m auto-margin' id='address_section' >
-            <div className='gr-padding-10'>
-                <p className='hint'><strong>{it.L('Only use an address for which you have proof of residence - ')}</strong></p>
-                <p className='hint'>{it.L('Only use an address for which you have proof of residence - a recent utility bill (e.g. electricity, water, gas, landline, or internet), bank statement, or government-issued letter with your name and this address.')}</p>
-            </div>
-
             <AddressLine1 row_id='address_line_1_row' row_class='invisible' />
             <AddressLine2 row_id='address_line_2_row' row_class='invisible' />
             <AddressCity row_id='address_city_row' row_class='invisible' />

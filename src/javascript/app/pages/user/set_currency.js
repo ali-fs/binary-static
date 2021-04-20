@@ -316,7 +316,7 @@ const SetCurrency = (() => {
     const populateReqMultiAccount = (selected_currency) => {
         const get_settings = State.getResponse('get_settings');
 
-        return ({
+        const request = {
             new_account_real      : 1,
             currency              : selected_currency,
             date_of_birth         : moment.utc(+get_settings.date_of_birth * 1000).format('YYYY-MM-DD'),
@@ -339,7 +339,11 @@ const SetCurrency = (() => {
             ...(get_settings.tax_residence && {
                 tax_residence: get_settings.tax_residence,
             }),
+        };
+        Object.keys(request).forEach(key => {
+            if (!request[key] || request[key] === '') delete request[key];
         });
+        return request;
     };
 
     const cleanupPopup = () => {

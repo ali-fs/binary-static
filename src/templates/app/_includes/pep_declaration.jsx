@@ -8,12 +8,7 @@ const PepDeclaration = ({ className, row_id }) => (
         id={row_id}
     >
         <div className='gr-12'>
-            <label>{it.L('A politically exposed person (PEP) is someone appointed with a prominent public position. Close associates and family members of a PEP are also considered to be PEPs.')}&nbsp;
-                <a id='pep_declaration_note_toggle' className='toggle-arrow' href='javascript:;'>{it.L('Learn more')}</a>
-            </label>
-            <div id='pep_declaration_note' style={{ display: 'none' }}>
-                <p>{it.L('A politically exposed person (PEP) is someone appointed with a prominent public position. Close associates and family members of a PEP are also considered to be PEPs.')}</p>
-            </div>
+            <p>{it.L('A politically exposed person (PEP) is someone appointed with a prominent public position. Close associates and family members of a PEP are also considered to be PEPs.')}</p>
         </div>
         <div className='gr-padding-10 gr-12'>
             <input id='pep_declaration' type='checkbox' />

@@ -18,11 +18,10 @@ const CurrencyForm = () => (
         <div className='center-text select_currency'>
             <form id='currency_step_form'>
                 <div id='currency'>
-                    <Currencies id='fiat' text={it.L('Fiat Currency')} />
-                    <Currencies id='crypto' text={it.L('Cryptocurrency')} />
+                    <Currencies id='fiat' text={it.L('Fiat currencies')} />
+                    <p className='hint set_currency_hint'>{it.L('You will not be able to change currency once you have made a deposit.')}</p>
+                    <Currencies id='crypto' text={it.L('Cryptocurrencies')} />
                 </div>
-
-                <p className='hint'>{it.L('You will not be able to change currency once you have made a deposit.')}</p>
 
                 <p className='invisible error-msg center-text' />
                 <div className='align-end' id='submit_section'>

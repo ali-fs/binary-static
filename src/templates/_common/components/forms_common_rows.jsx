@@ -197,7 +197,6 @@ export const AddressPostcode = ({ children, hint, row_class, row_id }) => (
         label={it.L('Postal/ZIP code')}
         attributes={{ maxLength: '20', 'data-lpignore': true }}
         hint={hint}
-        has_geovalidator
         row_class={`postcode-form-row ${row_class || ''}`}
         row_id={row_id}
     >
@@ -242,7 +241,7 @@ export const SecretAnswer = () => (
 
 export const Tnc = ({ className, row_id }) => (
     <div className={`gr-row fieldset_margin_top ${className}`} id={row_id}>
-        <div className='gr-12-m gr-padding-10'>
+        <div className='gr-12-m gr-padding-10 add-account-tnc'>
             <input type='checkbox' name='tnc' id='tnc' />
             <label htmlFor='tnc'>
                 {it.L(
@@ -256,7 +255,7 @@ export const Tnc = ({ className, row_id }) => (
 );
 
 export const Jurisdiction = ({ row_id, className }) => (
-    <Fieldset legend={it.L('Jurisdiction and Choice of Law')} id={row_id} className={className}>
+    <Fieldset legend={it.L('Jurisdiction and choice of law')} id={row_id} className={className}>
         <div className='gr-12'>
             <p>{it.L('Your account will be opened with [_1], and will be subject to the jurisdiction and laws of [_2].', '<span id="lc-name"></span>', '<span id="lc-country"></span>')}</p>
         </div>
