@@ -18,7 +18,7 @@ const PersonalDetailForm = () => (
     <React.Fragment>
         <form id='personal_detail_step_form' className='gr-padding-10'>
             <div className='gr-9 gr-12-m auto-margin'>
-                <Fieldset id='name_section' legend={it.L('Name')} className='invisible'>
+                <Fieldset id='name_section' legend={it.L('Name')} legend_id='name_section_legend' className='invisible'>
                     <Salutation row_id='salutation_row' row_class='input-disabled invisible' />
                     <FirstName row_id='first_name_row' row_class='input-disabled invisible' />
                     <LastName row_id='last_name_row' row_class='input-disabled invisible' />

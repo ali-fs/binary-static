@@ -885,9 +885,20 @@ body #not_authenticated_financial ul.checked > li {
 }
 
 .select2-container {
-    width: 262px !important;
+    width: 100% !important;
     @media screen and (min-width: 768px) {
         width: 360px !important;
+    }
+}
+
+.padding-h35 {
+    @media screen and (min-width: 768px) {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    @media screen and (max-width: 480px) {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 

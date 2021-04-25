@@ -1,11 +1,12 @@
-const SelectMatcher = require('@binary-com/binary-style').select2Matcher;
-const moment = require('moment');
-const Client = require('../../../../base/client');
+const SelectMatcher     = require('@binary-com/binary-style').select2Matcher;
+const moment            = require('moment');
+const Client            = require('../../../../base/client');
 const generateBirthDate = require('../../../../../app/common/attach_dom/birth_date_picker');
-const BinarySocket = require('../../../../base/socket');
-const getElementById = require('../../../../../_common/common_functions').getElementById;
-const makeOption = require('../../../../../_common/common_functions').makeOption;
-const State = require('../../../../../_common/storage').State;
+const BinarySocket      = require('../../../../base/socket');
+const localize          = require('../../../../../_common/localize').localize;
+const getElementById    = require('../../../../../_common/common_functions').getElementById;
+const makeOption        = require('../../../../../_common/common_functions').makeOption;
+const State             = require('../../../../../_common/storage').State;
 
 const PersonalDetailForm = (() => {
 
@@ -24,6 +25,8 @@ const PersonalDetailForm = (() => {
                 is_disabled: residence.disabled,
             }));
         });
+
+        if (fields.some(field => field.id === 'salutation')) getElementById('name_section_legend').innerHTML = localize('Title and name');
 
         const residence_select_fields = ['place_of_birth', 'citizen', 'tax_residence'];
         const simple_select_fields = ['salutation', 'account_opening_reason'];
