@@ -30,18 +30,23 @@ const SetCurrency = (() => {
     const init = async (_, real_account_signup_target) => {
         $currency_list = $('.currency_list');
         $error = $('#set_currency').find('.error-msg');
-        const landing_company = (await BinarySocket.send({ landing_company: 1 })).landing_company;
+        const landing_company = (await BinarySocket.wait('landing_company')).landing_company;
 
         populateCurrencies(getAvailableCurrencies(landing_company, real_account_signup_target));
         onSelection(true);
     };
 
     const getAvailableCurrencies = (landing_company, real_account_signup_target) => {
-        const target = real_account_signup_target === 'maltainvest' ? 'financial' : 'gaming';
+        const target = getTargetCompany(landing_company, real_account_signup_target);
         if (landing_company[`${target}_company`]) {
             return getSortedCurrencies(landing_company[`${target}_company`].legal_allowed_currencies);
         }
         return [];
+    };
+    
+    const getTargetCompany = (landing_company, real_account_signup_target) => {
+        if (real_account_signup_target === 'maltainvest') return 'financial';
+        return landing_company.gaming_company ? 'gaming' : 'financial';
     };
 
     const getSortedCurrencies = (currency_list) => currency_list.sort((a, b) => {

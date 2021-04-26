@@ -60,7 +60,7 @@ const FormManager = (() => {
                     } else if (/lbl_/.test(key)) {
                         value = field.value || field.$.text();
                     } else if (key === '#currency') {
-                        value = $('.selected').find('.currency-name').text() || '';
+                        value = $('.currency_wrapper.selected').attr('id') || '';
                     } else if (field.$.is(':checkbox')) {
                         value = field.$.is(':checked') ? 1 : 0;
                     } else if (Array.isArray(val)) {
