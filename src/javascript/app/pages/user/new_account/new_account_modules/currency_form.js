@@ -30,7 +30,7 @@ const SetCurrency = (() => {
     const init = async (_, real_account_signup_target) => {
         $currency_list = $('.currency_list');
         $error = $('#set_currency').find('.error-msg');
-        const landing_company = (await BinarySocket.wait('landing_company')).landing_company;
+        const landing_company = (await BinarySocket.send({ landing_company: 1 })).landing_company;
 
         populateCurrencies(getAvailableCurrencies(landing_company, real_account_signup_target));
         onSelection(true);
