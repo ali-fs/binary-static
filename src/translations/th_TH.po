@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-04-25 11:39\n"
+"PO-Revision-Date: 2021-05-03 11:12\n"
 "Last-Translator: \n"
 "Language-Team: Thai\n"
 "MIME-Version: 1.0\n"
@@ -3507,7 +3507,7 @@ msgid "DIEL RTS28 for 2019"
 msgstr "DIEL RTS28 สำหรับ 2019"
 
 msgid "DIEL RTS28 for 2020"
-msgstr ""
+msgstr "DIEL RTS28 สำหรับ 2020"
 
 msgid "DIEL forms part of %1the Investor Compensation Scheme%2 (the \"Scheme\"), which is a rescue fund for investors that are clients of failed investment firms licensed by the MFSA. The Scheme covers 90% of the Company's net liability to a client in respect of investments that qualify for compensation under the Investment Services Act subject to a maximum payment to any one person of €20,000. The Scheme is based on EC Directive 97/9."
 msgstr "DIEL สร้างขึ้นมาเป็นส่วนหนึ่งของ %1แผนการชดเชยแก่นักลงทุน%2 (\"แผน\") ซึ่งเป็นเงินทุนช่วยเหลือสำหรับนักลงทุน ซึ่งเป็นลูกค้าของบริษัทลงทุนที่ล้มเหลวที่ได้รับใบอนุญาตจาก MFSA แผนนี้ให้ความคุ้มครอง 90% ของหนี้สุทธิของบริษัทแก่ลูกค้าสำหรับการลงทุนที่มีคุณสมบัติได้รับการชดเชยภายใต้พระราชบัญญัติการบริการด้านการลงทุน (Investment Services Act) และขึ้นอยู่กับจำนวนเงินที่จ่ายสูงสุดให้แก่บุคคลหนึ่งจำนวน €20,000 แผนการนี้ยึดตามหลัก EC Directive 97/9"
@@ -5728,6 +5728,9 @@ msgstr "ฉันต้องการเปิดบัญชีสกุลเ
 
 msgid "I want to reapply"
 msgstr "ฉันต้องการสมัครอีกครั้ง"
+
+msgid "I want to receive updates on %1 products, services, and events."
+msgstr ""
 
 msgid "I want to set my currency instead"
 msgstr "ฉันต้องการกำหนดสกุลเงินของฉัน"
@@ -9420,9 +9423,6 @@ msgstr "รับอีเมล์ทาง %1 ผลิตภัณฑ์ บ�
 msgid "Receive instant prices based on your position."
 msgstr "รับราคาทันทีตามตำแหน่งของท่าน"
 
-msgid "Receive news and special offers"
-msgstr "รับข่าวสารและข้อเสนอพิเศษ"
-
 msgid "Receive prices that are benchmarked against interbank rates."
 msgstr "รับราคาที่เปรียบเทียบกับอัตราระหว่างธนาคาร"
 
@@ -10264,7 +10264,7 @@ msgid "Sorry, an error occurred while processing your request."
 msgstr "ขออภัย มีความผิดพลาดเกิดขึ้นขณะที่ประมวลผลความประสงค์ของท่าน"
 
 msgid "Sorry, but binary options trading is not available in your country."
-msgstr ""
+msgstr "ขออภัยการซื้อขายตัวเลือกไบนารีไม่สามารถใช้ได้ในประเทศของคุณ"
 
 msgid "Sorry, but binary options trading is not available in your financial account."
 msgstr "ขออภัย การซื้อขายไบนารี่ออปชัน ไม่สามารถใช้งานได้ในบัญชี financial ของคุณ"
@@ -13603,6 +13603,9 @@ msgstr "เสมือน"
 
 msgid "Virtual Account"
 msgstr "บัญชีทดลองใช้"
+
+msgid "Virtual accounts do not have Payment Agent services."
+msgstr ""
 
 msgid "Visa is an international company that supports digital payments around the world, most commonly through their brand of credit and debit cards. For more information, please visit %1."
 msgstr "วีซ่า เป็นองค์กรนานาชาติที่ให้บริการการชำระเงินดิจิทัลทั่วโลก ส่วนใหญ่ผ่านทางบัตรเครดิตหรือบัตรเดบิตของแบรนด์ต่างๆ สำหรับข้อมูลเพิ่มเติม โปรดศึกษาจาก %1"

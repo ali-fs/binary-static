@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-04-25 11:39\n"
+"PO-Revision-Date: 2021-05-03 11:12\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -449,7 +449,7 @@ msgid "%1Deriv-Demo%2 if your signal is for demo accounts only."
 msgstr "%1Deriv-Demo%2 se il segnale vale solo per conti di prova."
 
 msgid "%1Deriv-Server%2 or %1Deriv-Server-02%2 if your signals is for real accounts only."
-msgstr ""
+msgstr "%1Deriv-Server%2 o %1Deriv-Server-02%2 se il segnale vale solo per conti reali."
 
 msgid "%1Founded%2 October 1999"
 msgstr "%1Fondata%2 nell'ottobre 1999"
@@ -467,10 +467,10 @@ msgid "%1Note%2: These limits are only applicable to your %3 real account. To se
 msgstr "%1Nota%2: questi limiti valgono solo per il conto reale %3. Potrai decidere altri limiti e impostarli di conseguenza, passando al conto corrispettivo."
 
 msgid "%1Note:%2 For a wider selection of signal providers, go to %3MQL5 showcase page%4 and search for Deriv under the Broker server field."
-msgstr ""
+msgstr "%1Nota bene:%2 per una maggiore selezione di fornitori di segnali per Deriv, visita la %3pagina di presentazione MQL5%4 e cerca Deriv nel campo del server Broker."
 
 msgid "%1Note:%2 You need to upgrade your MQL5 account to seller status to be able to add a signal. If you’ve not upgraded yet, follow the steps on this page to register as a seller."
-msgstr ""
+msgstr "%1Nota bene:%2 per potere aggiungere un segnale, è necessario eseguire l'upgrade del conto MQL5 e classificarsi come venditore. Se non lo hai ancora fatto, segui i passaggi riportati su questa pagina per registrarti come venditore."
 
 msgid "%1Please note that if you live in the United Kingdom, self-exclusion cannot be removed until its period has expired. %2If you wish to resume trading after your self-exclusion period is over, please make your request by calling %3. Requests by chat or email shall not be entertained."
 msgstr "%1 Se vivi nel Regno Unito, non è possibile rimuovere l'autoesclusione fino alla scadenza del periodo stabilito. %2Se desideri riprendere le attività di trading dopo tale periodo, puoi richiederlo chiamando al numero %3. Le richieste inviate via chat o via e-mail non verranno considerate."
@@ -1151,7 +1151,7 @@ msgid "Additional business exposure:"
 msgstr "Ulteriore esposizione commerciale:"
 
 msgid "Additional income stream from monthly subscriptions."
-msgstr ""
+msgstr "Flussi di entrate aggiuntivi da abbonamenti mensili."
 
 msgid "Additional processing time may be required by your bank or money transfer services for the funds to be credited to your payment account."
 msgstr "È possibile che l'accredito di fondi sul tuo conto richieda più tempo da parte della banca o dei servizi di trasferimento di denaro."
@@ -1892,7 +1892,7 @@ msgid "Automate your trading strategies with our simple, \"drag-and-drop\" bot c
 msgstr "Automatizza le tue strategie di trading con il nostro semplice strumento di creazione di bot \"trascina e rilascia\"."
 
 msgid "Automated copying – no extra work from you."
-msgstr ""
+msgstr "Copia automatizzata: nessun lavoro extra da parte tua."
 
 msgid "Automated decision-making"
 msgstr "Processo decisionale automatizzato"
@@ -2084,7 +2084,7 @@ msgid "Benefits of being a Payment Agent"
 msgstr "I vantaggi dell'essere un Agente di pagamento"
 
 msgid "Benefits of subscribing to MT5 signals"
-msgstr ""
+msgstr "Vantaggi dell'iscrizione ai segnali MT5"
 
 msgid "Best execution factors"
 msgstr "Fattori di miglior esecuzione"
@@ -3506,7 +3506,7 @@ msgid "DIEL RTS28 for 2019"
 msgstr "DIEL RTS28 per 2019"
 
 msgid "DIEL RTS28 for 2020"
-msgstr ""
+msgstr "DIEL RTS28 per 2020"
 
 msgid "DIEL forms part of %1the Investor Compensation Scheme%2 (the \"Scheme\"), which is a rescue fund for investors that are clients of failed investment firms licensed by the MFSA. The Scheme covers 90% of the Company's net liability to a client in respect of investments that qualify for compensation under the Investment Services Act subject to a maximum payment to any one person of €20,000. The Scheme is based on EC Directive 97/9."
 msgstr "DIEL fa parte dell'Investor Compensation Scheme (il \"sistema\") ossia un fondo di salvataggio per gli investitori che sono clienti di società d'investimento fallite, autorizzato dalla MFSA. Il sistema copre il 90% della responsabilità diretta della Società verso un cliente rispetto a investimenti per cui è previsto un indennizzo secondo l'Investment Services Act, soggetto al pagamento di un importo massimo pari a €20.000 per ciascun soggetto. Il sistema si basa sulla Direttiva 97/9/CE."
@@ -4250,7 +4250,7 @@ msgid "Earn when your clients trade on an MT5 Synthetics account."
 msgstr ""
 
 msgid "Easy to set up – no installation required."
-msgstr ""
+msgstr "Facile da configurare, senza obbligo d'installazione."
 
 msgid "Economic Calendar"
 msgstr "Calendario economico"
@@ -5216,7 +5216,7 @@ msgid "Front-End Developer"
 msgstr "Sviluppatore front-end"
 
 msgid "Full disclosure of each providers’ performances."
-msgstr ""
+msgstr "Divulgazione completa delle performance di ogni fornitore."
 
 msgid "Fund transfers"
 msgstr "Trasferimenti di fondi"
@@ -5612,7 +5612,7 @@ msgid "How it works"
 msgstr "Come funziona"
 
 msgid "How it’s calculated"
-msgstr ""
+msgstr "Come si calcola"
 
 msgid "How much do I get paid if I refer clients onto your MT5 platform?"
 msgstr "Qual è la mia retribuzione se indirizzo clienti alla piattaforma MT5?"
@@ -5645,7 +5645,7 @@ msgid "How to register as a signal provider"
 msgstr ""
 
 msgid "How to renew or cancel your subscription"
-msgstr ""
+msgstr "Come rinnovare o annullare l'iscrizione"
 
 msgid "How to scan a QR code"
 msgstr "Come fare lo scan di un codice QR"
@@ -5727,6 +5727,9 @@ msgstr "Desidero aprire un altro conto per criptovalute"
 
 msgid "I want to reapply"
 msgstr "Desidero ricandidarmi"
+
+msgid "I want to receive updates on %1 products, services, and events."
+msgstr ""
 
 msgid "I want to set my currency instead"
 msgstr "Desidero impostare la mia valuta"
@@ -5951,7 +5954,7 @@ msgid "If we have reason to believe that your tax information is incomplete, we 
 msgstr "Se abbiamo motivo di ritenere che i tuoi dati fiscali siano incompleti, potremmo contattarti per chiarimenti."
 
 msgid "If you are a professional trader, the MT5 trading signals service allows you to share your strategies with other traders for free or a subscription fee that you determine. When traders subscribe to your signal, your deals are automatically replicated on their accounts each time you place a trade."
-msgstr ""
+msgstr "Se sei un trader professionista, il servizio di segnali di trading MT5 ti consente di condividere le tue strategie con altri trader gratuitamente o con una commissione di iscrizione stabilita da te. Quando i trader si iscrivono al tuo segnale, le tue operazioni vengono replicate automaticamente sui loro conti ogni volta che effettui un trade."
 
 msgid "If you are considering self-exclusion, you may wish to register with GAMSTOP."
 msgstr "Se stai valutando l'autoesclusione, puoi registrarti con GAMSTOP."
@@ -7514,7 +7517,7 @@ msgid "Min-Max Withdrawal"
 msgstr "Prelievo min/max"
 
 msgid "Minimise trading risk by copying from expert traders."
-msgstr ""
+msgstr "Riduci al minimo i rischi legati al trading seguendo l'esempio di trader esperti."
 
 msgid "Minimum deposit"
 msgstr "Deposito minimo"
@@ -9417,9 +9420,6 @@ msgstr "Ricevi e-mail su prodotti, servizi ed eventi di %1."
 
 msgid "Receive instant prices based on your position."
 msgstr "Ricevi prezzi immediati basati sulla tua posizione."
-
-msgid "Receive news and special offers"
-msgstr "Ricevi aggiornamenti e offerte speciali"
 
 msgid "Receive prices that are benchmarked against interbank rates."
 msgstr "Ricevi prezzi che vengono confrontati con i tassi interbancari."
@@ -13599,6 +13599,9 @@ msgstr "Virtuale"
 
 msgid "Virtual Account"
 msgstr "Conto Virtuale"
+
+msgid "Virtual accounts do not have Payment Agent services."
+msgstr ""
 
 msgid "Visa is an international company that supports digital payments around the world, most commonly through their brand of credit and debit cards. For more information, please visit %1."
 msgstr "Visa è una società internazionale che supporta i pagamenti digitali in tutto il mondo, solitamente attraverso le carte di credito o di debito dello stesso circuito. Per maggiori informazioni, visita il sito %1."

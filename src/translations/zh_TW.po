@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-04-25 11:39\n"
+"PO-Revision-Date: 2021-05-03 11:12\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional\n"
 "MIME-Version: 1.0\n"
@@ -3506,7 +3506,7 @@ msgid "DIEL RTS28 for 2019"
 msgstr "2019 年 DIEL RTS28 "
 
 msgid "DIEL RTS28 for 2020"
-msgstr ""
+msgstr "2020 年 DIEL RTS28 "
 
 msgid "DIEL forms part of %1the Investor Compensation Scheme%2 (the \"Scheme\"), which is a rescue fund for investors that are clients of failed investment firms licensed by the MFSA. The Scheme covers 90% of the Company's net liability to a client in respect of investments that qualify for compensation under the Investment Services Act subject to a maximum payment to any one person of €20,000. The Scheme is based on EC Directive 97/9."
 msgstr "DIEL 是%1投資者補償方案%2 ( \"方案\") 的一部分，該方案是專為獲得MFSA准證而經營失敗的投資者設立的救濟基金。根據投資服務規定每人最多只補償20,000歐元的限制，此基金向每位合格者提供的補償金額為公司對客戶投資負債淨額的90%。此方案依據歐盟第97/9指令設定。"
@@ -5727,6 +5727,9 @@ msgstr "我要開立另一個加密貨幣帳戶"
 
 msgid "I want to reapply"
 msgstr "我想重新申請"
+
+msgid "I want to receive updates on %1 products, services, and events."
+msgstr ""
 
 msgid "I want to set my currency instead"
 msgstr "我要設定幣種"
@@ -9418,9 +9421,6 @@ msgstr "接收與 %1 產品、服務和活動有關的電子郵件。"
 msgid "Receive instant prices based on your position."
 msgstr "根據您的位置接收即時價格。"
 
-msgid "Receive news and special offers"
-msgstr "收取新消息和特別優惠"
-
 msgid "Receive prices that are benchmarked against interbank rates."
 msgstr "接收以銀行間利率為基準的價格。"
 
@@ -10262,7 +10262,7 @@ msgid "Sorry, an error occurred while processing your request."
 msgstr "對不起，在處理您的請求時發生錯誤。"
 
 msgid "Sorry, but binary options trading is not available in your country."
-msgstr ""
+msgstr "對不起，您的國家無法進行二元期權交易。"
 
 msgid "Sorry, but binary options trading is not available in your financial account."
 msgstr "對不起，您的金融帳戶無法進行二元期權交易。"
@@ -13599,6 +13599,9 @@ msgstr "虛擬"
 
 msgid "Virtual Account"
 msgstr "虛擬帳戶"
+
+msgid "Virtual accounts do not have Payment Agent services."
+msgstr ""
 
 msgid "Visa is an international company that supports digital payments around the world, most commonly through their brand of credit and debit cards. For more information, please visit %1."
 msgstr "Visa是支援世界各地數位支付的國際公司, 最普遍的是通過其品牌的信用和轉帳卡。欲知詳情, 請存取 %1。"
