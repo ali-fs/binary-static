@@ -4,7 +4,7 @@ import { Fieldset, FormRow } from './forms.jsx';
 export const Salutation = ({ className, row_class, row_id }) => (
     <FormRow
         type='select'
-        className={`center-select-m ${className}`}
+        className={`${className}`}
         id='salutation'
         label={it.L('Title')}
         row_class={row_class}
@@ -47,7 +47,7 @@ export const DateOfBirth = ({ className, row_class, row_id }) => (
         label={it.L('Date of birth')}
         row_class={row_class}
         row_id={row_id}
-        attributes={{ size: '12', readOnly: true, className: `center-text-m ${className || ''}`, 'data-lpignore': true, required: true }}
+        attributes={{ size: '12', readOnly: true, className: `center-text-m ${className || ''}`, 'data-lpignore': true }}
     />
 );
 
@@ -92,7 +92,6 @@ export const AccountOpeningReason = ({ row_id, row_class }) => (
     <FormRow
         type='select'
         id='account_opening_reason'
-        className='center-select-m'
         label={it.L('Account opening reason')}
         row_id={row_id}
         row_class={row_class}

@@ -118,7 +118,7 @@ const SetCurrency = (() => {
         const $fiat_currencies  = $('<div/>');
         const $cryptocurrencies = $('<div/>');
         currencies.forEach((c) => {
-            const $wrapper = $('<div/>', { class: 'gr-2 gr-4-m currency_wrapper', id: c });
+            const $wrapper = $('<div/>', { class: 'gr-2 gr-6-m currency_wrapper', id: c });
             const $image   = $('<div/>').append($('<img/>', { src: Url.urlForStatic(`images/pages/set_currency/${c.toLowerCase()}.svg`) }));
             const $name    = $('<div/>', { class: 'currency-name' });
 

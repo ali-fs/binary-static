@@ -1,4 +1,3 @@
-const moment = require('moment');
 const localize = require('../../../../../_common/localize').localize;
 const PersonalDetailForm = require('../new_account_modules/personal_detail_form');
 
@@ -33,7 +32,7 @@ const getPersonalDetailsConfig = ({ account_settings, residence_list }) => {
             section      : 'detail',
             supported_in : ['svg', 'iom', 'malta', 'maltainvest'],
             default_value: account_settings.date_of_birth
-                ? moment.utc(account_settings.date_of_birth * 1000)
+                ? account_settings.date_of_birth
                 : '',
             is_immutable: true,
             rules       : ['req'],

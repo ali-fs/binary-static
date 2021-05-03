@@ -71,6 +71,7 @@ const RealAccountOpening = (() => {
             form_selector     : `#${steps[current_step].body_module_step}_form`,
             get_submitted_data: onStepSubmitted,
         });
+        $.scrollTo(0, 500);
     };
 
     const onRiskAccept = (e) => {

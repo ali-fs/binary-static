@@ -7,6 +7,8 @@ const localize          = require('../../../../../_common/localize').localize;
 const getElementById    = require('../../../../../_common/common_functions').getElementById;
 const makeOption        = require('../../../../../_common/common_functions').makeOption;
 const State             = require('../../../../../_common/storage').State;
+const toISOFormat       = require('../../../../../_common/string_util').toISOFormat;
+const toReadableFormat  = require('../../../../../_common/string_util').toReadableFormat;
 
 const PersonalDetailForm = (() => {
 
@@ -38,16 +40,17 @@ const PersonalDetailForm = (() => {
                     const country_name = residence_list.find(obj => obj.value === field.default_value).text;
                     $(`#${field.id}`).replaceWith($('<span/>', { id: field.id, text: country_name, 'data-value': field.default_value }));
                 } else {
-                    $(`#${field.id}`).html((field.id === 'tax_residence' ? $options_with_disabled : $options).html()).val(field.default_value);
+                    $(`#${field.id}`).html((field.id === 'citizen' ? $options_with_disabled : $options).html()).val(field.default_value);
                     $(`#${field.id}`).select2({
                         matcher(params, data) {
                             return SelectMatcher(params, data);
                         },
                     });
                 }
+                $(`#${field.id}`).attr('tabIndex', 0);
             }
             if (simple_select_fields.includes(field.id)) {
-                getElementById(field.id).value = field.default_value;
+                $(`#${field.id}`).addClass('center-select-m').val(field.default_value);
             }
             if (text_fields.includes(field.id)) {
                 $(`#${field.id}`).text(field.default_value);
@@ -58,9 +61,10 @@ const PersonalDetailForm = (() => {
             if (field.id === 'date_of_birth') {
                 generateBirthDate(landing_company.minimum_age);
                 if (field.default_value !== '') {
+                    const dob_moment_object = moment.unix(field.default_value);
                     $(`#${field.id}`)
-                        .attr('data-value', moment(field.default_value).format('YYYY-MM-DD'))
-                        .val(moment(field.default_value).format('DD MMM, YYYY'));
+                        .attr('data-value', toISOFormat(dob_moment_object))
+                        .val(toReadableFormat(dob_moment_object));
                 }
             }
             if (field.id === 'phone') {

@@ -9,7 +9,7 @@ const Currencies = ({ text, id }) => (
             <div className='faded'>{text}</div>
             <div className='align-self-center border-bottom-light-gray' />
         </div>
-        <div className='gr-8 gr-10-p gr-12-m gr-centered invisible'>
+        <div className='gr-8 gr-10-p gr-9-m gr-centered invisible'>
             <div className='gr-row gr-row-align-center gr-padding-20 gr-parent currency_list' id={`${id}_currency_list`} />
         </div>
     </React.Fragment>

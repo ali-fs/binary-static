@@ -2,7 +2,7 @@ import React from 'react';
 
 const Currencies = ({ text, id }) => (
     <React.Fragment>
-        <div className='section-divider gr-padding-20 gr-row invisible' id={`${id}_currencies`}>
+        <div className='section-divider gr-padding-20 gr-padding-10-m gr-row invisible' id={`${id}_currencies`}>
             <div className='align-self-center border-bottom-light-gray' />
             <div className='faded'>{text}</div>
             <div className='align-self-center border-bottom-light-gray' />
