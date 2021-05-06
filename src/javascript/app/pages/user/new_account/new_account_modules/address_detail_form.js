@@ -36,7 +36,6 @@ const AddressDetailForm = (() => {
                     return SelectMatcher(params, data);
                 },
             });
-            $(`#${field.id}`).attr('tabIndex', 0);
         } else {
             $address_state.replaceWith($('<input/>',
                 { id: 'address_state', name: 'address_state', type: 'text', maxlength: '35', 'data-lpignore': true }));

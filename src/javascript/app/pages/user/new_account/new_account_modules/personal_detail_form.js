@@ -47,7 +47,6 @@ const PersonalDetailForm = (() => {
                         },
                     });
                 }
-                $(`#${field.id}`).attr('tabIndex', 0);
             }
             if (simple_select_fields.includes(field.id)) {
                 $(`#${field.id}`).addClass('center-select-m').val(field.default_value);
