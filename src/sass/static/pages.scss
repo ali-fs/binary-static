@@ -897,6 +897,12 @@ body #not_authenticated_financial ul.checked > li {
     text-align-last: center;
 }
 
+.currency_list {
+    @media screen and (min-width: 768px) {
+        justify-content: center;
+    }
+}
+
 .padding-h35 {
     @media screen and (min-width: 768px) {
         padding-left: 35px;
