@@ -42,6 +42,9 @@
         }
         &-title {
             font-size: $FONT_SIZE_S;
+            @media (max-width: 480px) {
+                margin: 0.5rem 0;
+            }
         }
     }
     &__steps {

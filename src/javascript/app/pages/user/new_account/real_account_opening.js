@@ -91,6 +91,7 @@ const RealAccountOpening = (() => {
     const showFinancialRiskWarning = () => {
         getElementById('account_opening_steps').setVisibility(0);
         getElementById('financial_risk_warning').setVisibility(1);
+        $.scrollTo(0, 500);
     };
 
     const onClickPrevious = () => renderStep(current_step--);
