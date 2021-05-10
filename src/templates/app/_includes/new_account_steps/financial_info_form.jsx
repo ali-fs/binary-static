@@ -21,7 +21,7 @@ const Frequency = () => (
 );
 
 const SelectRow = ({ id, label, con }) => (
-    <FormRow id={id} label={label} type='select' className='center-select-m'>{con()}</FormRow>
+    <FormRow id={id} label={label} type='select' className='select-center-mobile'>{con()}</FormRow>
 );
 
 const Values = () => (
@@ -53,7 +53,7 @@ const TradingExperienceForm = () => (
 
 const FinancialInformationForm = () => (
     <Fieldset id='financial_information_section' legend={it.L('Financial information')}>
-        <FormRow id='income_source' label={it.L('Source of income')} type='select' className='center-select-m'>
+        <FormRow id='income_source' label={it.L('Source of income')} type='select' className='select-center-mobile'>
             <option value=''>{it.L('Please select')}</option>
             <option value='Salaried Employee'>{it.L('Salaried Employee')}</option>
             <option value='Self-Employed'>{it.L('Self-Employed')}</option>
@@ -63,7 +63,7 @@ const FinancialInformationForm = () => (
             <option value='Savings &amp; Inheritance'>{it.L('Savings & Inheritance')}</option>
         </FormRow>
 
-        <FormRow id='employment_status' label={it.L('Employment status')} type='select' className='center-select-m'>
+        <FormRow id='employment_status' label={it.L('Employment status')} type='select' className='select-center-mobile'>
             <option value=''>{it.L('Please select')}</option>
             <option value='Employed'>{it.L('Employed')}</option>
             <option value='Pensioner'>{it.L('Pensioner')}</option>
@@ -72,7 +72,7 @@ const FinancialInformationForm = () => (
             <option value='Unemployed'>{it.L('Unemployed')}</option>
         </FormRow>
 
-        <FormRow id='employment_industry' label={it.L('Industry of employment')} type='select' className='center-select-m'>
+        <FormRow id='employment_industry' label={it.L('Industry of employment')} type='select' className='select-center-mobile'>
             <option value=''>{it.L('Please select')}</option>
             <option value='Construction'>{it.L('Construction')}</option>
             <option value='Education'>{it.L('Education')}</option>
@@ -90,7 +90,7 @@ const FinancialInformationForm = () => (
             <option value='Unemployed'>{it.L('Unemployed')}</option>
         </FormRow>
 
-        <FormRow id='occupation' label={it.L('Occupation')} type='select' className='center-select-m'>
+        <FormRow id='occupation' label={it.L('Occupation')} type='select' className='select-center-mobile'>
             <option value=''>{it.L('Please select')}</option>
             <option value='Chief Executives, Senior Officials and Legislators'>{it.L('Chief Executives, Senior Officials and Legislators')}</option>
             <option value='Managers'>{it.L('Managers')}</option>
@@ -108,7 +108,7 @@ const FinancialInformationForm = () => (
             <option value='Unemployed'>{it.L('Unemployed')}</option>
         </FormRow>
 
-        <FormRow id='source_of_wealth' label={it.L('Source of wealth')} type='select' className='center-select-m'>
+        <FormRow id='source_of_wealth' label={it.L('Source of wealth')} type='select' className='select-center-mobile'>
             <option value=''>{it.L('Please select')}</option>
             <option value='Accumulation of Income/Savings'>{it.L('Accumulation of Income/Savings')}</option>
             <option value='Cash Business'>{it.L('Cash Business')}</option>
@@ -119,18 +119,18 @@ const FinancialInformationForm = () => (
             <option value='Sale of Property'>{it.L('Sale of Property')}</option>
         </FormRow>
 
-        <FormRow id='education_level' label={it.L('Level of education')} type='select' className='center-select-m'>
+        <FormRow id='education_level' label={it.L('Level of education')} type='select' className='select-center-mobile'>
             <option value=''>{it.L('Please select')}</option>
             <option value='Primary'>{it.L('Primary')}</option>
             <option value='Secondary'>{it.L('Secondary')}</option>
             <option value='Tertiary'>{it.L('Tertiary')}</option>
         </FormRow>
 
-        <FormRow id='net_income' label={it.L('Net annual income')} type='select' className='center-select-m'>
+        <FormRow id='net_income' label={it.L('Net annual income')} type='select' className='select-center-mobile'>
             <Values />
         </FormRow>
 
-        <FormRow id='estimated_worth' label={it.L('Estimated net worth')} type='select' className='center-select-m'>
+        <FormRow id='estimated_worth' label={it.L('Estimated net worth')} type='select' className='select-center-mobile'>
             <option value=''>{it.L('Please select')}</option>
             <option value='Less than $100,000'>{it.L('Less than $100,000')}</option>
             <option value='$100,000 - $250,000'>{it.L('$100,000 - $250,000')}</option>
@@ -139,7 +139,7 @@ const FinancialInformationForm = () => (
             <option value='Over $1,000,000'>{it.L('Over $1,000,000')}</option>
         </FormRow>
 
-        <FormRow id='account_turnover' label={it.L('Anticipated account turnover')} type='select' className='center-select-m'>
+        <FormRow id='account_turnover' label={it.L('Anticipated account turnover')} type='select' className='select-center-mobile'>
             <Values />
         </FormRow>
     </Fieldset>
@@ -151,8 +151,8 @@ const FinancialInfoForm = () => (
             <FinancialInformationForm />
             <TradingExperienceForm />
             <div className='align-end' id='submit_section'>
-                <a className='button button-secondary btn_cancel action_previous' href='javascript:;'><span>{it.L('Previous')}</span></a>
-                <button className='button' type='submit'>{it.L('Next')}</button>
+                <a className='button button-secondary btn_cancel action_previous margin-v-10 inline-block-button' href='javascript:;'><span>{it.L('Previous')}</span></a>
+                <button className='button margin-v-10' type='submit'>{it.L('Next')}</button>
             </div>
         </form>
     </React.Fragment>

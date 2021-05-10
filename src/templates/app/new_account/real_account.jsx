@@ -39,8 +39,8 @@ const RealAccount = () => (
                 <p>{it.L('On the basis of the information provided in relation to your knowledge and experience, we consider that the investments available via this website are not appropriate for you.')}</p>
                 <p>{it.L('By clicking <strong>Accept</strong> below and proceeding with the Account Opening you should note that you may be exposing yourself to risks (which may be significant, including the risk of loss of the entire sum invested) that you may not have the knowledge and experience to properly assess or mitigate.')}</p>
                 <div className='align-end' id='submit_section'>
-                    <a id='financial_risk_decline' className='button button-secondary btn_cancel' href={it.url_for('trading')}><span>{it.L('Decline')}</span></a>
-                    <button id='financial_risk_accept' className='button' type='submit' action='financial_risk_accept'>{it.L('Accept')}</button>
+                    <a id='financial_risk_decline' className='button button-secondary btn_cancel margin-v-10 inline-block-button' href={it.url_for('trading')}><span>{it.L('Decline')}</span></a>
+                    <button id='financial_risk_accept' className='button margin-v-10' type='submit' action='financial_risk_accept'>{it.L('Accept')}</button>
                 </div>
             </form>
             <ClientMessage />

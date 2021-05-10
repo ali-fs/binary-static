@@ -40,8 +40,8 @@ const SetCurrency = () => (
 
                 <div id='deposit_row' className='gr-padding-10 invisible'>
                     <div>
-                        <a className='button button-secondary btn_cancel'id='maybe_later_btn' href='javascript:;'><span>{it.L('Maybe later')}</span></a>
-                        <a className='button' href='javascript:;'id='deposit_btn'><span>{it.L('Deposit now')}</span></a>
+                        <a className='button button-secondary btn_cancel inline-block-button'id='maybe_later_btn' href='javascript:;'><span>{it.L('Maybe later')}</span></a>
+                        <a className='button inline-block-button' href='javascript:;'id='deposit_btn'><span>{it.L('Deposit now')}</span></a>
                     </div>
                 </div>
 
@@ -56,8 +56,8 @@ const SetCurrency = () => (
                     <Currencies id='crypto' text={it.L('Cryptocurrency')} />
 
                     <div className='invisible show_change_currency show_multi_account show_set_currency' id='submit_section'>
-                        <a className='button button-secondary btn_cancel' href='javascript:;'><span>{it.L('Cancel')}</span></a>
-                        <a className='button' id='btn_ok' href='javascript:;'><span /></a>
+                        <a className='button button-secondary btn_cancel inline-block-button' href='javascript:;'><span>{it.L('Cancel')}</span></a>
+                        <a className='button inline-block-button' id='btn_ok' href='javascript:;'><span /></a>
                     </div>
                 </form>
             </div>

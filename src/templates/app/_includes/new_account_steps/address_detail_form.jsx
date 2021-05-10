@@ -21,8 +21,8 @@ const AddressDetailForm = () => (
             <AddressPostcode row_id='address_postcode_row' row_class=' invisible' />
         </div>
         <div className='align-end' id='submit_section'>
-            <a className='button button-secondary btn_cancel action_previous' href='javascript:;'><span>{it.L('Previous')}</span></a>
-            <button className='button' type='submit'>{it.L('Next')}</button>
+            <a className='button button-secondary btn_cancel action_previous margin-v-10 inline-block-button' href='javascript:;'><span>{it.L('Previous')}</span></a>
+            <button className='button margin-v-10' type='submit'>{it.L('Next')}</button>
         </div>
     </form>
 );

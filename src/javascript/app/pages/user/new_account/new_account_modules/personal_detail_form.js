@@ -18,14 +18,8 @@ const PersonalDetailForm = (() => {
         const landing_company = State.getResponse('landing_company');
 
         const $options = $('<div/>');
-        const $options_with_disabled = $('<div/>');
         residence_list.forEach((residence) => {
             $options.append(makeOption({ text: residence.text, value: residence.value }));
-            $options_with_disabled.append(makeOption({
-                text       : residence.text,
-                value      : residence.value,
-                is_disabled: residence.disabled,
-            }));
         });
 
         if (fields.some(field => field.id === 'salutation')) getElementById('name_section_legend').innerHTML = localize('Title and name');
@@ -40,7 +34,7 @@ const PersonalDetailForm = (() => {
                     const country_name = residence_list.find(obj => obj.value === field.default_value).text;
                     $(`#${field.id}`).replaceWith($('<span/>', { id: field.id, text: country_name, 'data-value': field.default_value }));
                 } else {
-                    $(`#${field.id}`).html((field.id === 'citizen' ? $options_with_disabled : $options).html()).val(field.default_value);
+                    $(`#${field.id}`).html($options.html()).val(field.default_value);
                     $(`#${field.id}`).select2({
                         matcher(params, data) {
                             return SelectMatcher(params, data);

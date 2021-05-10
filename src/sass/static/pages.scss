@@ -882,6 +882,19 @@ body #not_authenticated_financial ul.checked > li {
     margin: 0;
 }
 
+.margin-v-10 {
+    margin: 10px 0;
+}
+
+.inline-block-button {
+    display: inline-block;
+}
+
+.select-center-mobile {
+    text-align-last: center;
+    -moz-text-align-last: center;
+}
+
 .select2-container {
     width: 100% !important;
     @media screen and (min-width: 768px) {
