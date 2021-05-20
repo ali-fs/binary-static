@@ -132,10 +132,9 @@ const AccountClosure = (() => {
 
     const onTextChanged = (e) => {
         const remaining_length =  max_reason_length - getReason().length;
-        if ((!regex.test(e.data) || remaining_length < 0)
-            && !delete_key_codes.includes(last_key_code)) {
-            document.execCommand('undo');
-            return;
+        if ((!regex.test(e.data) || remaining_length < 0) && !delete_key_codes.includes(last_key_code)) {
+            const changed_element = getElementById(e.target.id);
+            changed_element.value = changed_element.value.slice(0, -1);
         }
         validateReason();
     };

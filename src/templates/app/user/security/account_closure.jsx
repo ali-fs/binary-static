@@ -23,10 +23,8 @@ const AccountClosureDialog = () => (
                     className='responsive'
                     src={it.url_for('images/pages/account_closure/ic-emergency.svg')}
                 />
-                <h1 className='gr-padding-10'>{it.L('Warning!')}</h1>
-                <p className='warning-msg'>{it.L('If you deactivate:')}</p>
-                <p className='warning-msg'>{it.L('You’ll be logged out automatically.')}</p>
-                <p className='warning-msg'>{it.L('You will [_1]NOT[_2] be able to log in again.', '<span id="red-msg">', '</span>')}</p>
+                <h1 className='gr-padding-10'>{it.L('Deactivate account?')}</h1>
+                <p className='gr-12'>{it.L('Deactivating your account will automatically log you out. You can reactivate your account by logging in at any time.')}</p>
             </div>
             <div className='center-text gr-centered gr-padding-10 gr-child'>
                 <a className='modal-back back button button-secondary' href='javascript:;'><span id='span-btn'>{it.L('Back')}</span></a>
@@ -78,12 +76,12 @@ const AccountClosure = () => (
                 <div className='gr-no-gutter'>
                     <div id='closing_steps' className='gr-padding-10'>
                         <div className='gr-padding-10'>
-                            <h3 className='secondary-color'>{it.L('1. Close all open positions')}</h3>
+                            <h3 className='secondary-color'>{it.L('Close open positions')}</h3>
                             <p className='no-margin'>{it.L('If you have a Binary real account, go to [_1]Portfolio[_2] to close any open positions.', `<a href="${it.url_for('user/portfoliows')}">`, '</a>')}</p>
                             <p className='invisible metatrader-link no-margin'>{it.L('If you have a DMT5 real account, log into it to close any open positions.')}</p>
                         </div>
                         <div className='gr-padding-30'>
-                            <h3 className='secondary-color'>{it.L('2. Withdraw your funds')}</h3>
+                            <h3 className='secondary-color'>{it.L('Withdraw your funds')}</h3>
                             <p className='no-margin'>{it.L('If you have a Binary real account, go to [_1]Cashier[_2] to withdraw your funds', `<a href="${it.url_for('cashier')}">`, '</a>')}</p>
                             <p className='invisible metatrader-link no-margin'>{it.L('If you have a DMT5 real account, go to [_1]MT5 dashboard[_2] to withdraw your funds.', `<a href="${it.url_for('user/metatrader')}">`, '</a>')}</p>
                         </div>
