@@ -64,11 +64,3 @@ release:
 releaseci:
   - 'default'
   - 'shell:compile_production'
-
-build:
-  - 'clean'
-  - 'test'
-  - 'copy'
-  - 'css'
-  - 'js'
-  - 'shell:compile_production'
