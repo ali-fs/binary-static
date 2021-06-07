@@ -15,6 +15,7 @@ const localizeForLang = require('../../_common/localize').forLang;
 const localize = require('../../_common/localize').localize;
 const ScrollToAnchor = require('../../_common/scroll_to_anchor');
 const isStorageSupported = require('../../_common/storage').isStorageSupported;
+const State = require('../../_common/storage').State;
 const ThirdPartyLinks = require('../../_common/third_party_links');
 const urlFor = require('../../_common/url').urlFor;
 const createElement = require('../../_common/utility').createElement;
@@ -37,6 +38,8 @@ const BinaryLoader = (() => {
 
         localizeForLang(urlLang());
 
+        checkAppidAndQAserver();
+
         Page.showNotificationOutdatedBrowser();
 
         Client.init();
@@ -48,6 +51,16 @@ const BinaryLoader = (() => {
         BinaryPjax.init(container, '#content');
         ThirdPartyLinks.init();
 
+    };
+
+    const checkAppidAndQAserver = () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const qa_server = urlParams.get('qa_server');
+        const app_id = urlParams.get('app_id');
+        if (qa_server && app_id) {
+            State.set('config.server_url', qa_server);
+            State.set('config.app_id', app_id);
+        }
     };
 
     const beforeContentChange = () => {
