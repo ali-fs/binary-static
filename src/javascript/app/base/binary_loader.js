@@ -55,8 +55,12 @@ const BinaryLoader = (() => {
 
     const checkAppidAndQAserver = () => {
         const urlParams = new URLSearchParams(window.location.search);
+        // eslint-disable-next-line no-console
+        console.log({urlParams});
         const qa_server = urlParams.get('qa_server');
         const app_id = urlParams.get('app_id');
+        // eslint-disable-next-line no-console
+        console.log({qa_server,app_id});
         if (qa_server && app_id) {
             State.set('config.server_url', qa_server);
             State.set('config.app_id', app_id);
