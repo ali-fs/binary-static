@@ -1,6 +1,8 @@
 name: Binary App ID Generator
 
-on: [pull_request]
+on:
+    issue_comment:
+        types: [edited]
 
 jobs:
     generate_app_id:
