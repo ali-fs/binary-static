@@ -44,8 +44,10 @@ const LiveChat = (() => {
         last_name = get_settings.last_name;
         client_email = ClientBase.get('email');
 
-        setSessionVariables();
-        setNameEmail();
+        if (window.LiveChatWidget){
+            setSessionVariables();
+            setNameEmail();
+        }
 
         window.LC_API.on_chat_ended = () => {
             setNameEmail();

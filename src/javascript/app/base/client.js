@@ -129,7 +129,7 @@ const Client = (() => {
         ClientBase.set('loginid', '');
         SocketCache.clear();
         RealityCheckData.clear();
-        if (isBinaryDomain()){
+        if (isBinaryDomain() && window.LiveChatWidget){
             endLiveChat().then(() => {
                 redirection(response);
             });
