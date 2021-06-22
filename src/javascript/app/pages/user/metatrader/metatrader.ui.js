@@ -78,7 +78,7 @@ const MetaTraderUI = (() => {
         $mt5_web_link.attr('href', `${mt5_url}${query_params}`);
     };
 
-    const populateTradingServers = (acc_type) => {
+    const populateTradingServers = async (acc_type) => {
         const $ddl_trade_server = $form.find('#ddl_trade_server');
 
         $ddl_trade_server.empty();
@@ -89,7 +89,8 @@ const MetaTraderUI = (() => {
             used     : 0,
         };
 
-        State.getResponse('trading_servers').forEach(trading_server => {
+        const trading_servers = State.getResponse('trading_servers') || (await BinarySocket.send({ trading_servers: 1 })).trading_servers;
+        trading_servers.forEach(trading_server => {
             // if server is not added to account type, and in accounts_info we are not storing it with server
             if (!/\d$/.test(account_type) && !getAccountsInfo(account_type)) {
                 account_type += `_${trading_server.id}`;
