@@ -49,8 +49,10 @@ const LiveChat = (() => {
             setNameEmail();
         }
 
-        window.LC_API.on_chat_ended = () => {
-            setNameEmail();
+        if (window.LC_API) {
+            window.LC_API.on_chat_ended = () => {
+                setNameEmail();
+            };
         };
     });
 
