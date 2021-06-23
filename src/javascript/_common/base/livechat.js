@@ -53,7 +53,7 @@ const LiveChat = (() => {
             window.LC_API.on_chat_ended = () => {
                 setNameEmail();
             };
-        };
+        }
     });
 
     const initialize = () => {
