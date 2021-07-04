@@ -211,7 +211,7 @@ const Home = () => {
                         <TabContentContainer>
                             <TabContent id='binary_options'>
                                 <AccountsTabContent
-                                    header={it.L('TEST Trade binary options on a wide range of web and mobile apps. Each comes with unique strengths that complement a variety of trading strategies.')}
+                                    header={it.L('Trade binary options on a wide range of web and mobile apps. Each comes with unique strengths that complement a variety of trading strategies.')}
                                     mobile_header={it.L('Binary Options')}
                                     image='images/pages/home/binary_options.svg'
                                     image_one='images/pages/home/icons/demo.svg'
