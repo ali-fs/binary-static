@@ -101,8 +101,7 @@ const Validation = (() => {
                     const event = events_map[field.type];
 
                     if (event) {
-                        field.$.unbind(event).on(event, e => {
-                            if (e.type === 'change' && e.target.type === 'text') return;
+                        field.$.unbind(event).on(event, () => {
                             checkField(field);
                             if (field.re_check_field) {
                                 checkField(forms[form_selector].fields.find(fld => (
@@ -232,12 +231,20 @@ const Validation = (() => {
             message = localize('Should be less than [_1]', addComma(options.max, options.format_money ? getDecimalPlaces(Client.get('currency')) : undefined));
         }
 
+        // Priority Validation
+        if ('balance' in options && isLessThanBalance(value, options)) {
+            is_ok   = false;
+            message = localize('Insufficient balance.');
+        }
+
         ValidatorsMap.get().number.message = message;
         return is_ok;
     };
 
     const isMoreThanMax = (value, options) =>
         (options.type === 'float' ? +value > +options.max : compareBigUnsignedInt(value, options.max) === 1);
+
+    const isLessThanBalance = (value,options) => options.balance < value;
 
     const validTaxID = (value, options, field) => {
         // input is valid in API regex but may not be valid for country regex
@@ -371,6 +378,7 @@ const Validation = (() => {
     };
 
     const showError = (field, localized_message) => {
+        if (field.$error.html() === localized_message) return;
         clearError(field);
         Password.removeCheck(field.selector);
         field.$error.html(localized_message).setVisibility(1);
